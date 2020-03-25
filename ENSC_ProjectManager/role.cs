@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class role
+    class Role
     {
-        private String _libelle;
-        public String Libelle { get { return _; } set { _code = value; } }
+        public string Libelle { get; set; }
+        internal Intervenant Intervenant { get; set; }
 
-        public module(String Libelle)
+        public Role(Intervenant intervenant,string libelle)
         {
-            _libelle = Libelle;
+            this.Libelle = libelle;
+            this.Intervenant = intervenant;
         }
     }
 }

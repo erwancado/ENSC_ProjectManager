@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class module
+    class Module
     {
-        private String _code;
-        public String Code{get{return _code;} set{_code = value;}}
+        private string _code;
+        public string Code { get { return _code; } set { _code = value; } }
 
-        private String _libelle;
-        public String Libelle{get{return _libelle;} set{_libelle=value;}}
+        private string _libelle;
+        public string Libelle { get { return _libelle; } set { _libelle = value; } }
 
-        public module(String Code, String Libelle)
+        private List<Matiere> _listeMatieres;
+        public List<Matiere> ListeMatiere
+        { get { return _listeMatieres; } set { _listeMatieres = value; } }
+
+        public Module(string Code, string Libelle)
         {
             _code = Code;
             _libelle = Libelle;
+            _listeMatieres = new List<Matiere>();
+        }
+
+        public void AjouterMatiere(params Matiere[] matieres)
+        {
+            foreach(Matiere matiere in matieres)
+            {
+                _listeMatieres.Add(matiere);
+                matiere.Module = this;
+            }
         }
     }
 }

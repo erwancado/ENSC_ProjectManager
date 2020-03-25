@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class type
+    class Type
     {
         private bool _groupe;
-        public bool Groupe { get { return _groupe; } set { _groupe = value; } }
-
+        private string _typePromotion;
         private int _nbMaxEtudiants;
         public int NbMaxEtudiants { get { return _nbMaxEtudiants; } set { _nbMaxEtudiants = value; } }
-
         private int _nbMinEtudiants;
         public int NbMinEtudiants { get { return _nbMinEtudiants; } set { _nbMinEtudiants = value; } }
 
-        public type(bool Groupe, int NbrMinEtudiants, int NbrMaxEtudiants)
+        internal string TypePromotion { get => _typePromotion; set => _typePromotion = value; }
+
+        public Type(int NbrMinEtudiants, int NbrMaxEtudiants, string typePromo)
         {
-            _groupe = Groupe;
+            _groupe = NbMaxEtudiants==1;
             _nbMaxEtudiants = NbrMaxEtudiants;
             _nbMinEtudiants = NbrMinEtudiants;
+            TypePromotion = typePromo;
         }
     }
 }
