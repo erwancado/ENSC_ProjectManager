@@ -13,9 +13,10 @@ namespace ENSC_ProjectManager
 
         public Promotion Promotion { get; set; }
 
-        public Etudiant(string nom, string prenom, string mail, int groupeTD) : base(nom, prenom, mail)
+        public Etudiant(string nom, string prenom, string mail, int groupeTD, bool redoublant) : base(nom, prenom, mail)
         {
             _groupeTD = groupeTD;
+            _redoublant = redoublant;
         }
 
         public int GroupeTD { get => _groupeTD; set => _groupeTD = value; }
