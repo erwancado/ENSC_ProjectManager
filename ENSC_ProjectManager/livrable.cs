@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Livrable
+    public class Livrable
     {
         private string _typeFichier;
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Type
+    public class Type
     {
-        private bool _groupe;
+        public bool Groupe { get { return NbMaxEtudiants != 1; } }
         private string _typePromotion;
         private int _nbMaxEtudiants;
         public int NbMaxEtudiants { get { return _nbMaxEtudiants; } set { _nbMaxEtudiants = value; } }
@@ -19,10 +19,13 @@ namespace ENSC_ProjectManager
 
         public Type(int NbrMinEtudiants, int NbrMaxEtudiants, string typePromo)
         {
-            _groupe = NbMaxEtudiants==1;
             _nbMaxEtudiants = NbrMaxEtudiants;
             _nbMinEtudiants = NbrMinEtudiants;
             TypePromotion = typePromo;
+        }
+        public Type()
+        {
+
         }
     }
 }

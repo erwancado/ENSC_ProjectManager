@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Module
+    public class Module
     {
         private string _code;
         public string Code { get { return _code; } set { _code = value; } }
@@ -24,7 +24,10 @@ namespace ENSC_ProjectManager
             _libelle = Libelle;
             _listeMatieres = new List<Matiere>();
         }
+        public Module()
+        {
 
+        }
         public void AjouterMatiere(params Matiere[] matieres)
         {
             foreach(Matiere matiere in matieres)

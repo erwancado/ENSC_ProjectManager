@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Professeur : Intervenant
+    public class Professeur : Intervenant
     {
         private string _titre;
         public Professeur(string nom, string prenom, string mail, string titre) : base(nom, prenom, mail)
         {
             _titre = titre;
         }
+        public Professeur() : base()
+        {
 
+        }
         public string Titre { get => _titre; set => _titre = value; }
     }
 }

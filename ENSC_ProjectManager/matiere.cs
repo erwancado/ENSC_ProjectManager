@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Matiere
+    public class Matiere
     {
         private string _code;
         public string Code{get{return _code;} set{ _code=value;}}
@@ -25,6 +25,10 @@ namespace ENSC_ProjectManager
             _code = Code;
             _libelle = Libelle;
             _listeProfesseurs = new List<Professeur>();
+        }
+        public Matiere()
+        {
+
         }
         public void AjouterProfesseur(params Professeur[] professeurs)
         {

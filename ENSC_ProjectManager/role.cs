@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Role
+    public class Role
     {
         public string Libelle { get; set; }
         internal Intervenant Intervenant { get; set; }
@@ -15,6 +15,10 @@ namespace ENSC_ProjectManager
         {
             this.Libelle = libelle;
             this.Intervenant = intervenant;
+        }
+        public Role()
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Intervenant
+    public class Intervenant
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
@@ -16,6 +16,10 @@ namespace ENSC_ProjectManager
             Nom = nom;
             Prenom = prenom;
             Mail = mail;
+        }
+        public Intervenant()
+        {
+
         }
 
         public bool VerificationMail(string mail)

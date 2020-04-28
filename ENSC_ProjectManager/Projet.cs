@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Projet
+    public class Projet
     {
         private string _libelle;
         public string Libelle { get { return _libelle; } set { _libelle = value; } }
@@ -31,6 +31,10 @@ namespace ENSC_ProjectManager
             _dateFin = dateFin;
             _listeLivrables = new List<Livrable>();
             _type = type;
+        }
+        public Projet()
+        {
+
         }
         public DateTimeSpan DureeProjet()
         {
@@ -89,7 +93,6 @@ namespace ENSC_ProjectManager
                     {
                         return new int[] { DateFin.Year };
                     }
-                    break;
                 case "transpromo":
                     if (DateFin.Month >= 9)
                     {

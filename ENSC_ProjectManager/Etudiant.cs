@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Etudiant : Intervenant
+    public class Etudiant : Intervenant
     {
         private bool _redoublant;
         private int _groupeTD;
@@ -18,7 +18,10 @@ namespace ENSC_ProjectManager
             _groupeTD = groupeTD;
             _redoublant = redoublant;
         }
+        public Etudiant()
+        {
 
+        }
         public int GroupeTD { get => _groupeTD; set => _groupeTD = value; }
     }
 }

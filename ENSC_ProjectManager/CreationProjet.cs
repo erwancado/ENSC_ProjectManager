@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
-    public partial class Form1 : Form
+    public partial class CreationProjet : Form
     {
-        public Form1()
+        public CreationProjet(Repertoire repertoire)
         {
             InitializeComponent();
+            dateDebutProjet.Enabled = false;
+            dateFinProjet.Enabled = false;
+            listeMatiere.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

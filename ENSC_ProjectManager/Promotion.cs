@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Promotion
+    public class Promotion
     {
         public int Annee { get; set; }
         private List<Etudiant> etudiants;
@@ -14,6 +14,10 @@ namespace ENSC_ProjectManager
         {
             Annee = annee;
             etudiants = new List<Etudiant>();
+        }
+        public Promotion()
+        {
+
         }
         public void AjouterEtudiant(Etudiant etudiant)
         {

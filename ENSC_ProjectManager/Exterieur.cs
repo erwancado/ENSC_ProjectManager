@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
-    class Exterieur : Intervenant
+    public class Exterieur : Intervenant
     {
         private string _organisation;
         public Exterieur(string nom, string prenom, string mail, string organisation) : base(nom, prenom, mail)
         {
             _organisation = organisation;
+        }
+        public Exterieur()
+        {
+
         }
 
         public string Organisation { get => _organisation; set => _organisation = value; }
