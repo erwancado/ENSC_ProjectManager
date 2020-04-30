@@ -8,6 +8,7 @@ namespace ENSC_ProjectManager
 {
     public class Matiere
     {
+        public string Promo;
         private string _code;
         public string Code{get{return _code;} set{ _code=value;}}
 
@@ -20,11 +21,12 @@ namespace ENSC_ProjectManager
 
         internal List<Professeur> ListeProfesseurs { get => _listeProfesseurs;}
 
-        public Matiere (string Code,string Libelle)
+        public Matiere (string Code,string Libelle, string promo)
         {
             _code = Code;
             _libelle = Libelle;
             _listeProfesseurs = new List<Professeur>();
+            Promo = promo;
         }
         public Matiere()
         {

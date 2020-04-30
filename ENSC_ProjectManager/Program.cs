@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 namespace ENSC_ProjectManager
 {
@@ -16,12 +14,16 @@ namespace ENSC_ProjectManager
         [STAThread]
         static void Main()
         {
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Repertoire repertoire = new Repertoire();
             String[] typesPromos = { "1A", "2A", "3A", "transpromo" };
             repertoire.typesPromos = typesPromos;
-            repertoire.saveData(Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar + "repertoire.xml");
-
+            Type projetProg = new Type(1, 2, typesPromos[0]);
+            Type transpromo = new Type(4, 6, typesPromos[3]);
+            repertoire.typesProjet.Add(projetProg);
+            repertoire.typesProjet.Add(transpromo);
+            Application.Run(new CreationProjet(repertoire));
         }
     }
 }

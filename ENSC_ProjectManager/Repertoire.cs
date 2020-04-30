@@ -12,7 +12,7 @@ namespace ENSC_ProjectManager
     public class Repertoire
     {
         public List<Type> typesProjet;
-        public List<Promotion> promotions;
+        public Dictionary<int,Promotion> promotions;
         public List<Matiere> matieres;
         public List<Module> modules;
         public List<Role> roles;
@@ -22,10 +22,56 @@ namespace ENSC_ProjectManager
         public String[] typesPromos;
         public Repertoire()
         {
+            typesProjet = new List<Type>();
+            promotions = new Dictionary<int, Promotion>();
+            matieres = new List<Matiere>();
+            roles = new List<Role>();
+            professeurs = new List<Professeur>();
+            intervenantsExte = new List<Exterieur>();
+            projets = new List<Projet>();
+        }
 
+        public void AddPromotion(Promotion promotion)
+        {
+            promotions.Add(promotion.Annee, promotion);
+        }
+        public Promotion GetPromotion(int annee)
+        {
+            Promotion promotion;
+            promotions.TryGetValue(annee, out promotion);
+            return promotion;
+        }
+
+        public Matiere GetMatiere(string code)
+        {
+            foreach(Matiere matiere in matieres)
+            {
+                if (matiere.Code.Equals(code))
+                {
+                    return matiere;
+                }
+            }
+            return null;
         }
         
-        public void saveData(string filename)
+        public Etudiant GetEtudiant(int anneePromo, string nom, string prenom)
+        {
+            Promotion promotion;
+            promotions.TryGetValue(anneePromo, out promotion);
+            if (promotion == null)
+                return null;
+            else
+            {
+                foreach(Etudiant etudiant in promotion.Etudiants)
+                {
+                    if (etudiant.Nom.Equals(nom) && etudiant.Prenom.Equals(prenom))
+                        return etudiant;
+                }
+                return null;
+            }
+        }
+
+        public void SaveData(string filename)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));
             TextWriter writer = new StreamWriter(filename);
