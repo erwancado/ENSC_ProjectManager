@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ajoutEtudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutEtudiant.Designer.cs">
+      <DependentUpon>ajoutEtudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutLivrable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutLivrable.Designer.cs">
+      <DependentUpon>ajoutLivrable.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutRoles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AjoutRoles.Designer.cs">
       <DependentUpon>AjoutRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutType.Designer.cs">
+      <DependentUpon>AjoutType.cs</DependentUpon>
     </Compile>
     <Compile Include="DateTimeSpan.cs" />
     <Compile Include="Etudiant.cs" />
@@ -75,8 +93,17 @@
     <Compile Include="Repertoire.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Type.cs" />
+    <EmbeddedResource Include="ajoutEtudiant.resx">
+      <DependentUpon>ajoutEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutLivrable.resx">
+      <DependentUpon>ajoutLivrable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AjoutRoles.resx">
       <DependentUpon>AjoutRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutType.resx">
+      <DependentUpon>AjoutType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreationProjet.resx">
       <DependentUpon>CreationProjet.cs</DependentUpon>
