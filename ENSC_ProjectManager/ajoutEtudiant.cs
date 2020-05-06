@@ -10,24 +10,37 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
-    public partial class ajoutEtudiant : Form
+    public partial class AjoutEtudiant : Form
     {
-        public ajoutEtudiant()
+        public Etudiant ReturnEtudiant;
+        public int ReturnAnneePromo;
+        public AjoutEtudiant(int minAnneePromo)
         {
             InitializeComponent();
-            Valider.Enabled = false;
-            if (nomEtudiant.Text.Length != 0 && prenomEtudiant.Text.Length != 0 && email.Text.Length != 0)
-                Valider.Enabled = true;
+            anneePromo.Maximum = minAnneePromo + 3;
+            anneePromo.Value = minAnneePromo;
+            anneePromo.Minimum = minAnneePromo;
         }
 
         private void Valider_Click(object sender, EventArgs e)
         {
-            bool redoublement = false;
-            if (redoublant.Checked)
+            if(nomEtudiant.TextLength!=0 && prenomEtudiant.TextLength != 0)
             {
-                redoublement = true;
+                if (RegexUtilities.IsValidEmail(email.Text))
+                {
+                    ReturnAnneePromo = (int)anneePromo.Value;
+                    ReturnEtudiant = new Etudiant(nomEtudiant.Text, prenomEtudiant.Text, email.Text, redoublant.Checked);
+                    this.Visible = false;
+                }
+
+                else
+                    MessageBox.Show("E-mail non valide", "L'e-mail entré est invalide.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            Etudiant E = new Etudiant(nomEtudiant.Text, prenomEtudiant.Text, email.Text, redoublement);
+            else
+            {
+                MessageBox.Show("Information manquante", "Tous les champs doivent être remplis pour continuer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
     }
 }

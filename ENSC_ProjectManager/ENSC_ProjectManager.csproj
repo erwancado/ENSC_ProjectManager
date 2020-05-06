@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ajoutEtudiant.cs">
+    <Compile Include="AjoutEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutEtudiant.Designer.cs">
-      <DependentUpon>ajoutEtudiant.cs</DependentUpon>
+    <Compile Include="AjoutEtudiant.Designer.cs">
+      <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajoutLivrable.cs">
+    <Compile Include="AjoutLivrable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutLivrable.Designer.cs">
-      <DependentUpon>ajoutLivrable.cs</DependentUpon>
+    <Compile Include="AjoutLivrable.Designer.cs">
+      <DependentUpon>AjoutLivrable.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutRoles.cs">
       <SubType>Form</SubType>
@@ -93,11 +93,11 @@
     <Compile Include="Repertoire.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Type.cs" />
-    <EmbeddedResource Include="ajoutEtudiant.resx">
-      <DependentUpon>ajoutEtudiant.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutEtudiant.resx">
+      <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajoutLivrable.resx">
-      <DependentUpon>ajoutLivrable.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutLivrable.resx">
+      <DependentUpon>AjoutLivrable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutRoles.resx">
       <DependentUpon>AjoutRoles.cs</DependentUpon>
