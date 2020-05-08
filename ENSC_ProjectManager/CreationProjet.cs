@@ -13,10 +13,12 @@ namespace ENSC_ProjectManager
     public partial class CreationProjet : Form
     {
         Repertoire repertoire;
+        List<Livrable> liste_livrables;
         public CreationProjet(Repertoire repertoire)
         {
             InitializeComponent();
             this.repertoire = repertoire;
+            liste_livrables = new List<Livrable>();
             dateDebutProjet.Enabled = false;
             dateFinProjet.Enabled = false;
             listeMatiere.Enabled = false;
@@ -32,6 +34,7 @@ namespace ENSC_ProjectManager
             retirerExte.Hide();
             retirerLivrable.Hide();
             ajouterLivrable.Enabled = false;
+            ajouterEtudiant.Enabled = false;
             RemplirTypesProjet();
         }
         private void RemplirTypesProjet()
@@ -43,6 +46,27 @@ namespace ENSC_ProjectManager
                 listeTypeProjet.Items.Add("Projet " + type.TypePromotion.ToUpper() + " de " + type.NbMinEtudiants + " à " + type.NbMaxEtudiants + " étudiants");
             }
             listeTypeProjet.EndUpdate();
+        }
+        private void AjouterTypeProjet(Type type)
+        {
+            repertoire.typesProjet.Add(type);
+            listeTypeProjet.BeginUpdate();
+            listeTypeProjet.Items.Add("Projet " + type.TypePromotion.ToUpper() + " de " + type.NbMinEtudiants + " à " + type.NbMaxEtudiants + " étudiants");
+            listeTypeProjet.EndUpdate();
+        }
+        private void AjouterLivrable(Livrable livrable)
+        {
+            if (affichageLivrables.Items.Count == 0)
+            {
+                dateDebutProjet.Enabled = false;
+                dateFinProjet.Enabled = false;
+                MessageBox.Show("Maintenant que vous avez ajouté un livrable, la modification des dates n'est plus possible." +
+                    " Retirez le livrable si vous souhaitez modifier les dates du projet.", "Ajout d'un livrable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            liste_livrables.Add(livrable);
+            affichageLivrables.BeginUpdate();
+            affichageLivrables.Items.Add(livrable.Libelle + " (" + livrable.TypeFichier.ToUpper() + ") - " + livrable.DateRendu.ToShortDateString() + (livrable.Rendu ? " - Rendu" : " - Non rendu"));
+            affichageLivrables.EndUpdate();
         }
         private void RemplirEtudiants(int[] anneePromos)
         {
@@ -60,6 +84,25 @@ namespace ENSC_ProjectManager
                 }
             }
             listeEtudiants.EndUpdate();
+        }
+        private void AjouterEtudiant(Etudiant etudiant, int anneePromo)
+        {
+            Promotion promotion = repertoire.GetPromotion(anneePromo);
+            bool promoVide = promotion == null;
+            if (promoVide)
+            {
+                promotion = new Promotion(anneePromo);
+            }
+            promotion.AjouterEtudiant(etudiant);
+            etudiant.Promotion = promotion;
+            if (promoVide)
+                repertoire.AddPromotion(promotion);
+            else
+                repertoire.AddEtudiant(etudiant);
+            listeEtudiants.BeginUpdate();
+            listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " - promotion " + etudiant.Promotion.Annee);
+            listeEtudiants.EndUpdate();
+
         }
         private void RemplirPromos(string[] promotions)
         {
@@ -128,11 +171,13 @@ namespace ENSC_ProjectManager
         {
             DatesValidation();
             ajouterLivrable.Enabled = true;
+            ajouterEtudiant.Enabled = true;
         }
         private void DateFinProjet_Validating(object sender, CancelEventArgs e)
         {
             DatesValidation();
             ajouterLivrable.Enabled = true;
+            ajouterEtudiant.Enabled = true;
         }
 
         private void ListeTypeProjet_SelectedValueChanged(object sender, EventArgs e)
@@ -250,6 +295,7 @@ namespace ENSC_ProjectManager
             else
             {
                 insertEtudiant.Show();
+                affichageEtudiants.ClearSelected();
             }
         }
 
@@ -258,7 +304,11 @@ namespace ENSC_ProjectManager
             if (affichageEtudiants.SelectedItem == null)
                 retirerEtudiant.Hide();
             else
+            {
                 retirerEtudiant.Show();
+                listeEtudiants.ClearSelected();
+            }
+                
         }
 
         private void listeProfesseurs_SelectedValueChanged(object sender, EventArgs e)
@@ -268,6 +318,7 @@ namespace ENSC_ProjectManager
             else
             {
                 insertProfesseur.Show();
+                affichageProfesseurs.ClearSelected();
             }
         }
 
@@ -276,7 +327,11 @@ namespace ENSC_ProjectManager
             if (affichageProfesseurs.SelectedItem == null)
                 retirerProfesseur.Hide();
             else
+            {
                 retirerProfesseur.Show();
+                listeProfesseurs.ClearSelected();
+            }
+                
         }
 
         private void listeExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -284,7 +339,11 @@ namespace ENSC_ProjectManager
             if (listeExtes.SelectedItem == null)
                 insertExte.Hide();
             else
+            {
                 insertExte.Show();
+                affichageExtes.ClearSelected();
+            }
+                
         }
 
         private void affichageExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -292,7 +351,11 @@ namespace ENSC_ProjectManager
             if (affichageExtes.SelectedItem == null)
                 retirerExte.Hide();
             else
+            {
                 retirerExte.Show();
+                listeExtes.ClearSelected();
+            }
+                
         }
 
         private void affichageLivrables_SelectedValueChanged(object sender, EventArgs e)
@@ -330,6 +393,12 @@ namespace ENSC_ProjectManager
                 affichageLivrables.BeginUpdate();
                 affichageLivrables.Items.RemoveAt(affichageEtudiants.SelectedIndex);
                 affichageLivrables.EndUpdate();
+                liste_livrables.RemoveAt(affichageEtudiants.SelectedIndex);
+                if (affichageLivrables.Items.Count == 0)
+                {
+                    dateDebutProjet.Enabled = true;
+                    dateFinProjet.Enabled = false;
+                }
             }
         }
 
@@ -339,6 +408,57 @@ namespace ENSC_ProjectManager
             if (listeExtes.SelectedItem != null)
                 affichageExtes.Items.Add(listeProfesseurs.SelectedItem);
             affichageExtes.EndUpdate();
+        }
+
+        private void ajouterType_Click(object sender, EventArgs e)
+        {
+            AjoutType formAjoutType = new AjoutType();
+            formAjoutType.Show();
+            formAjoutType.VisibleChanged += formVisibleChangedAjouterType;
+
+        }
+        private void formVisibleChangedAjouterType(object sender, EventArgs e)
+        {
+            AjoutType form = (AjoutType)sender;
+            if (!form.Visible)
+            {
+                this.AjouterTypeProjet(form.ReturnType);
+                form.Dispose();
+            }
+
+
+        }
+
+        private void ajouterLivrable_Click(object sender, EventArgs e)
+        {
+            AjoutLivrable formAjoutLivrable = new AjoutLivrable(dateDebutProjet.Value, dateFinProjet.Value);
+            formAjoutLivrable.Show();
+            formAjoutLivrable.VisibleChanged += formVisibleChangedAjouterLivrable;
+        }
+        private void formVisibleChangedAjouterLivrable(object sender, EventArgs e)
+        {
+            AjoutLivrable form = (AjoutLivrable)sender;
+            if (!form.Visible)
+            {
+                this.AjouterLivrable(form.ReturnLivrable);
+                form.Dispose();
+            }
+        }
+
+        private void ajouterEtudiant_Click(object sender, EventArgs e)
+        {
+            AjoutEtudiant formAjoutEtudiant = new AjoutEtudiant(AnneePromo("1A"));
+            formAjoutEtudiant.Show();
+            formAjoutEtudiant.VisibleChanged += formVisibleChangedAjouterEtudiant;
+        }
+        private void formVisibleChangedAjouterEtudiant(object sender, EventArgs e)
+        {
+            AjoutEtudiant form = (AjoutEtudiant)sender;
+            if (!form.Visible)
+            {
+                AjouterEtudiant(form.ReturnEtudiant, form.ReturnAnneePromo);
+                form.Dispose();
+            }
         }
     }
 }

@@ -44,7 +44,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(188, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
+            this.label3.Size = new System.Drawing.Size(148, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "nombre minimum d\'eleve";
             // 
@@ -53,7 +53,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(185, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 13);
+            this.label5.Size = new System.Drawing.Size(151, 15);
             this.label5.TabIndex = 1;
             this.label5.Text = "nombre maximum d\'eleve";
             // 
@@ -107,7 +107,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(140, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 13);
+            this.label6.Size = new System.Drawing.Size(196, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Selectionnez un type de promotion";
             // 
@@ -117,7 +117,7 @@
             this.validerType.Name = "validerType";
             this.validerType.Size = new System.Drawing.Size(131, 23);
             this.validerType.TabIndex = 6;
-            this.validerType.Text = "ajouter ce type de projet";
+            this.validerType.Text = "Ajouter";
             this.validerType.UseVisualStyleBackColor = true;
             this.validerType.Click += new System.EventHandler(this.ValiderType_Click);
             // 

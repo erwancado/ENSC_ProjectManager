@@ -41,7 +41,10 @@ namespace ENSC_ProjectManager
             promotions.TryGetValue(annee, out promotion);
             return promotion;
         }
-
+        public void AddEtudiant(Etudiant etudiant)
+        {
+            promotions[etudiant.Promotion.Annee].AjouterEtudiant(etudiant);
+        }
         public Matiere GetMatiere(string code)
         {
             foreach(Matiere matiere in matieres)

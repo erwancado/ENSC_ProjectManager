@@ -12,6 +12,7 @@ namespace ENSC_ProjectManager
 {
     public partial class AjoutType : Form
     {
+        public Type ReturnType;
         public AjoutType()
         {
             InitializeComponent();
@@ -31,7 +32,8 @@ namespace ENSC_ProjectManager
 
         private void ValiderType_Click(object sender, EventArgs e)
         {
-            Type unType = new Type((int)nbMinEleve.Value, (int)nbMaxEleve.Value, listeTypePromo.SelectedItem.ToString());
+            ReturnType = new Type((int)nbMinEleve.Value, (int)nbMaxEleve.Value, listeTypePromo.SelectedItem.ToString());
+            this.Visible = false;
         }
 
         private void ListeTypePromo_Click(object sender, EventArgs e)

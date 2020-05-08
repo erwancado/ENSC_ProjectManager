@@ -34,20 +34,20 @@
             this.dateDebutProjet = new System.Windows.Forms.DateTimePicker();
             this.dateFinProjet = new System.Windows.Forms.DateTimePicker();
             this.listeEtudiants = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_etu = new System.Windows.Forms.Label();
             this.listePromotion = new System.Windows.Forms.CheckedListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_profs = new System.Windows.Forms.Label();
             this.insertEtudiant = new System.Windows.Forms.Button();
             this.insertProfesseur = new System.Windows.Forms.Button();
             this.listeProfesseurs = new System.Windows.Forms.ListBox();
             this.insertExte = new System.Windows.Forms.Button();
             this.listeExtes = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_exte = new System.Windows.Forms.Label();
             this.ajouterLivrable = new System.Windows.Forms.Button();
-            this.livrables = new System.Windows.Forms.Label();
+            this.label_livrables = new System.Windows.Forms.Label();
             this.valider = new System.Windows.Forms.Button();
             this.nomProjet = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_nom_projet = new System.Windows.Forms.Label();
             this.descriptionProjet = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.retirerEtudiant = new System.Windows.Forms.Button();
@@ -81,6 +81,7 @@
             this.ajouterType.TabIndex = 1;
             this.ajouterType.Text = "Ajouter un type";
             this.ajouterType.UseVisualStyleBackColor = true;
+            this.ajouterType.Click += new System.EventHandler(this.ajouterType_Click);
             // 
             // listeMatiere
             // 
@@ -118,14 +119,14 @@
             this.listeEtudiants.TabIndex = 6;
             this.listeEtudiants.SelectedValueChanged += new System.EventHandler(this.listeEtudiants_SelectedValueChanged);
             // 
-            // label1
+            // label_etu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 240);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 15);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Etudiants";
+            this.label_etu.AutoSize = true;
+            this.label_etu.Location = new System.Drawing.Point(72, 240);
+            this.label_etu.Name = "label_etu";
+            this.label_etu.Size = new System.Drawing.Size(58, 15);
+            this.label_etu.TabIndex = 7;
+            this.label_etu.Text = "Etudiants";
             // 
             // listePromotion
             // 
@@ -137,14 +138,14 @@
             this.listePromotion.TabIndex = 8;
             this.listePromotion.SelectedValueChanged += new System.EventHandler(this.ListePromotion_SelectedValueChanged);
             // 
-            // label2
+            // label_profs
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(338, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Professeurs";
+            this.label_profs.AutoSize = true;
+            this.label_profs.Location = new System.Drawing.Point(338, 239);
+            this.label_profs.Name = "label_profs";
+            this.label_profs.Size = new System.Drawing.Size(72, 15);
+            this.label_profs.TabIndex = 9;
+            this.label_profs.Text = "Professeurs";
             // 
             // insertEtudiant
             // 
@@ -196,32 +197,33 @@
             this.listeExtes.TabIndex = 17;
             this.listeExtes.SelectedValueChanged += new System.EventHandler(this.listeExtes_SelectedValueChanged);
             // 
-            // label3
+            // label_exte
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(528, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 15);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Intervenants extérieurs";
+            this.label_exte.AutoSize = true;
+            this.label_exte.Location = new System.Drawing.Point(528, 239);
+            this.label_exte.Name = "label_exte";
+            this.label_exte.Size = new System.Drawing.Size(130, 15);
+            this.label_exte.TabIndex = 16;
+            this.label_exte.Text = "Intervenants extérieurs";
             // 
             // ajouterLivrable
             // 
-            this.ajouterLivrable.Location = new System.Drawing.Point(773, 286);
+            this.ajouterLivrable.Location = new System.Drawing.Point(833, 286);
             this.ajouterLivrable.Name = "ajouterLivrable";
             this.ajouterLivrable.Size = new System.Drawing.Size(105, 23);
             this.ajouterLivrable.TabIndex = 20;
             this.ajouterLivrable.Text = "Ajouter livrable";
             this.ajouterLivrable.UseVisualStyleBackColor = true;
+            this.ajouterLivrable.Click += new System.EventHandler(this.ajouterLivrable_Click);
             // 
-            // livrables
+            // label_livrables
             // 
-            this.livrables.AutoSize = true;
-            this.livrables.Location = new System.Drawing.Point(799, 331);
-            this.livrables.Name = "livrables";
-            this.livrables.Size = new System.Drawing.Size(56, 15);
-            this.livrables.TabIndex = 21;
-            this.livrables.Text = "Livrables";
+            this.label_livrables.AutoSize = true;
+            this.label_livrables.Location = new System.Drawing.Point(859, 331);
+            this.label_livrables.Name = "label_livrables";
+            this.label_livrables.Size = new System.Drawing.Size(56, 15);
+            this.label_livrables.TabIndex = 21;
+            this.label_livrables.Text = "Livrables";
             // 
             // valider
             // 
@@ -239,18 +241,18 @@
             this.nomProjet.Size = new System.Drawing.Size(241, 20);
             this.nomProjet.TabIndex = 24;
             // 
-            // label4
+            // label_nom_projet
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(473, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 15);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Nom du projet";
+            this.label_nom_projet.AutoSize = true;
+            this.label_nom_projet.Location = new System.Drawing.Point(473, 15);
+            this.label_nom_projet.Name = "label_nom_projet";
+            this.label_nom_projet.Size = new System.Drawing.Size(85, 15);
+            this.label_nom_projet.TabIndex = 25;
+            this.label_nom_projet.Text = "Nom du projet";
             // 
             // descriptionProjet
             // 
-            this.descriptionProjet.Location = new System.Drawing.Point(952, 240);
+            this.descriptionProjet.Location = new System.Drawing.Point(1062, 242);
             this.descriptionProjet.Name = "descriptionProjet";
             this.descriptionProjet.Size = new System.Drawing.Size(368, 397);
             this.descriptionProjet.TabIndex = 26;
@@ -259,7 +261,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1080, 222);
+            this.label6.Location = new System.Drawing.Point(1190, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 15);
             this.label6.TabIndex = 28;
@@ -315,9 +317,9 @@
             // affichageLivrables
             // 
             this.affichageLivrables.FormattingEnabled = true;
-            this.affichageLivrables.Location = new System.Drawing.Point(751, 362);
+            this.affichageLivrables.Location = new System.Drawing.Point(755, 362);
             this.affichageLivrables.Name = "affichageLivrables";
-            this.affichageLivrables.Size = new System.Drawing.Size(160, 277);
+            this.affichageLivrables.Size = new System.Drawing.Size(265, 277);
             this.affichageLivrables.TabIndex = 34;
             this.affichageLivrables.SelectedValueChanged += new System.EventHandler(this.affichageLivrables_SelectedValueChanged);
             // 
@@ -329,6 +331,7 @@
             this.ajouterEtudiant.TabIndex = 35;
             this.ajouterEtudiant.Text = "Ajouter un étudiant";
             this.ajouterEtudiant.UseVisualStyleBackColor = true;
+            this.ajouterEtudiant.Click += new System.EventHandler(this.ajouterEtudiant_Click);
             // 
             // ajouterProfesseur
             // 
@@ -360,7 +363,7 @@
             // 
             // retirerLivrable
             // 
-            this.retirerLivrable.Location = new System.Drawing.Point(773, 645);
+            this.retirerLivrable.Location = new System.Drawing.Point(833, 645);
             this.retirerLivrable.Name = "retirerLivrable";
             this.retirerLivrable.Size = new System.Drawing.Size(117, 23);
             this.retirerLivrable.TabIndex = 39;
@@ -372,7 +375,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 727);
+            this.ClientSize = new System.Drawing.Size(1459, 727);
             this.Controls.Add(this.retirerLivrable);
             this.Controls.Add(this.retirerExte);
             this.Controls.Add(this.ajouterExte);
@@ -386,20 +389,20 @@
             this.Controls.Add(this.retirerEtudiant);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.descriptionProjet);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label_nom_projet);
             this.Controls.Add(this.nomProjet);
             this.Controls.Add(this.valider);
-            this.Controls.Add(this.livrables);
+            this.Controls.Add(this.label_livrables);
             this.Controls.Add(this.ajouterLivrable);
             this.Controls.Add(this.insertExte);
             this.Controls.Add(this.listeExtes);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_exte);
             this.Controls.Add(this.insertProfesseur);
             this.Controls.Add(this.listeProfesseurs);
             this.Controls.Add(this.insertEtudiant);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_profs);
             this.Controls.Add(this.listePromotion);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_etu);
             this.Controls.Add(this.listeEtudiants);
             this.Controls.Add(this.dateFinProjet);
             this.Controls.Add(this.dateDebutProjet);
@@ -421,20 +424,20 @@
         private System.Windows.Forms.DateTimePicker dateDebutProjet;
         private System.Windows.Forms.DateTimePicker dateFinProjet;
         private System.Windows.Forms.ListBox listeEtudiants;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_etu;
         private System.Windows.Forms.CheckedListBox listePromotion;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_profs;
         private System.Windows.Forms.Button insertEtudiant;
         private System.Windows.Forms.Button insertProfesseur;
         private System.Windows.Forms.ListBox listeProfesseurs;
         private System.Windows.Forms.Button insertExte;
         private System.Windows.Forms.ListBox listeExtes;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_exte;
         private System.Windows.Forms.Button ajouterLivrable;
-        private System.Windows.Forms.Label livrables;
+        private System.Windows.Forms.Label label_livrables;
         private System.Windows.Forms.Button valider;
         private System.Windows.Forms.TextBox nomProjet;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_nom_projet;
         private System.Windows.Forms.RichTextBox descriptionProjet;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button retirerEtudiant;

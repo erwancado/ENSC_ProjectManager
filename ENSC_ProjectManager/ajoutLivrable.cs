@@ -10,19 +10,21 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
-    public partial class ajoutLivrable : Form
+    public partial class AjoutLivrable : Form
     {
         private DateTime _dateDebutProjet;
         private DateTime _dateFinProjet;
+        public Livrable ReturnLivrable;
 
-        public ajoutLivrable(DateTime dateDebutProjet, DateTime dateFinProjet)
+        public AjoutLivrable(DateTime dateDebutProjet, DateTime dateFinProjet)
         {
             _dateDebutProjet = dateDebutProjet;
             _dateFinProjet = dateFinProjet;
 
             InitializeComponent();
+            rendu.Checked = true;
             valider.Enabled = false;
-            dateRenduLivrable.Value = DateTime.Now;
+            dateRenduLivrable.Value = dateFinProjet;
             listeTypeFichier.Items.Add("pdf");
             listeTypeFichier.Items.Add("video");
             listeTypeFichier.Items.Add("map");
@@ -32,7 +34,8 @@ namespace ENSC_ProjectManager
         private void Valider_Click(object sender, EventArgs e)
         {
             
-             Livrable aRendre = new Livrable(listeTypeFichier.SelectedItem.ToString(), dateRenduLivrable.Value, false, nomDuLivrable.Text);
+            ReturnLivrable = new Livrable(listeTypeFichier.SelectedItem.ToString(), dateRenduLivrable.Value, rendu.Checked, nomDuLivrable.Text);
+            this.Visible = false;
         }
 
         private void DateRenduLivrable_ValueChanged(object sender, EventArgs e)
@@ -41,9 +44,7 @@ namespace ENSC_ProjectManager
             {
                 valider.Enabled = true;
             }
-            int testValiditeDebut = DateTime.Compare(_dateDebutProjet, dateRenduLivrable.Value);
-            int testValiditeFin = DateTime.Compare(dateRenduLivrable.Value, _dateFinProjet);
-            if(testValiditeDebut > 0 || testValiditeFin > 0)
+            if(!DateValide())
             {
                 MessageBox.Show("La date de rendu du livrable doit être comprise entre la date de début et de fin du projet", "Erreur de concordance des dates", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 valider.Enabled = false;
@@ -52,10 +53,17 @@ namespace ENSC_ProjectManager
 
         private void NomDuLivrable_TextChanged(object sender, EventArgs e)
         {
-            if(listeTypeFichier.SelectedIndex!=0)
+            if(listeTypeFichier.SelectedIndex!=0 && DateValide())
             {
                 valider.Enabled = true;
             }
+        }
+
+        private bool DateValide()
+        {
+            int testValiditeDebut = DateTime.Compare(_dateDebutProjet, dateRenduLivrable.Value);
+            int testValiditeFin = DateTime.Compare(dateRenduLivrable.Value, _dateFinProjet);
+            return (dateRenduLivrable.Value==_dateDebutProjet||dateRenduLivrable.Value==_dateFinProjet || !(testValiditeDebut > 0 || testValiditeFin > 0 ));
         }
     }
 }
