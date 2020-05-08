@@ -59,6 +59,24 @@
     <Compile Include="ajoutLivrable.Designer.cs">
       <DependentUpon>ajoutLivrable.cs</DependentUpon>
     </Compile>
+    <Compile Include="ajoutMatiere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutMatiere.Designer.cs">
+      <DependentUpon>ajoutMatiere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutModule.Designer.cs">
+      <DependentUpon>ajoutModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajoutProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutProf.Designer.cs">
+      <DependentUpon>ajoutProf.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +116,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ajoutLivrable.resx">
       <DependentUpon>ajoutLivrable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutMatiere.resx">
+      <DependentUpon>ajoutMatiere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutModule.resx">
+      <DependentUpon>ajoutModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutProf.resx">
+      <DependentUpon>ajoutProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutRoles.resx">
       <DependentUpon>AjoutRoles.cs</DependentUpon>
