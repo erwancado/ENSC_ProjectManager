@@ -79,7 +79,7 @@ namespace ENSC_ProjectManager
                 {
                     foreach (Etudiant etudiant in promotion.Etudiants)
                     {
-                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom+" - promotion "+etudiant.Promotion.Annee);
+                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " - promotion " + etudiant.Promotion.Annee);
                     }
                 }
             }
@@ -164,6 +164,13 @@ namespace ENSC_ProjectManager
             {
                 listeExtes.Items.Add(exterieur.Nom + " " + exterieur.Prenom + " - " + exterieur.Organisation);
             }
+        }
+
+        private void AjouterExte(Exterieur intervenant)
+        {
+            listeExtes.BeginUpdate();
+            listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " - " + intervenant.Organisation);
+            listeExtes.EndUpdate();
         }
         private int AnneePromo(string promotion)
         {
@@ -255,7 +262,7 @@ namespace ENSC_ProjectManager
             RemplirExtes();
         }
 
-       
+
         private void DatesValidation()
         {
             if (dateDebutProjet.Value > dateFinProjet.Value)
@@ -281,7 +288,7 @@ namespace ENSC_ProjectManager
         private void insertEtudiant_Click(object sender, EventArgs e)
         {
             affichageEtudiants.BeginUpdate();
-            if(listeEtudiants.SelectedItem!=null)
+            if (listeEtudiants.SelectedItem != null)
                 affichageEtudiants.Items.Add(listeEtudiants.SelectedItem);
             affichageEtudiants.EndUpdate();
         }
@@ -324,7 +331,7 @@ namespace ENSC_ProjectManager
                 retirerEtudiant.Show();
                 listeEtudiants.ClearSelected();
             }
-                
+
         }
 
         private void listeProfesseurs_SelectedValueChanged(object sender, EventArgs e)
@@ -347,7 +354,7 @@ namespace ENSC_ProjectManager
                 retirerProfesseur.Show();
                 listeProfesseurs.ClearSelected();
             }
-                
+
         }
 
         private void listeExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -359,7 +366,7 @@ namespace ENSC_ProjectManager
                 insertExte.Show();
                 affichageExtes.ClearSelected();
             }
-                
+
         }
 
         private void affichageExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -371,7 +378,7 @@ namespace ENSC_ProjectManager
                 retirerExte.Show();
                 listeExtes.ClearSelected();
             }
-                
+
         }
 
         private void affichageLivrables_SelectedValueChanged(object sender, EventArgs e)
@@ -493,18 +500,35 @@ namespace ENSC_ProjectManager
             }
         }
 
-        private void AjouterMatiere_Click(object sender, EventArgs e)
+        private void ajoutMatiere_Click(object sender, EventArgs e)
         {
             AjoutMatiere formAjoutMatiere = new AjoutMatiere(repertoire);
             formAjoutMatiere.Show();
             formAjoutMatiere.VisibleChanged += formVisibleChangedAjouterMatiere;
         }
+
         private void formVisibleChangedAjouterMatiere(object sender, EventArgs e)
         {
             AjoutMatiere form = (AjoutMatiere)sender;
             if (!form.Visible)
             {
                 AjouterMatiere(form.ReturnMatiere, form.ReturnModule);
+                form.Dispose();
+            }
+        }
+
+        private void ajouterExte_Click(object sender, EventArgs e)
+        {
+            AjoutExterieur formAjoutExterieur = new AjoutExterieur();
+            formAjoutExterieur.Show();
+        }
+
+        private void formVisibleChangedAjouterExterieur(object sender, EventArgs e)
+        {
+            AjoutExterieur form = (AjoutExterieur)sender;
+            if (!form.Visible)
+            {
+                AjouterExte(form.ReturnIntervenant);
                 form.Dispose();
             }
         }
