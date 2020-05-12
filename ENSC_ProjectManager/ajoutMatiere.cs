@@ -18,7 +18,7 @@ namespace ENSC_ProjectManager
             anneeEnseignement.Items.Add("1 ère année");
             anneeEnseignement.Items.Add("2 ème année");
             anneeEnseignement.Items.Add("3 ème année");
-            listeProf.Items.Add(Professeur anidaznpizn);
+            listeProf.Items.Add(Professeur);
 
             Valider.Enabled = false;
 

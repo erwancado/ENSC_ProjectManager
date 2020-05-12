@@ -24,6 +24,7 @@ namespace ENSC_ProjectManager
         {
             typesProjet = new List<Type>();
             promotions = new Dictionary<int, Promotion>();
+            modules = new List<Module>();
             matieres = new List<Matiere>();
             roles = new List<Role>();
             professeurs = new List<Professeur>();
@@ -34,6 +35,13 @@ namespace ENSC_ProjectManager
         public void AddPromotion(Promotion promotion)
         {
             promotions.Add(promotion.Annee, promotion);
+        }
+        public void AddModule(Module mod)
+        {
+            modules.Add(mod);
+            foreach (Matiere matiere in matieres)
+            { matieres.Add(matiere); }
+
         }
         public Promotion GetPromotion(int annee)
         {
