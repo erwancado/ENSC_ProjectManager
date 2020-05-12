@@ -61,6 +61,7 @@
             this.ajouterExte = new System.Windows.Forms.Button();
             this.retirerExte = new System.Windows.Forms.Button();
             this.retirerLivrable = new System.Windows.Forms.Button();
+            this.AjouterMatiere = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listeTypeProjet
@@ -341,6 +342,7 @@
             this.ajouterProfesseur.TabIndex = 36;
             this.ajouterProfesseur.Text = "Ajouter un professeur";
             this.ajouterProfesseur.UseVisualStyleBackColor = true;
+            this.ajouterProfesseur.Click += new System.EventHandler(this.ajouterProfesseur_Click);
             // 
             // ajouterExte
             // 
@@ -371,11 +373,22 @@
             this.retirerLivrable.UseVisualStyleBackColor = true;
             this.retirerLivrable.Click += new System.EventHandler(this.retirerLivrable_Click);
             // 
+            // AjouterMatiere
+            // 
+            this.AjouterMatiere.Location = new System.Drawing.Point(1119, 133);
+            this.AjouterMatiere.Name = "AjouterMatiere";
+            this.AjouterMatiere.Size = new System.Drawing.Size(140, 23);
+            this.AjouterMatiere.TabIndex = 40;
+            this.AjouterMatiere.Text = "Ajouter une matière";
+            this.AjouterMatiere.UseVisualStyleBackColor = true;
+            this.AjouterMatiere.Click += new System.EventHandler(this.AjouterMatiere_Click);
+            // 
             // CreationProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1459, 727);
+            this.Controls.Add(this.AjouterMatiere);
             this.Controls.Add(this.retirerLivrable);
             this.Controls.Add(this.retirerExte);
             this.Controls.Add(this.ajouterExte);
@@ -451,6 +464,7 @@
         private System.Windows.Forms.Button ajouterExte;
         private System.Windows.Forms.Button retirerExte;
         private System.Windows.Forms.Button retirerLivrable;
+        private System.Windows.Forms.Button AjouterMatiere;
     }
 }
 

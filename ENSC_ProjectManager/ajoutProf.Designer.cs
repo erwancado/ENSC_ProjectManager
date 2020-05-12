@@ -1,6 +1,6 @@
 ﻿namespace ENSC_ProjectManager
 {
-    partial class ajoutProf
+    partial class AjoutProf
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,8 @@
             this.mailProf = new System.Windows.Forms.TextBox();
             this.titreProf = new System.Windows.Forms.TextBox();
             this.Valider = new System.Windows.Forms.Button();
+            this.label_matieres = new System.Windows.Forms.Label();
+            this.liste_matieres = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(251, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
             // 
@@ -53,7 +55,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(237, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Prénom";
             // 
@@ -62,7 +64,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(254, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mail";
             // 
@@ -71,7 +73,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(254, 218);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(31, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Titre";
             // 
@@ -105,7 +107,7 @@
             // 
             // Valider
             // 
-            this.Valider.Location = new System.Drawing.Point(282, 284);
+            this.Valider.Location = new System.Drawing.Point(309, 381);
             this.Valider.Name = "Valider";
             this.Valider.Size = new System.Drawing.Size(75, 23);
             this.Valider.TabIndex = 14;
@@ -113,11 +115,34 @@
             this.Valider.UseVisualStyleBackColor = true;
             this.Valider.Click += new System.EventHandler(this.Valider_Click);
             // 
-            // ajoutProf
+            // label_matieres
+            // 
+            this.label_matieres.AutoSize = true;
+            this.label_matieres.Location = new System.Drawing.Point(163, 260);
+            this.label_matieres.Name = "label_matieres";
+            this.label_matieres.Size = new System.Drawing.Size(122, 15);
+            this.label_matieres.TabIndex = 15;
+            this.label_matieres.Text = "Matières enseignées";
+            // 
+            // liste_matieres
+            // 
+            this.liste_matieres.CheckOnClick = true;
+            this.liste_matieres.FormattingEnabled = true;
+            this.liste_matieres.Location = new System.Drawing.Point(309, 260);
+            this.liste_matieres.Name = "liste_matieres";
+            this.liste_matieres.ScrollAlwaysVisible = true;
+            this.liste_matieres.Size = new System.Drawing.Size(244, 94);
+            this.liste_matieres.Sorted = true;
+            this.liste_matieres.TabIndex = 16;
+            this.liste_matieres.ThreeDCheckBoxes = true;
+            // 
+            // AjoutProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.liste_matieres);
+            this.Controls.Add(this.label_matieres);
             this.Controls.Add(this.Valider);
             this.Controls.Add(this.titreProf);
             this.Controls.Add(this.mailProf);
@@ -127,8 +152,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ajoutProf";
-            this.Text = "ajoutProf";
+            this.Name = "AjoutProf";
+            this.Text = "Ajout d\'un professeur";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +170,7 @@
         private System.Windows.Forms.TextBox mailProf;
         private System.Windows.Forms.TextBox titreProf;
         private System.Windows.Forms.Button Valider;
+        private System.Windows.Forms.Label label_matieres;
+        private System.Windows.Forms.CheckedListBox liste_matieres;
     }
 }

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
-    public partial class ajoutModule : Form
+    public partial class AjoutModule : Form
     {
-        public ajoutModule()
+        public AjoutModule()
         {
             InitializeComponent();
-           Valider.Enanable = false;
+           Valider.Enabled = false;
             if (codeModule.ToString().Length > 0 && libelleModule.ToString().Length > 0)
                 Valider.Enabled = true;
 

@@ -127,6 +127,14 @@ namespace ENSC_ProjectManager
             }
             listeMatiere.EndUpdate();
         }
+
+        private void AjouterMatiere(Matiere matiere, Module module)
+        {
+            repertoire.AddMatiere(matiere, module);
+            listeMatiere.BeginUpdate();
+            listeMatiere.Items.Add(matiere.Code + "-" + matiere.Libelle);
+            listeMatiere.EndUpdate();
+        }
         private void RemplirProfesseurs(Matiere[] matieres)
         {
             listeProfesseurs.BeginUpdate();
@@ -138,6 +146,14 @@ namespace ENSC_ProjectManager
                     listeProfesseurs.Items.Add(professeur.Nom + " " + professeur.Prenom);
                 }
             }
+            listeProfesseurs.EndUpdate();
+        }
+
+        private void AjouterProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
+        {
+            repertoire.AddProfesseur(professeur, matieresEnseignees);
+            listeProfesseurs.BeginUpdate();
+            listeProfesseurs.Items.Add(professeur.Nom + " " + professeur.Prenom);
             listeProfesseurs.EndUpdate();
         }
         private void RemplirExtes()
@@ -457,6 +473,38 @@ namespace ENSC_ProjectManager
             if (!form.Visible)
             {
                 AjouterEtudiant(form.ReturnEtudiant, form.ReturnAnneePromo);
+                form.Dispose();
+            }
+        }
+
+        private void ajouterProfesseur_Click(object sender, EventArgs e)
+        {
+            AjoutProf formAjoutProf = new AjoutProf(repertoire);
+            formAjoutProf.Show();
+            formAjoutProf.VisibleChanged += formVisibleChangedAjouterProfesseur;
+        }
+        private void formVisibleChangedAjouterProfesseur(object sender, EventArgs e)
+        {
+            AjoutProf form = (AjoutProf)sender;
+            if (!form.Visible)
+            {
+                AjouterProfesseur(form.ReturnProfesseur, form.ReturnMatieresEnseignees);
+                form.Dispose();
+            }
+        }
+
+        private void AjouterMatiere_Click(object sender, EventArgs e)
+        {
+            AjoutMatiere formAjoutMatiere = new AjoutMatiere(repertoire);
+            formAjoutMatiere.Show();
+            formAjoutMatiere.VisibleChanged += formVisibleChangedAjouterMatiere;
+        }
+        private void formVisibleChangedAjouterMatiere(object sender, EventArgs e)
+        {
+            AjoutMatiere form = (AjoutMatiere)sender;
+            if (!form.Visible)
+            {
+                AjouterMatiere(form.ReturnMatiere, form.ReturnModule);
                 form.Dispose();
             }
         }
