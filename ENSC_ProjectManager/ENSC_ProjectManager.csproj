@@ -53,6 +53,12 @@
     <Compile Include="AjoutEtudiant.Designer.cs">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="ajoutExterieur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutExterieur.Designer.cs">
+      <DependentUpon>ajoutExterieur.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutLivrable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Type.cs" />
     <EmbeddedResource Include="AjoutEtudiant.resx">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutExterieur.resx">
+      <DependentUpon>ajoutExterieur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutLivrable.resx">
       <DependentUpon>AjoutLivrable.cs</DependentUpon>
