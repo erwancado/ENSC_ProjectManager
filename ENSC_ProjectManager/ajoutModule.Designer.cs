@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.libelleModule = new System.Windows.Forms.TextBox();
             this.Valider = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.promo = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +74,7 @@
             // 
             // Valider
             // 
-            this.Valider.Location = new System.Drawing.Point(310, 193);
+            this.Valider.Location = new System.Drawing.Point(313, 280);
             this.Valider.Name = "Valider";
             this.Valider.Size = new System.Drawing.Size(75, 23);
             this.Valider.TabIndex = 13;
@@ -80,17 +82,37 @@
             this.Valider.UseVisualStyleBackColor = true;
             this.Valider.Click += new System.EventHandler(this.Valider_Click);
             // 
-            // ajoutModule
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(285, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Promo";
+            // 
+            // promo
+            // 
+            this.promo.FormattingEnabled = true;
+            this.promo.HorizontalScrollbar = true;
+            this.promo.Location = new System.Drawing.Point(348, 160);
+            this.promo.Name = "promo";
+            this.promo.Size = new System.Drawing.Size(120, 94);
+            this.promo.TabIndex = 15;
+            // 
+            // AjoutModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.promo);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Valider);
             this.Controls.Add(this.libelleModule);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.codeModule);
             this.Controls.Add(this.label1);
-            this.Name = "ajoutModule";
+            this.Name = "AjoutModule";
             this.Text = "ajoutModule";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,5 +126,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox libelleModule;
         private System.Windows.Forms.Button Valider;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox promo;
     }
 }

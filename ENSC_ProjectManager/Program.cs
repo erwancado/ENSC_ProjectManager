@@ -19,21 +19,15 @@ namespace ENSC_ProjectManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Repertoire repertoire = new Repertoire();
-            String[] typesPromos = { "1A", "2A", "3A", "transpromo" };
-            repertoire.typesPromos = typesPromos;
-            Type projetProg = new Type(1, 2, typesPromos[0]);
-            Type transpromo = new Type(4, 6, typesPromos[3]);
-            repertoire.typesProjet.Add(projetProg);
-            repertoire.typesProjet.Add(transpromo);
-            Application.Run(new CreationProjet(repertoire));
+
             try
             {
-                using(StreamReader sr =new StreamReader("liste.txt"))
+                using (StreamReader sr = new StreamReader("liste.txt"))
                 {
                     string line;
                     Module module = null;
                     string promo = null;
-                    while ((line=sr.ReadLine())!=null)
+                    while ((line = sr.ReadLine()) != null)
                     {
                         if (line.StartsWith("+"))
                         {
@@ -63,13 +57,21 @@ namespace ENSC_ProjectManager
                     }
                     repertoire.AddModule(module);
                 }
-               
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("le fichier n'a pas pu être lu");
                 Console.WriteLine(e.Message);
             }
+            String[] typesPromos = { "1A", "2A", "3A", "transpromo" };
+            repertoire.typesPromos = typesPromos;
+            Type projetProg = new Type(1, 2, typesPromos[0]);
+            Type transpromo = new Type(4, 6, typesPromos[3]);
+            repertoire.typesProjet.Add(projetProg);
+            repertoire.typesProjet.Add(transpromo);
+           
+            Application.Run(new CreationProjet(repertoire));
         }
         
     }
