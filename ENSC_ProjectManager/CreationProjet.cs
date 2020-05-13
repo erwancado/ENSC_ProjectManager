@@ -168,6 +168,7 @@ namespace ENSC_ProjectManager
 
         private void AjouterExte(Exterieur intervenant)
         {
+            repertoire.intervenantsExte.Add(intervenant);
             listeExtes.BeginUpdate();
             listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " - " + intervenant.Organisation);
             listeExtes.EndUpdate();

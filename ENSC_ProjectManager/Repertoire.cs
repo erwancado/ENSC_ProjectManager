@@ -110,7 +110,6 @@ namespace ENSC_ProjectManager
                 return null;
             }
         }
-
         public void SaveData(string filename)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));

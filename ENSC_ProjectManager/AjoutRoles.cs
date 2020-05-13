@@ -12,9 +12,26 @@ namespace ENSC_ProjectManager
 {
     public partial class AjoutRoles : Form
     {
-        public AjoutRoles()
+        List<Intervenant> Intervenants;
+        public AjoutRoles(List<Intervenant> intervenants)
         {
             InitializeComponent();
+            Intervenants = intervenants;
+            descriptionCol2.Hide();
+            libelle_role.Hide();
+            ajouterRole.Hide();
+            RemplirIntervenants();
+        }
+
+        private void RemplirIntervenants()
+        {
+            liste_intervenants.BeginUpdate();
+            liste_intervenants.Items.Clear();
+            foreach(Intervenant intervenant in Intervenants)
+            {
+                liste_intervenants.Items.Add(intervenant.Nom + " " + intervenant.Prenom+" "+intervenant.Mail);
+            }
+            liste_intervenants.EndUpdate();
         }
     }
 }
