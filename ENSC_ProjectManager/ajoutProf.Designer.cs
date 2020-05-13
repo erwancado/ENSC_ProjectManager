@@ -131,7 +131,7 @@
             this.liste_matieres.Location = new System.Drawing.Point(309, 260);
             this.liste_matieres.Name = "liste_matieres";
             this.liste_matieres.ScrollAlwaysVisible = true;
-            this.liste_matieres.Size = new System.Drawing.Size(244, 94);
+            this.liste_matieres.Size = new System.Drawing.Size(330, 94);
             this.liste_matieres.Sorted = true;
             this.liste_matieres.TabIndex = 16;
             this.liste_matieres.ThreeDCheckBoxes = true;
