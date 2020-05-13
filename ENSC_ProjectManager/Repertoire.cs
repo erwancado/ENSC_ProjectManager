@@ -53,6 +53,25 @@ namespace ENSC_ProjectManager
         {
             promotions[etudiant.Promotion.Annee].AjouterEtudiant(etudiant);
         }
+
+        public void AddProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
+        {
+            professeurs.Add(professeur);
+            foreach(Matiere matiere in matieresEnseignees)
+            {
+                int index = matieres.FindIndex(m => m.Code.Equals(matiere.Code));
+                matieres[index].AjouterProfesseur(professeur);
+            }
+        }
+        public Professeur GetProfesseur(string nom, string prenom)
+        {
+            foreach(Professeur professeur in professeurs)
+            {
+                if (professeur.Nom.Equals(nom) && professeur.Prenom.Equals(prenom))
+                    return professeur;
+            }
+            return null;
+        }
         public Matiere GetMatiere(string code)
         {
             foreach(Matiere matiere in matieres)
@@ -64,7 +83,25 @@ namespace ENSC_ProjectManager
             }
             return null;
         }
+
+        public void AddMatiere(Matiere matiere,Module module)
+        {
+            matieres.Add(matiere);
+            modules.Find(m => m.Code.Equals(module.Code)).AjouterMatiere(matiere);
+        }
         
+        public Module GetModule(string code)
+        {
+            foreach(Module module in modules)
+            {
+                if (module.Code.Equals(code))
+                {
+                    return module;
+                }
+            }
+            return null;
+        }
+
         public Etudiant GetEtudiant(int anneePromo, string nom, string prenom)
         {
             Promotion promotion;

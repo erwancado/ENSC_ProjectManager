@@ -53,11 +53,11 @@
     <Compile Include="AjoutEtudiant.Designer.cs">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajoutExterieur.cs">
+    <Compile Include="AjoutExterieur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutExterieur.Designer.cs">
-      <DependentUpon>ajoutExterieur.cs</DependentUpon>
+    <Compile Include="AjoutExterieur.Designer.cs">
+      <DependentUpon>AjoutExterieur.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutLivrable.cs">
       <SubType>Form</SubType>
@@ -65,23 +65,23 @@
     <Compile Include="AjoutLivrable.Designer.cs">
       <DependentUpon>AjoutLivrable.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajoutMatiere.cs">
+    <Compile Include="AjoutMatiere.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutMatiere.Designer.cs">
-      <DependentUpon>ajoutMatiere.cs</DependentUpon>
+    <Compile Include="AjoutMatiere.Designer.cs">
+      <DependentUpon>AjoutMatiere.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajoutModule.cs">
+    <Compile Include="AjoutModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutModule.Designer.cs">
-      <DependentUpon>ajoutModule.cs</DependentUpon>
+    <Compile Include="AjoutModule.Designer.cs">
+      <DependentUpon>AjoutModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajoutProf.cs">
+    <Compile Include="AjoutProf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajoutProf.Designer.cs">
-      <DependentUpon>ajoutProf.cs</DependentUpon>
+    <Compile Include="AjoutProf.Designer.cs">
+      <DependentUpon>AjoutProf.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutRoles.cs">
       <SubType>Form</SubType>
@@ -120,20 +120,20 @@
     <EmbeddedResource Include="AjoutEtudiant.resx">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajoutExterieur.resx">
-      <DependentUpon>ajoutExterieur.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutExterieur.resx">
+      <DependentUpon>AjoutExterieur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutLivrable.resx">
       <DependentUpon>AjoutLivrable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajoutMatiere.resx">
-      <DependentUpon>ajoutMatiere.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutMatiere.resx">
+      <DependentUpon>AjoutMatiere.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajoutModule.resx">
-      <DependentUpon>ajoutModule.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutModule.resx">
+      <DependentUpon>AjoutModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajoutProf.resx">
-      <DependentUpon>ajoutProf.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutProf.resx">
+      <DependentUpon>AjoutProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutRoles.resx">
       <DependentUpon>AjoutRoles.cs</DependentUpon>

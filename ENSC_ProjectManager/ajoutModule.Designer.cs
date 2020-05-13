@@ -1,6 +1,6 @@
 ﻿namespace ENSC_ProjectManager
 {
-    partial class ajoutModule
+    partial class AjoutModule
     {
         /// <summary>
         /// Required designer variable.

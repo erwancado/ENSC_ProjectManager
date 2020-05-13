@@ -79,7 +79,7 @@ namespace ENSC_ProjectManager
                 {
                     foreach (Etudiant etudiant in promotion.Etudiants)
                     {
-                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom+" - promotion "+etudiant.Promotion.Annee);
+                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " - promotion " + etudiant.Promotion.Annee);
                     }
                 }
             }
@@ -127,6 +127,14 @@ namespace ENSC_ProjectManager
             }
             listeMatiere.EndUpdate();
         }
+
+        private void AjouterMatiere(Matiere matiere, Module module)
+        {
+            repertoire.AddMatiere(matiere, module);
+            listeMatiere.BeginUpdate();
+            listeMatiere.Items.Add(matiere.Code + "-" + matiere.Libelle);
+            listeMatiere.EndUpdate();
+        }
         private void RemplirProfesseurs(Matiere[] matieres)
         {
             listeProfesseurs.BeginUpdate();
@@ -140,6 +148,14 @@ namespace ENSC_ProjectManager
             }
             listeProfesseurs.EndUpdate();
         }
+
+        private void AjouterProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
+        {
+            repertoire.AddProfesseur(professeur, matieresEnseignees);
+            listeProfesseurs.BeginUpdate();
+            listeProfesseurs.Items.Add(professeur.Nom + " " + professeur.Prenom);
+            listeProfesseurs.EndUpdate();
+        }
         private void RemplirExtes()
         {
             listeExtes.BeginUpdate();
@@ -148,6 +164,13 @@ namespace ENSC_ProjectManager
             {
                 listeExtes.Items.Add(exterieur.Nom + " " + exterieur.Prenom + " - " + exterieur.Organisation);
             }
+        }
+
+        private void AjouterExte(Exterieur intervenant)
+        {
+            listeExtes.BeginUpdate();
+            listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " - " + intervenant.Organisation);
+            listeExtes.EndUpdate();
         }
         private int AnneePromo(string promotion)
         {
@@ -239,7 +262,7 @@ namespace ENSC_ProjectManager
             RemplirExtes();
         }
 
-       
+
         private void DatesValidation()
         {
             if (dateDebutProjet.Value > dateFinProjet.Value)
@@ -265,7 +288,7 @@ namespace ENSC_ProjectManager
         private void insertEtudiant_Click(object sender, EventArgs e)
         {
             affichageEtudiants.BeginUpdate();
-            if(listeEtudiants.SelectedItem!=null)
+            if (listeEtudiants.SelectedItem != null)
                 affichageEtudiants.Items.Add(listeEtudiants.SelectedItem);
             affichageEtudiants.EndUpdate();
         }
@@ -308,7 +331,7 @@ namespace ENSC_ProjectManager
                 retirerEtudiant.Show();
                 listeEtudiants.ClearSelected();
             }
-                
+
         }
 
         private void listeProfesseurs_SelectedValueChanged(object sender, EventArgs e)
@@ -331,7 +354,7 @@ namespace ENSC_ProjectManager
                 retirerProfesseur.Show();
                 listeProfesseurs.ClearSelected();
             }
-                
+
         }
 
         private void listeExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -343,7 +366,7 @@ namespace ENSC_ProjectManager
                 insertExte.Show();
                 affichageExtes.ClearSelected();
             }
-                
+
         }
 
         private void affichageExtes_SelectedValueChanged(object sender, EventArgs e)
@@ -355,7 +378,7 @@ namespace ENSC_ProjectManager
                 retirerExte.Show();
                 listeExtes.ClearSelected();
             }
-                
+
         }
 
         private void affichageLivrables_SelectedValueChanged(object sender, EventArgs e)
@@ -457,6 +480,55 @@ namespace ENSC_ProjectManager
             if (!form.Visible)
             {
                 AjouterEtudiant(form.ReturnEtudiant, form.ReturnAnneePromo);
+                form.Dispose();
+            }
+        }
+
+        private void ajouterProfesseur_Click(object sender, EventArgs e)
+        {
+            AjoutProf formAjoutProf = new AjoutProf(repertoire);
+            formAjoutProf.Show();
+            formAjoutProf.VisibleChanged += formVisibleChangedAjouterProfesseur;
+        }
+        private void formVisibleChangedAjouterProfesseur(object sender, EventArgs e)
+        {
+            AjoutProf form = (AjoutProf)sender;
+            if (!form.Visible)
+            {
+                AjouterProfesseur(form.ReturnProfesseur, form.ReturnMatieresEnseignees);
+                form.Dispose();
+            }
+        }
+
+        private void ajoutMatiere_Click(object sender, EventArgs e)
+        {
+            AjoutMatiere formAjoutMatiere = new AjoutMatiere(repertoire);
+            formAjoutMatiere.Show();
+            formAjoutMatiere.VisibleChanged += formVisibleChangedAjouterMatiere;
+        }
+
+        private void formVisibleChangedAjouterMatiere(object sender, EventArgs e)
+        {
+            AjoutMatiere form = (AjoutMatiere)sender;
+            if (!form.Visible)
+            {
+                AjouterMatiere(form.ReturnMatiere, form.ReturnModule);
+                form.Dispose();
+            }
+        }
+
+        private void ajouterExte_Click(object sender, EventArgs e)
+        {
+            AjoutExterieur formAjoutExterieur = new AjoutExterieur();
+            formAjoutExterieur.Show();
+        }
+
+        private void formVisibleChangedAjouterExterieur(object sender, EventArgs e)
+        {
+            AjoutExterieur form = (AjoutExterieur)sender;
+            if (!form.Visible)
+            {
+                AjouterExte(form.ReturnIntervenant);
                 form.Dispose();
             }
         }

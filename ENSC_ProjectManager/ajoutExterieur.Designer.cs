@@ -1,6 +1,6 @@
 ﻿namespace ENSC_ProjectManager
 {
-    partial class ajoutExterieur
+    partial class AjoutExterieur
     {
         /// <summary>
         /// Required designer variable.
@@ -44,36 +44,36 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(297, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "nom";
+            this.label1.Text = "Nom";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(282, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "prénom";
+            this.label2.Text = "Prénom";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(297, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 2;
-            this.label3.Text = "mail";
+            this.label3.Text = "Mail";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(260, 173);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(77, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "organisation";
+            this.label4.Text = "Organisation";
             // 
             // nomExte
             // 
@@ -113,7 +113,7 @@
             this.Valider.UseVisualStyleBackColor = true;
             this.Valider.Click += new System.EventHandler(this.Valider_Click);
             // 
-            // ajoutExterieur
+            // AjoutExterieur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ajoutExterieur";
+            this.Name = "AjoutExterieur";
             this.Text = "ajoutExterieur";
             this.ResumeLayout(false);
             this.PerformLayout();

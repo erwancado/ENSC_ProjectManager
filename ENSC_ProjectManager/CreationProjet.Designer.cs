@@ -61,6 +61,7 @@
             this.ajouterExte = new System.Windows.Forms.Button();
             this.retirerExte = new System.Windows.Forms.Button();
             this.retirerLivrable = new System.Windows.Forms.Button();
+            this.ajoutMatiere = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listeTypeProjet
@@ -130,6 +131,7 @@
             // 
             // listePromotion
             // 
+            this.listePromotion.CheckOnClick = true;
             this.listePromotion.FormattingEnabled = true;
             this.listePromotion.Location = new System.Drawing.Point(476, 122);
             this.listePromotion.Name = "listePromotion";
@@ -341,6 +343,7 @@
             this.ajouterProfesseur.TabIndex = 36;
             this.ajouterProfesseur.Text = "Ajouter un professeur";
             this.ajouterProfesseur.UseVisualStyleBackColor = true;
+            this.ajouterProfesseur.Click += new System.EventHandler(this.ajouterProfesseur_Click);
             // 
             // ajouterExte
             // 
@@ -350,6 +353,7 @@
             this.ajouterExte.TabIndex = 37;
             this.ajouterExte.Text = "Ajouter un intervenant";
             this.ajouterExte.UseVisualStyleBackColor = true;
+            this.ajouterExte.Click += new System.EventHandler(this.ajouterExte_Click);
             // 
             // retirerExte
             // 
@@ -371,11 +375,22 @@
             this.retirerLivrable.UseVisualStyleBackColor = true;
             this.retirerLivrable.Click += new System.EventHandler(this.retirerLivrable_Click);
             // 
+            // ajoutMatiere
+            // 
+            this.ajoutMatiere.Location = new System.Drawing.Point(1124, 132);
+            this.ajoutMatiere.Name = "ajoutMatiere";
+            this.ajoutMatiere.Size = new System.Drawing.Size(130, 23);
+            this.ajoutMatiere.TabIndex = 40;
+            this.ajoutMatiere.Text = "Ajouter une matière";
+            this.ajoutMatiere.UseVisualStyleBackColor = true;
+            this.ajoutMatiere.Click += new System.EventHandler(this.ajoutMatiere_Click);
+            // 
             // CreationProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1459, 727);
+            this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);
             this.Controls.Add(this.retirerExte);
             this.Controls.Add(this.ajouterExte);
@@ -451,6 +466,7 @@
         private System.Windows.Forms.Button ajouterExte;
         private System.Windows.Forms.Button retirerExte;
         private System.Windows.Forms.Button retirerLivrable;
+        private System.Windows.Forms.Button ajoutMatiere;
     }
 }
 
