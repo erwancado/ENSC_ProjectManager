@@ -26,7 +26,7 @@ namespace ENSC_ProjectManager
             if (nomExte.Text.Length > 1 && prenomExte.Text.Length > 0 && mailExte.Text.Length > 7 && organisationExte.Text.Length > 1) {
                 if (RegexUtilities.IsValidEmail(mailExte.Text))
                 {
-                    ReturnIntervenant = new Exterieur(nomExte.Text, prenomExte.Text, mailExte.Text, organisationExte.Text);
+                    ReturnIntervenant = new Exterieur(nomExte.Text.Replace(' ', '-'), prenomExte.Text.Replace(' ', '-'), mailExte.Text, organisationExte.Text);
                     this.Visible = false;
                 }
                 else

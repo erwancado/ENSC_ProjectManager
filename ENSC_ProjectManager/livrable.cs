@@ -28,5 +28,9 @@ namespace ENSC_ProjectManager
             _rendu = Rendu;
             _libelle = Libelle;
         }
+        public Livrable()
+        {
+
+        }
     }
 }

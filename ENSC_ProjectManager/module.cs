@@ -37,7 +37,7 @@ namespace ENSC_ProjectManager
             foreach(Matiere matiere in matieres)
             {
                 _listeMatieres.Add(matiere);
-                matiere.Module = this;
+                matiere.CodeModule = Code;
             }
         }
     }

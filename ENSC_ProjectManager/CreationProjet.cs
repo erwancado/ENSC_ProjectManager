@@ -14,6 +14,7 @@ namespace ENSC_ProjectManager
     {
         Repertoire repertoire;
         List<Livrable> liste_livrables;
+        Type typeProjet;
         public CreationProjet(Repertoire repertoire)
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace ENSC_ProjectManager
             listeEtudiants.Enabled = false;
             listeProfesseurs.Enabled = false;
             listeExtes.Enabled = false;
+            valider.Enabled = false;
             insertExte.Hide();
             insertProfesseur.Hide();
             insertEtudiant.Hide();
@@ -35,6 +37,7 @@ namespace ENSC_ProjectManager
             retirerLivrable.Hide();
             ajouterLivrable.Enabled = false;
             ajouterEtudiant.Enabled = false;
+
             RemplirTypesProjet();
         }
         private void RemplirTypesProjet()
@@ -79,7 +82,7 @@ namespace ENSC_ProjectManager
                 {
                     foreach (Etudiant etudiant in promotion.Etudiants)
                     {
-                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " - promotion " + etudiant.Promotion.Annee);
+                        listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " _ promotion " + etudiant.AnneePromotion);
                     }
                 }
             }
@@ -94,13 +97,12 @@ namespace ENSC_ProjectManager
                 promotion = new Promotion(anneePromo);
             }
             promotion.AjouterEtudiant(etudiant);
-            etudiant.Promotion = promotion;
             if (promoVide)
                 repertoire.AddPromotion(promotion);
             else
                 repertoire.AddEtudiant(etudiant);
             listeEtudiants.BeginUpdate();
-            listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " - promotion " + etudiant.Promotion.Annee);
+            listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " _ promotion " + etudiant.AnneePromotion);
             listeEtudiants.EndUpdate();
 
         }
@@ -214,6 +216,7 @@ namespace ENSC_ProjectManager
             string[] promotions = GetPromotions(libPromo);
             RemplirPromos(promotions);
             RemplirMatieres(promotions);
+            typeProjet = repertoire.typesProjet[listeTypeProjet.SelectedIndex];
         }
 
         private string[] GetPromotions(string libPromo)
@@ -288,10 +291,21 @@ namespace ENSC_ProjectManager
 
         private void insertEtudiant_Click(object sender, EventArgs e)
         {
-            affichageEtudiants.BeginUpdate();
-            if (listeEtudiants.SelectedItem != null)
-                affichageEtudiants.Items.Add(listeEtudiants.SelectedItem);
-            affichageEtudiants.EndUpdate();
+            if (affichageEtudiants.Items.Count < typeProjet.NbMaxEtudiants)
+            {
+                affichageEtudiants.BeginUpdate();
+                if (listeEtudiants.SelectedItem != null)
+                    affichageEtudiants.Items.Add(listeEtudiants.SelectedItem);
+                affichageEtudiants.EndUpdate();
+                if (affichageEtudiants.Items.Count >= typeProjet.NbMinEtudiants)
+                {
+                    valider.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nombre maximum d'étudiants atteint", "Le type de projet choisi indique un maximum de ."+typeProjet.NbMaxEtudiants+" étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void retirerEtudiant_Click(object sender, EventArgs e)
@@ -301,6 +315,10 @@ namespace ENSC_ProjectManager
                 affichageEtudiants.BeginUpdate();
                 affichageEtudiants.Items.RemoveAt(affichageEtudiants.SelectedIndex);
                 affichageEtudiants.EndUpdate();
+                if(affichageEtudiants.Items.Count < typeProjet.NbMinEtudiants)
+                {
+                    valider.Enabled = false;
+                }
             }
         }
 
@@ -531,6 +549,114 @@ namespace ENSC_ProjectManager
             {
                 AjouterExte(form.ReturnIntervenant);
                 form.Dispose();
+            }
+        }
+
+        private List<Etudiant> EtudiantsProjet()
+        {
+            List<Etudiant> etudiants = new List<Etudiant>();
+            for(int i=0; i < affichageEtudiants.Items.Count;i++)
+            {
+                string strEtudiant = affichageEtudiants.Items[i].ToString();
+                string nomEtPrenom = strEtudiant.Split('_')[0];
+                string promotion = strEtudiant.Split('_')[1];
+                Etudiant etudiant = repertoire.GetEtudiant(int.Parse(promotion.Split(' ')[2]), nomEtPrenom.Split(' ')[0], nomEtPrenom.Split(' ')[1]);
+                if (etudiant != null)
+                    etudiants.Add(etudiant);
+            }
+            return etudiants;
+        }
+
+        private List<Professeur> ProfesseursProjet()
+        {
+            List<Professeur> professeurs = new List<Professeur>();
+            for(int i=0; i < affichageProfesseurs.Items.Count; i++)
+            {
+                string strProf = affichageProfesseurs.Items[i].ToString();
+                Professeur professeur = repertoire.GetProfesseur(strProf.Split(' ')[0], strProf.Split(' ')[1]);
+                if (professeur != null)
+                    professeurs.Add(professeur);
+            }
+            return professeurs;
+        }
+
+        private List<Exterieur> IntervenantsExteProjet()
+        {
+            List<Exterieur> intervenantsExte = new List<Exterieur>();
+            for(int i = 0; i < affichageExtes.Items.Count; i++)
+            {
+                string strExte = affichageExtes.Items[i].ToString();
+                Exterieur exterieur = repertoire.GetExterieur(strExte.Split(' ')[0], strExte.Split(' ')[1], strExte.Split(' ')[2]);
+                if (exterieur != null)
+                {
+                    intervenantsExte.Add(exterieur);
+                }
+            }
+            return intervenantsExte;
+        }
+
+        private List<Matiere> MatieresProjet()
+        {
+            List<Matiere> matieres = new List<Matiere>();
+            for(int i=0; i < listeMatiere.CheckedItems.Count; i++)
+            {
+                Matiere matiere = repertoire.GetMatiere(listeMatiere.CheckedItems[i].ToString().Split('-')[0]);
+                if (matiere != null)
+                    matieres.Add(matiere);
+            }
+            return matieres;
+        }
+        private void valider_Click(object sender, EventArgs e)
+        {
+            List<Intervenant> intervenants = new List<Intervenant>();
+            List<Etudiant> etudiantsProjet = EtudiantsProjet();
+            foreach (Etudiant etudiant in etudiantsProjet)
+                intervenants.Add(etudiant);
+            foreach (Professeur professeur in ProfesseursProjet())
+                intervenants.Add(professeur);
+            foreach (Exterieur exterieur in IntervenantsExteProjet())
+                intervenants.Add(exterieur);
+            if (nomProjet.TextLength > 0)
+            {
+                if (listeMatiere.CheckedItems.Count > 0)
+                {
+                    if(etudiantsProjet.Count>=typeProjet.NbMinEtudiants && etudiantsProjet.Count <= typeProjet.NbMaxEtudiants)
+                    {
+                        if (liste_livrables.Count > 0)
+                        {
+                            AjoutRoles formAjoutRoles = new AjoutRoles(intervenants, repertoire);
+                            formAjoutRoles.Show();
+                            formAjoutRoles.VisibleChanged += formVisibleChangedAjouterRoles;
+                        }
+                        else
+                            MessageBox.Show("Livrable manquant", "Veuillez ajouter un livrable au projet.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                        MessageBox.Show("Nombre d'étudiants incorrect", "Le groupe de projet doit être composé de "
+                            +typeProjet.NbMinEtudiants+" à "+typeProjet.NbMaxEtudiants+" étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    MessageBox.Show("Matière manquante", "Veuillez sélectionner la ou les matières dont fait parti le projet.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Nom de projet manquant", "Veuillez renseigner le nom du projet.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void formVisibleChangedAjouterRoles(object sender, EventArgs e)
+        {
+            AjoutRoles form = (AjoutRoles)sender;
+            if (!form.Visible)
+            {
+                repertoire.roles.AddRange(form.ReturnRoles);
+                Projet projet = new Projet(nomProjet.Text, descriptionProjet.Text, dateDebutProjet.Value, dateFinProjet.Value, typeProjet);
+                projet.ListeLivrables = liste_livrables;
+                projet.ListeRoles = form.ReturnRoles;
+                projet.ListeMatieres = MatieresProjet();
+                repertoire.projets.Add(projet);
+                repertoire.SaveData();
+                form.Dispose();
+                this.Close();
             }
         }
     }

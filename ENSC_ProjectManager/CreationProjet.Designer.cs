@@ -87,10 +87,10 @@
             // listeMatiere
             // 
             this.listeMatiere.FormattingEnabled = true;
-            this.listeMatiere.Location = new System.Drawing.Point(732, 122);
+            this.listeMatiere.Location = new System.Drawing.Point(732, 92);
             this.listeMatiere.Name = "listeMatiere";
             this.listeMatiere.ScrollAlwaysVisible = true;
-            this.listeMatiere.Size = new System.Drawing.Size(372, 34);
+            this.listeMatiere.Size = new System.Drawing.Size(372, 109);
             this.listeMatiere.TabIndex = 3;
             this.listeMatiere.SelectedValueChanged += new System.EventHandler(this.ListeMatiere_SelectedValueChanged);
             // 
@@ -235,6 +235,7 @@
             this.valider.TabIndex = 23;
             this.valider.Text = "Valider et passer aux rôles";
             this.valider.UseVisualStyleBackColor = true;
+            this.valider.Click += new System.EventHandler(this.valider_Click);
             // 
             // nomProjet
             // 

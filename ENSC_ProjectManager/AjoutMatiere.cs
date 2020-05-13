@@ -24,6 +24,7 @@ namespace ENSC_ProjectManager
             anneeEnseignement.Items.Add("2A");
             anneeEnseignement.Items.Add("3A");
             RemplirProfesseurs();
+            RemplirModules("");
         }
 
         private void Valider_Click(object sender, EventArgs e)
@@ -89,15 +90,31 @@ namespace ENSC_ProjectManager
             listeProf.EndUpdate();
         }
 
-        private void RemplirModules()
+        private void RemplirModules(string promo)
         {
             liste_modules.BeginUpdate();
             liste_modules.Items.Clear();
-            foreach(Module module in Repertoire.modules)
+            if(promo.Equals(""))
             {
-                liste_modules.Items.Add(module.Code + "-" + module.Libelle);
+                foreach (Module module in Repertoire.modules)
+                {
+                    liste_modules.Items.Add(module.Code + "-" + module.Libelle);
+                }
+            }
+            else
+            {
+                foreach (Module module in Repertoire.modules)
+                {
+                    if(module.Promo.Equals(promo))
+                        liste_modules.Items.Add(module.Code + "-" + module.Libelle);
+                }
             }
             liste_modules.EndUpdate();
+        }
+
+        private void anneeEnseignement_SelectedValueChanged(object sender, EventArgs e)
+        {
+            RemplirModules(anneeEnseignement.SelectedItem.ToString());
         }
     }
 }
