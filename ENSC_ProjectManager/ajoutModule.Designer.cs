@@ -35,7 +35,7 @@
             this.libelleModule = new System.Windows.Forms.TextBox();
             this.Valider = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.promo = new System.Windows.Forms.CheckedListBox();
+            this.promo = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -95,11 +95,10 @@
             // promo
             // 
             this.promo.FormattingEnabled = true;
-            this.promo.HorizontalScrollbar = true;
             this.promo.Location = new System.Drawing.Point(348, 160);
             this.promo.Name = "promo";
-            this.promo.Size = new System.Drawing.Size(120, 94);
-            this.promo.TabIndex = 15;
+            this.promo.Size = new System.Drawing.Size(120, 95);
+            this.promo.TabIndex = 16;
             // 
             // AjoutModule
             // 
@@ -129,6 +128,6 @@
         private System.Windows.Forms.TextBox libelleModule;
         private System.Windows.Forms.Button Valider;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox promo;
+        private System.Windows.Forms.ListBox promo;
     }
 }

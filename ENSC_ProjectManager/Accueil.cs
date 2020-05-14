@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
-    public partial class AjoutModule : Form
+    public partial class Accueil : Form
     {
-        public AjoutModule()
+        public Accueil()
         {
             InitializeComponent();
-           Valider.Enabled = false;
-
         }
 
-        private void CodeModule_StyleChanged(object sender, EventArgs e)
+        private void BoutonNouveauProjet_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ListeProfs_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void Valider_Click(object sender, EventArgs e)
-        {
-
-           Module Mod = new Module(codeModule.Text, libelleModule.Text,promo.SelectedItem.ToString());
-        }
-
-
     }
 }
