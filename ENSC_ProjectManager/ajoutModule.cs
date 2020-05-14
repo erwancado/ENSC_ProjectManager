@@ -17,7 +17,7 @@ namespace ENSC_ProjectManager
             InitializeComponent();
             
            Valider.Enabled = false;
-            if (codeModule.ToString().Length > 0 && libelleModule.ToString().Length > 0 && promo.CheckedItems.Count==1)
+            if (codeModule.ToString().Length > 0 && libelleModule.ToString().Length > 0 && promo.SelectedItem.ToString().Length>0)
                 Valider.Enabled = true;
 
         }
@@ -29,7 +29,12 @@ namespace ENSC_ProjectManager
 
         private void Valider_Click(object sender, EventArgs e)
         {
-           Module Mod = new Module(codeModule.Text, libelleModule.Text,promo.CheckedItems.ToString());
+           Module Mod = new Module(codeModule.Text, libelleModule.Text,promo.SelectedItem.ToString());
+        }
+
+        private void Promo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

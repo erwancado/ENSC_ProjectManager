@@ -83,6 +83,11 @@ namespace ENSC_ProjectManager
             }
             return null;
         }
+        public List<Projet> GetProjet()
+        {
+            
+            return 
+        }
 
         public void AddMatiere(Matiere matiere,Module module)
         {
