@@ -125,7 +125,7 @@
             this.label_etu.AutoSize = true;
             this.label_etu.Location = new System.Drawing.Point(72, 240);
             this.label_etu.Name = "label_etu";
-            this.label_etu.Size = new System.Drawing.Size(58, 15);
+            this.label_etu.Size = new System.Drawing.Size(51, 13);
             this.label_etu.TabIndex = 7;
             this.label_etu.Text = "Etudiants";
             // 
@@ -145,7 +145,7 @@
             this.label_profs.AutoSize = true;
             this.label_profs.Location = new System.Drawing.Point(338, 239);
             this.label_profs.Name = "label_profs";
-            this.label_profs.Size = new System.Drawing.Size(72, 15);
+            this.label_profs.Size = new System.Drawing.Size(62, 13);
             this.label_profs.TabIndex = 9;
             this.label_profs.Text = "Professeurs";
             // 
@@ -204,7 +204,7 @@
             this.label_exte.AutoSize = true;
             this.label_exte.Location = new System.Drawing.Point(528, 239);
             this.label_exte.Name = "label_exte";
-            this.label_exte.Size = new System.Drawing.Size(130, 15);
+            this.label_exte.Size = new System.Drawing.Size(114, 13);
             this.label_exte.TabIndex = 16;
             this.label_exte.Text = "Intervenants extérieurs";
             // 
@@ -223,7 +223,7 @@
             this.label_livrables.AutoSize = true;
             this.label_livrables.Location = new System.Drawing.Point(859, 331);
             this.label_livrables.Name = "label_livrables";
-            this.label_livrables.Size = new System.Drawing.Size(56, 15);
+            this.label_livrables.Size = new System.Drawing.Size(49, 13);
             this.label_livrables.TabIndex = 21;
             this.label_livrables.Text = "Livrables";
             // 
@@ -249,7 +249,7 @@
             this.label_nom_projet.AutoSize = true;
             this.label_nom_projet.Location = new System.Drawing.Point(473, 15);
             this.label_nom_projet.Name = "label_nom_projet";
-            this.label_nom_projet.Size = new System.Drawing.Size(85, 15);
+            this.label_nom_projet.Size = new System.Drawing.Size(73, 13);
             this.label_nom_projet.TabIndex = 25;
             this.label_nom_projet.Text = "Nom du projet";
             // 
@@ -266,7 +266,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(1190, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 15);
+            this.label6.Size = new System.Drawing.Size(104, 13);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description du projet";
             // 
@@ -390,7 +390,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 727);
+            this.ClientSize = new System.Drawing.Size(1370, 727);
             this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);
             this.Controls.Add(this.retirerExte);

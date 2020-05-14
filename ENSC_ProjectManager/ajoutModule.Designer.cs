@@ -98,7 +98,6 @@
             this.promo.Name = "promo";
             this.promo.Size = new System.Drawing.Size(120, 95);
             this.promo.TabIndex = 16;
-            this.promo.Click += new System.EventHandler(this.Promo_Click);
             // 
             // AjoutModule
             // 

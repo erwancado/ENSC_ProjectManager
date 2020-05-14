@@ -19,7 +19,12 @@ namespace ENSC_ProjectManager
 
         private void BoutonNouveauProjet_Click(object sender, EventArgs e)
         {
-            Application.Run(new CreationProjet(repertoire));
+            
+        }
+
+        private void ListeProfs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
