@@ -16,9 +16,7 @@ namespace ENSC_ProjectManager
         public AjoutExterieur()
         {
             InitializeComponent();
-            Valider.Enabled = false;
-            
-                Valider.Enabled = true;
+            this.CenterToParent();
         }
 
         private void Valider_Click(object sender, EventArgs e)

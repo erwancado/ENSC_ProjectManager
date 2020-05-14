@@ -20,6 +20,7 @@ namespace ENSC_ProjectManager
             InitializeComponent();
             Repertoire = repertoire;
             RemplirMatieres(repertoire.matieres);
+            this.CenterToParent();
         }
 
         private void Valider_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutLivrable));
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateRenduLivrable = new System.Windows.Forms.DateTimePicker();
@@ -137,8 +138,9 @@
             this.Controls.Add(this.dateRenduLivrable);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutLivrable";
-            this.Text = "ajoutLivrable";
+            this.Text = "Ajout d\'un livrable";
             this.ResumeLayout(false);
             this.PerformLayout();
 

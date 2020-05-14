@@ -39,6 +39,7 @@ namespace ENSC_ProjectManager
             ajouterEtudiant.Enabled = false;
 
             RemplirTypesProjet();
+            this.CenterToScreen();
         }
         private void RemplirTypesProjet()
         {

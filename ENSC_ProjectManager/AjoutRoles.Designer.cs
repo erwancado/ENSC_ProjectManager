@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutRoles));
             this.ValiderRoles = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.libelle_role = new System.Windows.Forms.ComboBox();
@@ -149,6 +150,7 @@
             this.Controls.Add(this.libelle_role);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.ValiderRoles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutRoles";
             this.Text = "Ajout des rôles";
             this.ResumeLayout(false);

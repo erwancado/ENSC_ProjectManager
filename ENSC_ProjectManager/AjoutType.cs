@@ -21,6 +21,7 @@ namespace ENSC_ProjectManager
             listeTypePromo.Items.Add("3A");
             listeTypePromo.Items.Add("Transpromo");
             validerType.Enabled = false;
+            this.CenterToParent();
         }
 
         private void NbMinEleve_ValueChanged(object sender, EventArgs e)

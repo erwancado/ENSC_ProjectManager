@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutEtudiant));
             this.nomEtudiant = new System.Windows.Forms.TextBox();
             this.prenomEtudiant = new System.Windows.Forms.TextBox();
             this.nom = new System.Windows.Forms.Label();
@@ -182,8 +183,9 @@
             this.Controls.Add(this.nom);
             this.Controls.Add(this.prenomEtudiant);
             this.Controls.Add(this.nomEtudiant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutEtudiant";
-            this.Text = "ajoutEtudiant";
+            this.Text = "Ajout d\'un étudiant";
             ((System.ComponentModel.ISupportInitialize)(this.anneePromo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

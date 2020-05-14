@@ -30,13 +30,6 @@
           <Redoublant>false</Redoublant>
           <AnneePromotion>2022</AnneePromotion>
         </Etudiant>
-        <Etudiant>
-          <Nom>De-Ligny</Nom>
-          <Prenom>Tiphaine</Prenom>
-          <Mail>tdeligny@ensc.fr</Mail>
-          <Redoublant>false</Redoublant>
-          <AnneePromotion>2022</AnneePromotion>
-        </Etudiant>
       </Etudiants>
     </Promotion>
   </promotions>

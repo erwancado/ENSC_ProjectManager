@@ -25,6 +25,7 @@ namespace ENSC_ProjectManager
             anneeEnseignement.Items.Add("3A");
             RemplirProfesseurs();
             RemplirModules("");
+            this.CenterToParent();
         }
 
         private void Valider_Click(object sender, EventArgs e)

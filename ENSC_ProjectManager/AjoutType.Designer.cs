@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutType));
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nbMinEleve = new System.Windows.Forms.NumericUpDown();
@@ -140,7 +141,9 @@
             this.Controls.Add(this.nbMinEleve);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutType";
+            this.Text = "Ajout d\'un type de projet";
             ((System.ComponentModel.ISupportInitialize)(this.nbMinEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbMaxEleve)).EndInit();
             this.ResumeLayout(false);

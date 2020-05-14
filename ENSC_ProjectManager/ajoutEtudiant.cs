@@ -20,6 +20,7 @@ namespace ENSC_ProjectManager
             anneePromo.Maximum = minAnneePromo + 3;
             anneePromo.Value = minAnneePromo;
             anneePromo.Minimum = minAnneePromo;
+            this.CenterToParent();
         }
 
         private void Valider_Click(object sender, EventArgs e)

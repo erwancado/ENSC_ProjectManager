@@ -20,7 +20,6 @@ namespace ENSC_ProjectManager
         {
             _dateDebutProjet = dateDebutProjet;
             _dateFinProjet = dateFinProjet;
-
             InitializeComponent();
             rendu.Checked = true;
             valider.Enabled = false;
@@ -29,6 +28,7 @@ namespace ENSC_ProjectManager
             listeTypeFichier.Items.Add("video");
             listeTypeFichier.Items.Add("map");
             listeTypeFichier.Items.Add("code");
+            this.CenterToParent();
         }
 
         private void Valider_Click(object sender, EventArgs e)

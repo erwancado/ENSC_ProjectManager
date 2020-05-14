@@ -28,6 +28,7 @@ namespace ENSC_ProjectManager
             retirerRole.Hide();
             RemplirIntervenants();
             RemplirRoles();
+            this.CenterToParent();
         }
 
         private void RemplirIntervenants()

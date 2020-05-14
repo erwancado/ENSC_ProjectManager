@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreationProjet));
             this.listeTypeProjet = new System.Windows.Forms.ListBox();
             this.ajouterType = new System.Windows.Forms.Button();
             this.listeMatiere = new System.Windows.Forms.CheckedListBox();
@@ -62,6 +63,8 @@
             this.retirerExte = new System.Windows.Forms.Button();
             this.retirerLivrable = new System.Windows.Forms.Button();
             this.ajoutMatiere = new System.Windows.Forms.Button();
+            this.logoENSC = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).BeginInit();
             this.SuspendLayout();
             // 
             // listeTypeProjet
@@ -123,9 +126,10 @@
             // label_etu
             // 
             this.label_etu.AutoSize = true;
-            this.label_etu.Location = new System.Drawing.Point(72, 240);
+            this.label_etu.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_etu.Location = new System.Drawing.Point(78, 237);
             this.label_etu.Name = "label_etu";
-            this.label_etu.Size = new System.Drawing.Size(58, 15);
+            this.label_etu.Size = new System.Drawing.Size(68, 17);
             this.label_etu.TabIndex = 7;
             this.label_etu.Text = "Etudiants";
             // 
@@ -143,9 +147,10 @@
             // label_profs
             // 
             this.label_profs.AutoSize = true;
-            this.label_profs.Location = new System.Drawing.Point(338, 239);
+            this.label_profs.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_profs.Location = new System.Drawing.Point(334, 237);
             this.label_profs.Name = "label_profs";
-            this.label_profs.Size = new System.Drawing.Size(72, 15);
+            this.label_profs.Size = new System.Drawing.Size(83, 17);
             this.label_profs.TabIndex = 9;
             this.label_profs.Text = "Professeurs";
             // 
@@ -202,9 +207,10 @@
             // label_exte
             // 
             this.label_exte.AutoSize = true;
-            this.label_exte.Location = new System.Drawing.Point(528, 239);
+            this.label_exte.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_exte.Location = new System.Drawing.Point(514, 237);
             this.label_exte.Name = "label_exte";
-            this.label_exte.Size = new System.Drawing.Size(130, 15);
+            this.label_exte.Size = new System.Drawing.Size(151, 17);
             this.label_exte.TabIndex = 16;
             this.label_exte.Text = "Intervenants extérieurs";
             // 
@@ -221,17 +227,20 @@
             // label_livrables
             // 
             this.label_livrables.AutoSize = true;
-            this.label_livrables.Location = new System.Drawing.Point(859, 331);
+            this.label_livrables.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_livrables.Location = new System.Drawing.Point(858, 330);
             this.label_livrables.Name = "label_livrables";
-            this.label_livrables.Size = new System.Drawing.Size(56, 15);
+            this.label_livrables.Size = new System.Drawing.Size(64, 17);
             this.label_livrables.TabIndex = 21;
             this.label_livrables.Text = "Livrables";
             // 
             // valider
             // 
-            this.valider.Location = new System.Drawing.Point(531, 692);
+            this.valider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chartreuse;
+            this.valider.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valider.Location = new System.Drawing.Point(531, 689);
             this.valider.Name = "valider";
-            this.valider.Size = new System.Drawing.Size(177, 23);
+            this.valider.Size = new System.Drawing.Size(197, 37);
             this.valider.TabIndex = 23;
             this.valider.Text = "Valider et passer aux rôles";
             this.valider.UseVisualStyleBackColor = true;
@@ -239,7 +248,7 @@
             // 
             // nomProjet
             // 
-            this.nomProjet.Location = new System.Drawing.Point(574, 12);
+            this.nomProjet.Location = new System.Drawing.Point(575, 15);
             this.nomProjet.Name = "nomProjet";
             this.nomProjet.Size = new System.Drawing.Size(241, 20);
             this.nomProjet.TabIndex = 24;
@@ -247,9 +256,10 @@
             // label_nom_projet
             // 
             this.label_nom_projet.AutoSize = true;
-            this.label_nom_projet.Location = new System.Drawing.Point(473, 15);
+            this.label_nom_projet.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nom_projet.Location = new System.Drawing.Point(473, 18);
             this.label_nom_projet.Name = "label_nom_projet";
-            this.label_nom_projet.Size = new System.Drawing.Size(85, 15);
+            this.label_nom_projet.Size = new System.Drawing.Size(96, 17);
             this.label_nom_projet.TabIndex = 25;
             this.label_nom_projet.Text = "Nom du projet";
             // 
@@ -264,14 +274,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1190, 224);
+            this.label6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1191, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 15);
+            this.label6.Size = new System.Drawing.Size(136, 17);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description du projet";
             // 
             // retirerEtudiant
             // 
+            this.retirerEtudiant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.retirerEtudiant.Location = new System.Drawing.Point(52, 645);
             this.retirerEtudiant.Name = "retirerEtudiant";
             this.retirerEtudiant.Size = new System.Drawing.Size(117, 23);
@@ -282,6 +294,7 @@
             // 
             // retirerProfesseur
             // 
+            this.retirerProfesseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.retirerProfesseur.Location = new System.Drawing.Point(315, 645);
             this.retirerProfesseur.Name = "retirerProfesseur";
             this.retirerProfesseur.Size = new System.Drawing.Size(117, 23);
@@ -358,6 +371,7 @@
             // 
             // retirerExte
             // 
+            this.retirerExte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.retirerExte.Location = new System.Drawing.Point(531, 645);
             this.retirerExte.Name = "retirerExte";
             this.retirerExte.Size = new System.Drawing.Size(117, 23);
@@ -368,6 +382,7 @@
             // 
             // retirerLivrable
             // 
+            this.retirerLivrable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.retirerLivrable.Location = new System.Drawing.Point(833, 645);
             this.retirerLivrable.Name = "retirerLivrable";
             this.retirerLivrable.Size = new System.Drawing.Size(117, 23);
@@ -386,11 +401,22 @@
             this.ajoutMatiere.UseVisualStyleBackColor = true;
             this.ajoutMatiere.Click += new System.EventHandler(this.ajoutMatiere_Click);
             // 
+            // logoENSC
+            // 
+            this.logoENSC.Image = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
+            this.logoENSC.InitialImage = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
+            this.logoENSC.Location = new System.Drawing.Point(1272, 3);
+            this.logoENSC.Name = "logoENSC";
+            this.logoENSC.Size = new System.Drawing.Size(184, 114);
+            this.logoENSC.TabIndex = 41;
+            this.logoENSC.TabStop = false;
+            // 
             // CreationProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1459, 727);
+            this.Controls.Add(this.logoENSC);
             this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);
             this.Controls.Add(this.retirerExte);
@@ -425,8 +451,10 @@
             this.Controls.Add(this.listeMatiere);
             this.Controls.Add(this.ajouterType);
             this.Controls.Add(this.listeTypeProjet);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreationProjet";
             this.Text = "Insérer un projet";
+            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +496,7 @@
         private System.Windows.Forms.Button retirerExte;
         private System.Windows.Forms.Button retirerLivrable;
         private System.Windows.Forms.Button ajoutMatiere;
+        private System.Windows.Forms.PictureBox logoENSC;
     }
 }
 
