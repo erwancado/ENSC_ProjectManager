@@ -28,105 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.listeRoles = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ValiderRoles = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.libelle_role = new System.Windows.Forms.ComboBox();
+            this.descriptionCol1 = new System.Windows.Forms.Label();
+            this.descriptionCol2 = new System.Windows.Forms.Label();
+            this.liste_intervenants = new System.Windows.Forms.ListBox();
+            this.liste_roles = new System.Windows.Forms.ListBox();
+            this.descriptionCol3 = new System.Windows.Forms.Label();
+            this.ajouterRole = new System.Windows.Forms.Button();
+            this.retirerRole = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // ValiderRoles
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom intervenant";
-            // 
-            // listeRoles
-            // 
-            this.listeRoles.FormattingEnabled = true;
-            this.listeRoles.Location = new System.Drawing.Point(319, 97);
-            this.listeRoles.Name = "listeRoles";
-            this.listeRoles.Size = new System.Drawing.Size(154, 30);
-            this.listeRoles.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(525, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Inserer un rôle";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(525, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Inserer un rôle";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(319, 146);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(154, 30);
-            this.listBox1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nom intervenant";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(525, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Inserer un rôle";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(319, 199);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(154, 30);
-            this.listBox2.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Nom intervenant";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(319, 333);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(154, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Insérer le projet";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ValiderRoles.Location = new System.Drawing.Point(440, 303);
+            this.ValiderRoles.Name = "ValiderRoles";
+            this.ValiderRoles.Size = new System.Drawing.Size(154, 23);
+            this.ValiderRoles.TabIndex = 9;
+            this.ValiderRoles.Text = "Insérer le projet";
+            this.ValiderRoles.UseVisualStyleBackColor = true;
+            this.ValiderRoles.Click += new System.EventHandler(this.ValiderRoles_Click);
             // 
             // button5
             // 
@@ -137,22 +59,96 @@
             this.button5.Text = "Retour en arrière";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // libelle_role
+            // 
+            this.libelle_role.FormattingEnabled = true;
+            this.libelle_role.Location = new System.Drawing.Point(413, 117);
+            this.libelle_role.Name = "libelle_role";
+            this.libelle_role.Size = new System.Drawing.Size(198, 21);
+            this.libelle_role.TabIndex = 12;
+            // 
+            // descriptionCol1
+            // 
+            this.descriptionCol1.AutoSize = true;
+            this.descriptionCol1.Location = new System.Drawing.Point(120, 80);
+            this.descriptionCol1.Name = "descriptionCol1";
+            this.descriptionCol1.Size = new System.Drawing.Size(73, 15);
+            this.descriptionCol1.TabIndex = 13;
+            this.descriptionCol1.Text = "Intervenants";
+            // 
+            // descriptionCol2
+            // 
+            this.descriptionCol2.AutoSize = true;
+            this.descriptionCol2.Location = new System.Drawing.Point(495, 80);
+            this.descriptionCol2.Name = "descriptionCol2";
+            this.descriptionCol2.Size = new System.Drawing.Size(33, 15);
+            this.descriptionCol2.TabIndex = 14;
+            this.descriptionCol2.Text = "Rôle";
+            // 
+            // liste_intervenants
+            // 
+            this.liste_intervenants.FormattingEnabled = true;
+            this.liste_intervenants.Location = new System.Drawing.Point(39, 117);
+            this.liste_intervenants.Name = "liste_intervenants";
+            this.liste_intervenants.ScrollAlwaysVisible = true;
+            this.liste_intervenants.Size = new System.Drawing.Size(261, 199);
+            this.liste_intervenants.TabIndex = 15;
+            this.liste_intervenants.SelectedValueChanged += new System.EventHandler(this.liste_intervenants_SelectedValueChanged);
+            // 
+            // liste_roles
+            // 
+            this.liste_roles.FormattingEnabled = true;
+            this.liste_roles.Location = new System.Drawing.Point(703, 117);
+            this.liste_roles.Name = "liste_roles";
+            this.liste_roles.ScrollAlwaysVisible = true;
+            this.liste_roles.Size = new System.Drawing.Size(317, 199);
+            this.liste_roles.TabIndex = 17;
+            this.liste_roles.SelectedValueChanged += new System.EventHandler(this.liste_roles_SelectedValueChanged);
+            // 
+            // descriptionCol3
+            // 
+            this.descriptionCol3.AutoSize = true;
+            this.descriptionCol3.Location = new System.Drawing.Point(832, 80);
+            this.descriptionCol3.Name = "descriptionCol3";
+            this.descriptionCol3.Size = new System.Drawing.Size(39, 15);
+            this.descriptionCol3.TabIndex = 16;
+            this.descriptionCol3.Text = "Rôles";
+            // 
+            // ajouterRole
+            // 
+            this.ajouterRole.Location = new System.Drawing.Point(452, 156);
+            this.ajouterRole.Name = "ajouterRole";
+            this.ajouterRole.Size = new System.Drawing.Size(131, 23);
+            this.ajouterRole.TabIndex = 18;
+            this.ajouterRole.Text = "Ajouter le rôle";
+            this.ajouterRole.UseVisualStyleBackColor = true;
+            this.ajouterRole.Click += new System.EventHandler(this.ajouterRole_Click);
+            // 
+            // retirerRole
+            // 
+            this.retirerRole.Location = new System.Drawing.Point(803, 331);
+            this.retirerRole.Name = "retirerRole";
+            this.retirerRole.Size = new System.Drawing.Size(108, 23);
+            this.retirerRole.TabIndex = 19;
+            this.retirerRole.Text = "Retirer le rôle";
+            this.retirerRole.UseVisualStyleBackColor = true;
+            this.retirerRole.Click += new System.EventHandler(this.retirerRole_Click);
+            // 
             // AjoutRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1060, 399);
+            this.Controls.Add(this.retirerRole);
+            this.Controls.Add(this.ajouterRole);
+            this.Controls.Add(this.liste_roles);
+            this.Controls.Add(this.descriptionCol3);
+            this.Controls.Add(this.liste_intervenants);
+            this.Controls.Add(this.descriptionCol2);
+            this.Controls.Add(this.descriptionCol1);
+            this.Controls.Add(this.libelle_role);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listeRoles);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ValiderRoles);
             this.Name = "AjoutRoles";
             this.Text = "Ajout des rôles";
             this.ResumeLayout(false);
@@ -161,17 +157,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listeRoles;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ValiderRoles;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox libelle_role;
+        private System.Windows.Forms.Label descriptionCol1;
+        private System.Windows.Forms.Label descriptionCol2;
+        private System.Windows.Forms.ListBox liste_intervenants;
+        private System.Windows.Forms.ListBox liste_roles;
+        private System.Windows.Forms.Label descriptionCol3;
+        private System.Windows.Forms.Button ajouterRole;
+        private System.Windows.Forms.Button retirerRole;
     }
 }

@@ -29,7 +29,7 @@ namespace ENSC_ProjectManager
                 if (RegexUtilities.IsValidEmail(email.Text))
                 {
                     ReturnAnneePromo = (int)anneePromo.Value;
-                    ReturnEtudiant = new Etudiant(nomEtudiant.Text, prenomEtudiant.Text, email.Text, redoublant.Checked);
+                    ReturnEtudiant = new Etudiant(nomEtudiant.Text.Replace(' ','-'), prenomEtudiant.Text.Replace(' ', '-'), email.Text, redoublant.Checked,ReturnAnneePromo);
                     this.Visible = false;
                 }
 

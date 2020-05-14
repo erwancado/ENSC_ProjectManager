@@ -117,7 +117,6 @@
             // mail
             // 
             this.mail.AutoSize = true;
-            this.mail.Enabled = false;
             this.mail.Location = new System.Drawing.Point(195, 147);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(98, 15);

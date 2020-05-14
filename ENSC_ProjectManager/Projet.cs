@@ -19,9 +19,9 @@ namespace ENSC_ProjectManager
         private DateTime _dateDebut;
         private string _description;
         private Type _type;
-        private List<Livrable> _listeLivrables;
-        private List<Role> _listeRoles;
-        private List<Matiere> _listeMatieres;
+        public List<Livrable> ListeLivrables;
+        public List<Role> ListeRoles;
+        public List<Matiere> ListeMatieres;
 
         public Projet(string libelle, string description, DateTime dateDebut, DateTime dateFin, Type type)
         {
@@ -29,12 +29,13 @@ namespace ENSC_ProjectManager
             _description = description;
             _dateDebut = dateDebut;
             _dateFin = dateFin;
-            _listeLivrables = new List<Livrable>();
             _type = type;
         }
         public Projet()
         {
-
+            ListeLivrables = new List<Livrable>();
+            ListeRoles = new List<Role>();
+            ListeMatieres = new List<Matiere>();
         }
         public DateTimeSpan DureeProjet()
         {
@@ -44,7 +45,7 @@ namespace ENSC_ProjectManager
         {
             foreach(Livrable livrable in livrables)
             {
-                _listeLivrables.Add(livrable);
+                ListeLivrables.Add(livrable);
             }
         }
 
@@ -52,13 +53,13 @@ namespace ENSC_ProjectManager
         {
             foreach(Role role in roles)
             {
-                _listeRoles.Add(role);
+                ListeRoles.Add(role);
             }
         }
 
         public void AjouterRole(string libelleRole, Intervenant intervenant)
         {
-            _listeRoles.Add(new Role(intervenant, libelleRole));
+            ListeRoles.Add(new Role(intervenant, libelleRole));
         }
 
         private int[] AnneesPromos()

@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Repertoire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <typesProjet>
+    <Type>
+      <NbMaxEtudiants>2</NbMaxEtudiants>
+      <NbMinEtudiants>1</NbMinEtudiants>
+      <TypePromotion>1A</TypePromotion>
+    </Type>
+    <Type>
+      <NbMaxEtudiants>6</NbMaxEtudiants>
+      <NbMinEtudiants>4</NbMinEtudiants>
+      <TypePromotion>transpromo</TypePromotion>
+    </Type>
+  </typesProjet>
+  <promotions>
+    <Promotion>
+      <Annee>2022</Annee>
+      <Etudiants>
+        <Etudiant>
+          <Nom>Cado</Nom>
+          <Prenom>Erwan</Prenom>
+          <Mail>ecado@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>De-Ligny</Nom>
+          <Prenom>Tiphaine</Prenom>
+          <Mail>tdeligny@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>De-Ligny</Nom>
+          <Prenom>Tiphaine</Prenom>
+          <Mail>tdeligny@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+      </Etudiants>
+    </Promotion>
+  </promotions>
+  <matieres>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5INOR0</Code>
+      <CodeModule>CO5INGL0</CodeModule>
+      <Libelle>Eléments d'orientation</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5INAN0</Code>
+      <CodeModule>CO5INGL0</CodeModule>
+      <Libelle>Anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SCCC0</Code>
+      <CodeModule>CO5SCOG0</CodeModule>
+      <Libelle>Cognitique et bases de la cognition</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SCFH0</Code>
+      <CodeModule>CO5SCOG0</CodeModule>
+      <Libelle>Facteurs humains, Utilisabilité et UX</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SCBI0</Code>
+      <CodeModule>CO5SCOG0</CodeModule>
+      <Libelle>Bases de la biologie humaine et neurobiologie</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SFBD0</Code>
+      <CodeModule>CO5SFON0</CodeModule>
+      <Libelle>Information et communication, bases de données et programmation web</Libelle>
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Clermont</Nom>
+          <Prenom>Edwige</Prenom>
+          <Mail>eclermont@ensc.fr</Mail>
+          <Titre />
+        </Professeur>
+      </ListeProfesseurs>
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SFIN0</Code>
+      <CodeModule>CO5SFON0</CodeModule>
+      <Libelle>Introduction à la programmation</Libelle>
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Clermont</Nom>
+          <Prenom>Edwige</Prenom>
+          <Mail>eclermont@ensc.fr</Mail>
+          <Titre />
+        </Professeur>
+      </ListeProfesseurs>
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SFMA0</Code>
+      <CodeModule>CO5SFON0</CodeModule>
+      <Libelle>Probabilités et statistique</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5PRTD0</Code>
+      <CodeModule>CO5PRST0</CodeModule>
+      <Libelle>Projet transdisciplinaire</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5PRTP0</Code>
+      <CodeModule>CO5PRST0</CodeModule>
+      <Libelle>Projet transpromotion</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SOPD0</Code>
+      <CodeModule>CO5SOUT0</CodeModule>
+      <Libelle>Parcours différenciés</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO5SOSO0</Code>
+      <CodeModule>CO5SOUT0</CodeModule>
+      <Libelle>Soutien (Informatique, Mathématiques)</Libelle>
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Clermont</Nom>
+          <Prenom>Edwige</Prenom>
+          <Mail>eclermont@ensc.fr</Mail>
+          <Titre />
+        </Professeur>
+      </ListeProfesseurs>
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6INGP0</Code>
+      <CodeModule>CO6INGL0</CodeModule>
+      <Libelle>Gestion de projet, Ingénierie de conception</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6INAN0</Code>
+      <CodeModule>CO6INGL0</CodeModule>
+      <Libelle>Anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SCCR0</Code>
+      <CodeModule>CO6SCOG0</CodeModule>
+      <Libelle>Connaissances et représentation</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SCCC0</Code>
+      <CodeModule>CO6SCOG0</CodeModule>
+      <Libelle>Gestion des connaissances et des compétences</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SFCW0</Code>
+      <CodeModule>CO6SFON0</CodeModule>
+      <Libelle>Communication Web</Libelle>
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Clermont</Nom>
+          <Prenom>Edwige</Prenom>
+          <Mail>eclermont@ensc.fr</Mail>
+          <Titre />
+        </Professeur>
+      </ListeProfesseurs>
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SFPA0</Code>
+      <CodeModule>CO6SFON0</CodeModule>
+      <Libelle>Programmation avancée</Libelle>
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Clermont</Nom>
+          <Prenom>Edwige</Prenom>
+          <Mail>eclermont@ensc.fr</Mail>
+          <Titre />
+        </Professeur>
+      </ListeProfesseurs>
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SFMA0</Code>
+      <CodeModule>CO6SFON0</CodeModule>
+      <Libelle>Statistique inférentielle et analyse de données</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SFSS0</Code>
+      <CodeModule>CO6SFON0</CodeModule>
+      <Libelle>Signaux et systèmes</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6PRTD0</Code>
+      <CodeModule>CO6PRST0</CodeModule>
+      <Libelle>Projet transdisciplinaire</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6PRSI0</Code>
+      <CodeModule>CO6PRST0</CodeModule>
+      <Libelle>Stage d'initiation à l'entreprise</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SOAE0</Code>
+      <CodeModule>CO6SOUT0</CodeModule>
+      <Libelle>Initiation à l'aéronautique</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SOSO0</Code>
+      <CodeModule>CO6SOUT0</CodeModule>
+      <Libelle>Soutien (Automatique, Informatique, Mathématiques, Traitement du signal)</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SOAE0</Code>
+      <CodeModule>CO6SOUT0</CodeModule>
+      <Libelle>Initiation à l'aéronautique</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>1A</Promo>
+      <Code>CO6SOSO0</Code>
+      <CodeModule>CO6SOUT0</CodeModule>
+      <Libelle>Soutien (Automatique, Informatique, Mathématiques, Traitement du signal)</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7INAE0</Code>
+      <CodeModule>CO7INGL0</CodeModule>
+      <Libelle>Accompagnement vers l'entreprise</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7INCO0</Code>
+      <CodeModule>CO7INGL0</CodeModule>
+      <Libelle>Conférences et culture</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7INAN0</Code>
+      <CodeModule>CO7INGL0</CodeModule>
+      <Libelle>Anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SCEH0</Code>
+      <CodeModule>CO7SCOG0</CodeModule>
+      <Libelle>Ingénierie Cognitique et Interaction Homme Système</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SCHS0</Code>
+      <CodeModule>CO7SCOG0</CodeModule>
+      <Libelle>Interfaces Homme-Systèmes</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SCIA0</Code>
+      <CodeModule>CO7SCOG0</CodeModule>
+      <Libelle>Intelligence artificielle - 1</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SFMA1</Code>
+      <CodeModule>CO7SFON0</CodeModule>
+      <Libelle>Modélisation statistique et systèmes dynamiques</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SFGL0</Code>
+      <CodeModule>CO7SFON0</CodeModule>
+      <Libelle>Génie logiciel</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SFTS0</Code>
+      <CodeModule>CO7SFON0</CodeModule>
+      <Libelle>Traitement du signal</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7PRTP0</Code>
+      <CodeModule>CO7PRST0</CodeModule>
+      <Libelle>Projet Transpromotion</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO7SOPS0</Code>
+      <CodeModule>CO7SOUT0</CodeModule>
+      <Libelle>Prévention et secours civiques</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8INMN0</Code>
+      <CodeModule>CO8INGL0</CodeModule>
+      <Libelle>Enjeux de l'entreprise</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8INCO0</Code>
+      <CodeModule>CO8INGL0</CodeModule>
+      <Libelle>Conférences et culture</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8INAN0</Code>
+      <CodeModule>CO8INGL0</CodeModule>
+      <Libelle>Anglais opérationnel</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SCFH0</Code>
+      <CodeModule>CO8SCOG0</CodeModule>
+      <Libelle>Facteurs humains et ingénierie cognitique</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SCSU0</Code>
+      <CodeModule>CO8SCOG0</CodeModule>
+      <Libelle>Système d'aide et de suppléance &amp; Méthodes de conception adaptées</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SCIA0</Code>
+      <CodeModule>CO8SCOG0</CodeModule>
+      <Libelle>Intelligence artificielle - 2</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SFMA1</Code>
+      <CodeModule>CO8SFON0</CodeModule>
+      <Libelle>Modélisation mathématiques</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SFPI0</Code>
+      <CodeModule>CO8SFON0</CodeModule>
+      <Libelle>Projet informatique individuel</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SFCA0</Code>
+      <CodeModule>CO8SFON0</CodeModule>
+      <Libelle>Commande et Automatique</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SFDM0</Code>
+      <CodeModule>CO8SFON0</CodeModule>
+      <Libelle>Développement mobile</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8PRSP0</Code>
+      <CodeModule>CO8PRST0</CodeModule>
+      <Libelle>Stage de perfectionnement</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SOSO0</Code>
+      <CodeModule>CO8SOUT0</CodeModule>
+      <Libelle>Soutien en anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>2A</Promo>
+      <Code>CO8SOSO0</Code>
+      <CodeModule>CO8SOUT0</CodeModule>
+      <Libelle>Soutien en anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9INEC0</Code>
+      <CodeModule>CO9INGL0</CodeModule>
+      <Libelle>Engagement, comportement et culture</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9INAN0</Code>
+      <CodeModule>CO9INGL0</CodeModule>
+      <Libelle>Anglais</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SCIC0</Code>
+      <CodeModule>CO9SCOG0</CodeModule>
+      <Libelle>Intelligence collective</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SCTI0</Code>
+      <CodeModule>CO9SCOG0</CodeModule>
+      <Libelle>TIC et accompagnements des changements sociétaux</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SCCS0</Code>
+      <CodeModule>CO9SCOG0</CodeModule>
+      <Libelle>Certificat TIC Santé</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SFMO1</Code>
+      <CodeModule>CO9SFON0</CodeModule>
+      <Libelle>Systèmes multi-agents et réalité virtuelle</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SFMI0</Code>
+      <CodeModule>CO9SFON0</CodeModule>
+      <Libelle>Facteurs humains et méthodes d'intervention</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SFFR0</Code>
+      <CodeModule>CO9SFON0</CodeModule>
+      <Libelle>Formation à la recherche et méthodologie</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9SFHR0</Code>
+      <CodeModule>CO9SFON0</CodeModule>
+      <Libelle>Interactions hommes-robots</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9PRFE0</Code>
+      <CodeModule>CO9PRST0</CodeModule>
+      <Libelle>Projet de fin d'études</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9PRSP1</Code>
+      <CodeModule>CO9PRST0</CodeModule>
+      <Libelle>Spécialisation : Evaluation de l'état de l'opérateur</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9PRSP2</Code>
+      <CodeModule>CO9PRST0</CodeModule>
+      <Libelle>Spécialisation : IA</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9PRSP3</Code>
+      <CodeModule>CO9PRST0</CodeModule>
+      <Libelle>Spécialisation : Design</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO9PRSP4</Code>
+      <CodeModule>CO9PRST0</CodeModule>
+      <Libelle>Spécialisation : Systèmes optiques et cognition</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+    <Matiere>
+      <Promo>3A</Promo>
+      <Code>CO0STSP0</Code>
+      <CodeModule>CO0PRST0</CodeModule>
+      <Libelle>Stage de professionalisation</Libelle>
+      <ListeProfesseurs />
+    </Matiere>
+  </matieres>
+  <modules>
+    <Module>
+      <Code>CO5INGL0</Code>
+      <Libelle>Culture Ingénieur et Langue</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5INOR0</Code>
+          <CodeModule>CO5INGL0</CodeModule>
+          <Libelle>Eléments d'orientation</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5INAN0</Code>
+          <CodeModule>CO5INGL0</CodeModule>
+          <Libelle>Anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO5SCOG0</Code>
+      <Libelle>Ingénierie Cognitique</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SCCC0</Code>
+          <CodeModule>CO5SCOG0</CodeModule>
+          <Libelle>Cognitique et bases de la cognition</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SCFH0</Code>
+          <CodeModule>CO5SCOG0</CodeModule>
+          <Libelle>Facteurs humains, Utilisabilité et UX</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SCBI0</Code>
+          <CodeModule>CO5SCOG0</CodeModule>
+          <Libelle>Bases de la biologie humaine et neurobiologie</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO5SFON0</Code>
+      <Libelle>Sciences fondamentales</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SFBD0</Code>
+          <CodeModule>CO5SFON0</CodeModule>
+          <Libelle>Information et communication, bases de données et programmation web</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SFIN0</Code>
+          <CodeModule>CO5SFON0</CodeModule>
+          <Libelle>Introduction à la programmation</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SFMA0</Code>
+          <CodeModule>CO5SFON0</CodeModule>
+          <Libelle>Probabilités et statistique</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO5PRST0</Code>
+      <Libelle>Projets</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5PRTD0</Code>
+          <CodeModule>CO5PRST0</CodeModule>
+          <Libelle>Projet transdisciplinaire</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5PRTP0</Code>
+          <CodeModule>CO5PRST0</CodeModule>
+          <Libelle>Projet transpromotion</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO5SOUT0</Code>
+      <Libelle>Parcours différenciés et Soutien</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SOPD0</Code>
+          <CodeModule>CO5SOUT0</CodeModule>
+          <Libelle>Parcours différenciés</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SOSO0</Code>
+          <CodeModule>CO5SOUT0</CodeModule>
+          <Libelle>Soutien (Informatique, Mathématiques)</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6INGL0</Code>
+      <Libelle>Culture Ingénieur et Langue</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6INGP0</Code>
+          <CodeModule>CO6INGL0</CodeModule>
+          <Libelle>Gestion de projet, Ingénierie de conception</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6INAN0</Code>
+          <CodeModule>CO6INGL0</CodeModule>
+          <Libelle>Anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6SCOG0</Code>
+      <Libelle>Ingénierie Cognitique</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SCCR0</Code>
+          <CodeModule>CO6SCOG0</CodeModule>
+          <Libelle>Connaissances et représentation</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SCCC0</Code>
+          <CodeModule>CO6SCOG0</CodeModule>
+          <Libelle>Gestion des connaissances et des compétences</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6SFON0</Code>
+      <Libelle>Sciences fondamentales</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFCW0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Communication Web</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFPA0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Programmation avancée</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFMA0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Statistique inférentielle et analyse de données</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFSS0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Signaux et systèmes</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6PRST0</Code>
+      <Libelle>Projet et Stage</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6PRTD0</Code>
+          <CodeModule>CO6PRST0</CodeModule>
+          <Libelle>Projet transdisciplinaire</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6PRSI0</Code>
+          <CodeModule>CO6PRST0</CodeModule>
+          <Libelle>Stage d'initiation à l'entreprise</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6SOUT0</Code>
+      <Libelle>Initiation aéronautique et Soutien</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SOAE0</Code>
+          <CodeModule>CO6SOUT0</CodeModule>
+          <Libelle>Initiation à l'aéronautique</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SOSO0</Code>
+          <CodeModule>CO6SOUT0</CodeModule>
+          <Libelle>Soutien (Automatique, Informatique, Mathématiques, Traitement du signal)</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO6SOUT0</Code>
+      <Libelle>Initiation aéronautique et Soutien</Libelle>
+      <Promo>1A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SOAE0</Code>
+          <CodeModule>CO6SOUT0</CodeModule>
+          <Libelle>Initiation à l'aéronautique</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SOSO0</Code>
+          <CodeModule>CO6SOUT0</CodeModule>
+          <Libelle>Soutien (Automatique, Informatique, Mathématiques, Traitement du signal)</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO7INGL0</Code>
+      <Libelle>Culture Ingénieur et Langue</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7INAE0</Code>
+          <CodeModule>CO7INGL0</CodeModule>
+          <Libelle>Accompagnement vers l'entreprise</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7INCO0</Code>
+          <CodeModule>CO7INGL0</CodeModule>
+          <Libelle>Conférences et culture</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7INAN0</Code>
+          <CodeModule>CO7INGL0</CodeModule>
+          <Libelle>Anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO7SCOG0</Code>
+      <Libelle>Ingénierie Cognitique</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SCEH0</Code>
+          <CodeModule>CO7SCOG0</CodeModule>
+          <Libelle>Ingénierie Cognitique et Interaction Homme Système</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SCHS0</Code>
+          <CodeModule>CO7SCOG0</CodeModule>
+          <Libelle>Interfaces Homme-Systèmes</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SCIA0</Code>
+          <CodeModule>CO7SCOG0</CodeModule>
+          <Libelle>Intelligence artificielle - 1</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO7SFON0</Code>
+      <Libelle>Sciences fondamentales</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SFMA1</Code>
+          <CodeModule>CO7SFON0</CodeModule>
+          <Libelle>Modélisation statistique et systèmes dynamiques</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SFGL0</Code>
+          <CodeModule>CO7SFON0</CodeModule>
+          <Libelle>Génie logiciel</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SFTS0</Code>
+          <CodeModule>CO7SFON0</CodeModule>
+          <Libelle>Traitement du signal</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO7PRST0</Code>
+      <Libelle>Projet</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7PRTP0</Code>
+          <CodeModule>CO7PRST0</CodeModule>
+          <Libelle>Projet Transpromotion</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO7SOUT0</Code>
+      <Libelle>Prévention et secours civiques</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7SOPS0</Code>
+          <CodeModule>CO7SOUT0</CodeModule>
+          <Libelle>Prévention et secours civiques</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8INGL0</Code>
+      <Libelle>Culture ingénieur et langue</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8INMN0</Code>
+          <CodeModule>CO8INGL0</CodeModule>
+          <Libelle>Enjeux de l'entreprise</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8INCO0</Code>
+          <CodeModule>CO8INGL0</CodeModule>
+          <Libelle>Conférences et culture</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8INAN0</Code>
+          <CodeModule>CO8INGL0</CodeModule>
+          <Libelle>Anglais opérationnel</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8SCOG0</Code>
+      <Libelle>Ingénierie Cognitique</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SCFH0</Code>
+          <CodeModule>CO8SCOG0</CodeModule>
+          <Libelle>Facteurs humains et ingénierie cognitique</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SCSU0</Code>
+          <CodeModule>CO8SCOG0</CodeModule>
+          <Libelle>Système d'aide et de suppléance &amp; Méthodes de conception adaptées</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SCIA0</Code>
+          <CodeModule>CO8SCOG0</CodeModule>
+          <Libelle>Intelligence artificielle - 2</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8SFON0</Code>
+      <Libelle>Sciences fondamentales</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SFMA1</Code>
+          <CodeModule>CO8SFON0</CodeModule>
+          <Libelle>Modélisation mathématiques</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SFPI0</Code>
+          <CodeModule>CO8SFON0</CodeModule>
+          <Libelle>Projet informatique individuel</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SFCA0</Code>
+          <CodeModule>CO8SFON0</CodeModule>
+          <Libelle>Commande et Automatique</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SFDM0</Code>
+          <CodeModule>CO8SFON0</CodeModule>
+          <Libelle>Développement mobile</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8PRST0</Code>
+      <Libelle>Stage</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8PRSP0</Code>
+          <CodeModule>CO8PRST0</CodeModule>
+          <Libelle>Stage de perfectionnement</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8SOUT0</Code>
+      <Libelle>Soutien</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SOSO0</Code>
+          <CodeModule>CO8SOUT0</CodeModule>
+          <Libelle>Soutien en anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO8SOUT0</Code>
+      <Libelle>Soutien</Libelle>
+      <Promo>2A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO8SOSO0</Code>
+          <CodeModule>CO8SOUT0</CodeModule>
+          <Libelle>Soutien en anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO9INGL0</Code>
+      <Libelle>Culture Ingénieur et Langue</Libelle>
+      <Promo>3A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9INEC0</Code>
+          <CodeModule>CO9INGL0</CodeModule>
+          <Libelle>Engagement, comportement et culture</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9INAN0</Code>
+          <CodeModule>CO9INGL0</CodeModule>
+          <Libelle>Anglais</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO9SCOG0</Code>
+      <Libelle>Ingénierie Cognitique</Libelle>
+      <Promo>3A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SCIC0</Code>
+          <CodeModule>CO9SCOG0</CodeModule>
+          <Libelle>Intelligence collective</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SCTI0</Code>
+          <CodeModule>CO9SCOG0</CodeModule>
+          <Libelle>TIC et accompagnements des changements sociétaux</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SCCS0</Code>
+          <CodeModule>CO9SCOG0</CodeModule>
+          <Libelle>Certificat TIC Santé</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO9SFON0</Code>
+      <Libelle>Sciences Fondamentales</Libelle>
+      <Promo>3A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SFMO1</Code>
+          <CodeModule>CO9SFON0</CodeModule>
+          <Libelle>Systèmes multi-agents et réalité virtuelle</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SFMI0</Code>
+          <CodeModule>CO9SFON0</CodeModule>
+          <Libelle>Facteurs humains et méthodes d'intervention</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SFFR0</Code>
+          <CodeModule>CO9SFON0</CodeModule>
+          <Libelle>Formation à la recherche et méthodologie</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9SFHR0</Code>
+          <CodeModule>CO9SFON0</CodeModule>
+          <Libelle>Interactions hommes-robots</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO9PRST0</Code>
+      <Libelle>Projet et Spécialisation</Libelle>
+      <Promo>3A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9PRFE0</Code>
+          <CodeModule>CO9PRST0</CodeModule>
+          <Libelle>Projet de fin d'études</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9PRSP1</Code>
+          <CodeModule>CO9PRST0</CodeModule>
+          <Libelle>Spécialisation : Evaluation de l'état de l'opérateur</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9PRSP2</Code>
+          <CodeModule>CO9PRST0</CodeModule>
+          <Libelle>Spécialisation : IA</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9PRSP3</Code>
+          <CodeModule>CO9PRST0</CodeModule>
+          <Libelle>Spécialisation : Design</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO9PRSP4</Code>
+          <CodeModule>CO9PRST0</CodeModule>
+          <Libelle>Spécialisation : Systèmes optiques et cognition</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+    <Module>
+      <Code>CO0PRST0</Code>
+      <Libelle>Stage de professionalisation</Libelle>
+      <Promo>3A</Promo>
+      <ListeMatiere>
+        <Matiere>
+          <Promo>3A</Promo>
+          <Code>CO0STSP0</Code>
+          <CodeModule>CO0PRST0</CodeModule>
+          <Libelle>Stage de professionalisation</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatiere>
+    </Module>
+  </modules>
+  <roles>
+    <Role>
+      <Libelle>Developpeur</Libelle>
+    </Role>
+    <Role>
+      <Libelle>Developpeur</Libelle>
+    </Role>
+    <Role>
+      <Libelle>Referent</Libelle>
+    </Role>
+    <Role>
+      <Libelle>Developpeur</Libelle>
+    </Role>
+    <Role>
+      <Libelle>Developpeur</Libelle>
+    </Role>
+    <Role>
+      <Libelle>Referent</Libelle>
+    </Role>
+  </roles>
+  <professeurs>
+    <Professeur>
+      <Nom>Clermont</Nom>
+      <Prenom>Edwige</Prenom>
+      <Mail>eclermont@ensc.fr</Mail>
+      <Titre />
+    </Professeur>
+  </professeurs>
+  <intervenantsExte />
+  <projets>
+    <Projet>
+      <ListeLivrables>
+        <Livrable>
+          <DateRendu>2020-05-18T19:53:46</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Rapport</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+        <Livrable>
+          <DateRendu>2020-05-18T19:53:46</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Code source</Libelle>
+          <TypeFichier>code</TypeFichier>
+        </Livrable>
+      </ListeLivrables>
+      <ListeRoles>
+        <Role>
+          <Libelle>Developpeur</Libelle>
+        </Role>
+        <Role>
+          <Libelle>Developpeur</Libelle>
+        </Role>
+        <Role>
+          <Libelle>Referent</Libelle>
+        </Role>
+      </ListeRoles>
+      <ListeMatieres>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFPA0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Programmation avancée</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+      </ListeMatieres>
+      <Libelle>Projet Info S6</Libelle>
+      <DateFin>2020-05-18T19:53:46</DateFin>
+      <DateDebut>2020-03-20T19:53:46</DateDebut>
+      <Description>Logiciel d'archivage des projets de l'ENSC.
+https://github.com/erwancado/ENSC_ProjectManager</Description>
+    </Projet>
+  </projets>
+  <typesPromos>
+    <string>1A</string>
+    <string>2A</string>
+    <string>3A</string>
+    <string>transpromo</string>
+  </typesPromos>
+  <saveFile>repertoire.xml</saveFile>
+</Repertoire>

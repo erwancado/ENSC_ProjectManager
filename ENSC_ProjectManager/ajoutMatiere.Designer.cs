@@ -90,6 +90,7 @@
             this.anneeEnseignement.Size = new System.Drawing.Size(152, 56);
             this.anneeEnseignement.TabIndex = 6;
             this.anneeEnseignement.Click += new System.EventHandler(this.AnneeEnseignement_Click);
+            this.anneeEnseignement.SelectedValueChanged += new System.EventHandler(this.anneeEnseignement_SelectedValueChanged);
             // 
             // Valider
             // 
@@ -117,7 +118,7 @@
             this.listeProf.Location = new System.Drawing.Point(333, 133);
             this.listeProf.Name = "listeProf";
             this.listeProf.ScrollAlwaysVisible = true;
-            this.listeProf.Size = new System.Drawing.Size(152, 94);
+            this.listeProf.Size = new System.Drawing.Size(193, 94);
             this.listeProf.Sorted = true;
             this.listeProf.TabIndex = 9;
             this.listeProf.ThreeDCheckBoxes = true;
@@ -137,7 +138,7 @@
             this.liste_modules.Location = new System.Drawing.Point(333, 304);
             this.liste_modules.Name = "liste_modules";
             this.liste_modules.ScrollAlwaysVisible = true;
-            this.liste_modules.Size = new System.Drawing.Size(152, 95);
+            this.liste_modules.Size = new System.Drawing.Size(239, 95);
             this.liste_modules.TabIndex = 11;
             // 
             // AjoutMatiere

@@ -12,7 +12,7 @@ namespace ENSC_ProjectManager
     public class Repertoire
     {
         public List<Type> typesProjet;
-        public Dictionary<int,Promotion> promotions;
+        public List<Promotion> promotions;
         public List<Matiere> matieres;
         public List<Module> modules;
         public List<Role> roles;
@@ -20,10 +20,11 @@ namespace ENSC_ProjectManager
         public List<Exterieur> intervenantsExte;
         public List<Projet> projets;
         public String[] typesPromos;
+        public string saveFile;
         public Repertoire()
         {
             typesProjet = new List<Type>();
-            promotions = new Dictionary<int, Promotion>();
+            promotions = new List<Promotion>();
             modules = new List<Module>();
             matieres = new List<Matiere>();
             roles = new List<Role>();
@@ -34,24 +35,24 @@ namespace ENSC_ProjectManager
 
         public void AddPromotion(Promotion promotion)
         {
-            promotions.Add(promotion.Annee, promotion);
+            promotions.Add(promotion);
         }
         public void AddModule(Module mod)
         {
             modules.Add(mod);
-            foreach (Matiere matiere in matieres)
-            { matieres.Add(matiere); }
+            foreach (Matiere matiere in mod.ListeMatiere)
+            { 
+                matieres.Add(matiere);
+            }
 
         }
         public Promotion GetPromotion(int annee)
         {
-            Promotion promotion;
-            promotions.TryGetValue(annee, out promotion);
-            return promotion;
+            return promotions.Find(p => p.Annee == annee);
         }
         public void AddEtudiant(Etudiant etudiant)
         {
-            promotions[etudiant.Promotion.Annee].AjouterEtudiant(etudiant);
+            GetPromotion(etudiant.AnneePromotion).AjouterEtudiant(etudiant);
         }
 
         public void AddProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
@@ -72,6 +73,16 @@ namespace ENSC_ProjectManager
             }
             return null;
         }
+
+        public Exterieur GetExterieur(string nom, string prenom, string organisation)
+        {
+            foreach(Exterieur exterieur in intervenantsExte)
+            {
+                if (exterieur.Nom.Equals(nom) && exterieur.Prenom.Equals(prenom) && exterieur.Organisation.Equals(organisation))
+                    return exterieur;
+            }
+            return null;
+        }
         public Matiere GetMatiere(string code)
         {
             foreach(Matiere matiere in matieres)
@@ -83,12 +94,7 @@ namespace ENSC_ProjectManager
             }
             return null;
         }
-        public List<Projet> GetProjet()
-        {
-            
-            return 
-        }
-
+        
         public void AddMatiere(Matiere matiere,Module module)
         {
             matieres.Add(matiere);
@@ -109,8 +115,7 @@ namespace ENSC_ProjectManager
 
         public Etudiant GetEtudiant(int anneePromo, string nom, string prenom)
         {
-            Promotion promotion;
-            promotions.TryGetValue(anneePromo, out promotion);
+            Promotion promotion = GetPromotion(anneePromo);
             if (promotion == null)
                 return null;
             else
@@ -124,12 +129,46 @@ namespace ENSC_ProjectManager
             }
         }
 
-        public void SaveData(string filename)
+        public List<string> GetLibellesRoles()
+        {
+            List<string> libelles = new List<string>();
+            foreach(Role role in roles)
+            {
+                if (!libelles.Contains(role.Libelle))
+                    libelles.Add(role.Libelle);
+            }
+            return libelles;
+        }
+        public void SaveData()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));
-            TextWriter writer = new StreamWriter(filename);
+            TextWriter writer = new StreamWriter(saveFile);
             serializer.Serialize(writer, this);
             writer.Close();
+        }
+
+        public static Repertoire LoadData(string SaveFile)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));
+            serializer.UnknownNode += new
+            XmlNodeEventHandler(serializer_UnknownNode);
+            serializer.UnknownAttribute += new XmlAttributeEventHandler(serializer_UnknownAttribute);
+            FileStream fs = new FileStream(SaveFile, FileMode.Open);
+            // Declare an object variable of the type to be deserialized.
+            Repertoire repertoire;
+            repertoire = (Repertoire)serializer.Deserialize(fs);
+            return repertoire;
+        }
+        private static void serializer_UnknownNode (object sender, XmlNodeEventArgs e)
+        {
+            Console.WriteLine("Unknown Node:" + e.Name + "\t" + e.Text);
+        }
+
+        private static void serializer_UnknownAttribute (object sender, XmlAttributeEventArgs e)
+        {
+            System.Xml.XmlAttribute attr = e.Attr;
+            Console.WriteLine("Unknown attribute " +
+            attr.Name + "='" + attr.Value + "'");
         }
     }
 }

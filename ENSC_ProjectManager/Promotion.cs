@@ -22,7 +22,7 @@ namespace ENSC_ProjectManager
         public void AjouterEtudiant(Etudiant etudiant)
         {
             Etudiants.Add(etudiant);
-            etudiant.Promotion = this;
+            etudiant.AnneePromotion = Annee;
         }
     }
 }

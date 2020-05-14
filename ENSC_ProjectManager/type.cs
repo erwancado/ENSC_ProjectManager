@@ -15,7 +15,7 @@ namespace ENSC_ProjectManager
         private int _nbMinEtudiants;
         public int NbMinEtudiants { get { return _nbMinEtudiants; } set { _nbMinEtudiants = value; } }
 
-        internal string TypePromotion { get => _typePromotion; set => _typePromotion = value; }
+        public string TypePromotion { get => _typePromotion; set => _typePromotion = value; }
 
         public Type(int NbrMinEtudiants, int NbrMaxEtudiants, string typePromo)
         {

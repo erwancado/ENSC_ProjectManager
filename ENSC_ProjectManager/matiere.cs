@@ -9,23 +9,18 @@ namespace ENSC_ProjectManager
     public class Matiere
     {
         public string Promo;
-        private string _code;
-        public string Code{get{return _code;} set{ _code=value;}}
+        public string Code;
+        public string CodeModule;
 
-        private string _libelle;
-        public Module Module { get; set; }
+        public string Libelle;
 
-        private readonly List<Professeur> _listeProfesseurs;
-        
-        public string Libelle{get{return _libelle;} set{ _code=value;}}
+        public List<Professeur> ListeProfesseurs;
 
-        internal List<Professeur> ListeProfesseurs { get => _listeProfesseurs;}
-
-        public Matiere (string Code,string Libelle, string promo)
+        public Matiere (string code,string libelle, string promo)
         {
-            _code = Code;
-            _libelle = Libelle;
-            _listeProfesseurs = new List<Professeur>();
+            Code = code;
+            Libelle = libelle;
+            ListeProfesseurs = new List<Professeur>();
             Promo = promo;
         }
         public Matiere()
@@ -36,7 +31,7 @@ namespace ENSC_ProjectManager
         {
             foreach(Professeur p in professeurs)
             {
-                _listeProfesseurs.Add(p);
+                ListeProfesseurs.Add(p);
             }
         }
     }

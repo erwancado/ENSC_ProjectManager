@@ -1,9 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -19,7 +15,7 @@ namespace ENSC_ProjectManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Repertoire repertoire = new Repertoire();
-
+            /*
             try
             {
                 using (StreamReader sr = new StreamReader("liste.txt"))
@@ -27,33 +23,35 @@ namespace ENSC_ProjectManager
                     string line;
                     Module module = null;
                     string promo = null;
-                    while ((line = sr.ReadLine()) != null)
+                    while (sr.Peek()>=0)
                     {
+                        line = sr.ReadLine();
                         if (line.StartsWith("+"))
                         {
                             promo = line.Substring(1, 2);
                             if (module != null)
                                 repertoire.AddModule(module);
                         }
-                        if (line.StartsWith("*"))
+                        else if (line.StartsWith("*"))
                         {
                             if (module != null)
                                 repertoire.AddModule(module);
-                            string code = line.Substring(1, 8);
                             string[] coupe = line.Split('!');
+                            string code = coupe[0].Substring(1);
                             string libelle = coupe[1];
                             Module mod = new Module(code, libelle, promo);
                             module = mod;
                         }
                         else
                         {
-                            string code = line.Substring(0, 8);
+                            
                             string[] coupe = line.Split('!');
+                            string code = coupe[0];
                             string libelle = coupe[1];
                             Matiere mat = new Matiere(code, libelle, promo);
                             module.AjouterMatiere(mat);
-
                         }
+                        
                     }
                     repertoire.AddModule(module);
                 }
@@ -70,7 +68,8 @@ namespace ENSC_ProjectManager
             Type transpromo = new Type(4, 6, typesPromos[3]);
             repertoire.typesProjet.Add(projetProg);
             repertoire.typesProjet.Add(transpromo);
-           
+            repertoire.saveFile = "repertoire.xml";*/
+            repertoire = Repertoire.LoadData("repertoire.xml");
             Application.Run(new CreationProjet(repertoire));
         }
         

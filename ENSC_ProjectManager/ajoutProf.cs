@@ -14,10 +14,11 @@ namespace ENSC_ProjectManager
     {
         public Professeur ReturnProfesseur;
         public List<Matiere> ReturnMatieresEnseignees;
-        private Repertoire repertoire;
+        private Repertoire Repertoire;
         public AjoutProf(Repertoire repertoire)
         {
             InitializeComponent();
+            Repertoire = repertoire;
             RemplirMatieres(repertoire.matieres);
         }
 
@@ -32,7 +33,8 @@ namespace ENSC_ProjectManager
                     {
                         for(int i=0; i<liste_matieres.CheckedItems.Count; i++)
                         {
-                            Matiere matiere = repertoire.GetMatiere(liste_matieres.CheckedItems[i].ToString().Split('-')[0]);
+                            string strCode = liste_matieres.CheckedItems[i].ToString().Split('-')[0];
+                            Matiere matiere = Repertoire.GetMatiere(strCode);
                             if (matiere != null)
                                 matieresEnseignees.Add(matiere);
                         }
