@@ -17,6 +17,9 @@ namespace ENSC_ProjectManager
             InitializeComponent();
         }
 
-       
+        private void BoutonNouveauProjet_Click(object sender, EventArgs e)
+        {
+            Application.Run(new CreationProjet(repertoire));
+        }
     }
 }

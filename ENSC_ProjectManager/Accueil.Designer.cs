@@ -144,6 +144,7 @@
             this.boutonNouveauProjet.Text = "Nouveau Projet";
             this.boutonNouveauProjet.UseMnemonic = false;
             this.boutonNouveauProjet.UseVisualStyleBackColor = true;
+            this.boutonNouveauProjet.Click += new System.EventHandler(this.BoutonNouveauProjet_Click);
             // 
             // titreDate
             // 
