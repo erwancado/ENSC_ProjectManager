@@ -976,7 +976,7 @@
           <Promo>2A</Promo>
           <Code>CO8SCSU0</Code>
           <CodeModule>CO8SCOG0</CodeModule>
-          <Libelle>Système d'aide et de suppléance &amp; Méthodes de conception adaptées</Libelle>
+          <Libelle>Système d'aide et de suppléance Méthodes de conception adaptées</Libelle>
           <ListeProfesseurs />
         </Matiere>
         <Matiere>
@@ -1208,22 +1208,120 @@
   </modules>
   <roles>
     <Role>
-      <Libelle>Developpeur</Libelle>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
     </Role>
     <Role>
-      <Libelle>Developpeur</Libelle>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>De-Ligny</Nom>
+        <Prenom>Tiphaine</Prenom>
+        <Mail>tdeligny@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
     </Role>
     <Role>
-      <Libelle>Referent</Libelle>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Clermont</Nom>
+        <Prenom>Edwige</Prenom>
+        <Mail>eclermont@ensc.fr</Mail>
+        <Titre />
+      </Intervenant>
     </Role>
     <Role>
-      <Libelle>Developpeur</Libelle>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
     </Role>
     <Role>
-      <Libelle>Developpeur</Libelle>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>De-Ligny</Nom>
+        <Prenom>Tiphaine</Prenom>
+        <Mail>tdeligny@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
     </Role>
     <Role>
-      <Libelle>Referent</Libelle>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Clermont</Nom>
+        <Prenom>Edwige</Prenom>
+        <Mail>eclermont@ensc.fr</Mail>
+        <Titre />
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>De-Ligny</Nom>
+        <Prenom>Tiphaine</Prenom>
+        <Mail>tdeligny@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Clermont</Nom>
+        <Prenom>Edwige</Prenom>
+        <Mail>eclermont@ensc.fr</Mail>
+        <Titre />
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>De-Ligny</Nom>
+        <Prenom>Tiphaine</Prenom>
+        <Mail>tdeligny@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Clermont</Nom>
+        <Prenom>Edwige</Prenom>
+        <Mail>eclermont@ensc.fr</Mail>
+        <Titre />
+      </Intervenant>
     </Role>
   </roles>
   <professeurs>
@@ -1239,13 +1337,13 @@
     <Projet>
       <ListeLivrables>
         <Livrable>
-          <DateRendu>2020-05-18T19:53:46</DateRendu>
+          <DateRendu>2020-05-21T17:49:37</DateRendu>
           <Rendu>true</Rendu>
           <Libelle>Rapport</Libelle>
           <TypeFichier>pdf</TypeFichier>
         </Livrable>
         <Livrable>
-          <DateRendu>2020-05-18T19:53:46</DateRendu>
+          <DateRendu>2020-05-21T17:49:37</DateRendu>
           <Rendu>true</Rendu>
           <Libelle>Code source</Libelle>
           <TypeFichier>code</TypeFichier>
@@ -1253,13 +1351,33 @@
       </ListeLivrables>
       <ListeRoles>
         <Role>
-          <Libelle>Developpeur</Libelle>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Cado</Nom>
+            <Prenom>Erwan</Prenom>
+            <Mail>ecado@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
         </Role>
         <Role>
-          <Libelle>Developpeur</Libelle>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>De-Ligny</Nom>
+            <Prenom>Tiphaine</Prenom>
+            <Mail>tdeligny@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
         </Role>
         <Role>
-          <Libelle>Referent</Libelle>
+          <Libelle>Référent</Libelle>
+          <Intervenant xsi:type="Professeur">
+            <Nom>Clermont</Nom>
+            <Prenom>Edwige</Prenom>
+            <Mail>eclermont@ensc.fr</Mail>
+            <Titre />
+          </Intervenant>
         </Role>
       </ListeRoles>
       <ListeMatieres>
@@ -1279,10 +1397,14 @@
         </Matiere>
       </ListeMatieres>
       <Libelle>Projet Info S6</Libelle>
-      <DateFin>2020-05-18T19:53:46</DateFin>
-      <DateDebut>2020-03-20T19:53:46</DateDebut>
-      <Description>Logiciel d'archivage des projets de l'ENSC.
-https://github.com/erwancado/ENSC_ProjectManager</Description>
+      <DateFin>2020-05-21T17:49:37</DateFin>
+      <DateDebut>2020-03-20T17:49:37</DateDebut>
+      <Description>Logiciel d'archivage des projets de l'ENSC.</Description>
+      <Type>
+        <NbMaxEtudiants>2</NbMaxEtudiants>
+        <NbMinEtudiants>1</NbMinEtudiants>
+        <TypePromotion>1A</TypePromotion>
+      </Type>
     </Projet>
   </projets>
   <typesPromos>

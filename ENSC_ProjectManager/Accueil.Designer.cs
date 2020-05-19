@@ -64,14 +64,16 @@
             this.listeAnneePromo = new System.Windows.Forms.CheckedListBox();
             this.nomDeProjet = new System.Windows.Forms.TextBox();
             this.titreRechercheParNomDeProjet = new System.Windows.Forms.Label();
+            this.rechercherMatiere = new System.Windows.Forms.Button();
+            this.rechercherModule = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listeProjets
             // 
             this.listeProjets.FormattingEnabled = true;
-            this.listeProjets.Location = new System.Drawing.Point(12, 136);
+            this.listeProjets.Location = new System.Drawing.Point(15, 127);
             this.listeProjets.Name = "listeProjets";
-            this.listeProjets.Size = new System.Drawing.Size(593, 550);
+            this.listeProjets.Size = new System.Drawing.Size(593, 563);
             this.listeProjets.TabIndex = 0;
             // 
             // titreListe
@@ -175,8 +177,9 @@
             // 
             this.matiere.Location = new System.Drawing.Point(839, 306);
             this.matiere.Name = "matiere";
-            this.matiere.Size = new System.Drawing.Size(199, 20);
+            this.matiere.Size = new System.Drawing.Size(127, 20);
             this.matiere.TabIndex = 13;
+            this.matiere.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Matiere_KeyPress);
             // 
             // titreRechercheMatiere
             // 
@@ -273,7 +276,6 @@
             this.listeProfs.Name = "listeProfs";
             this.listeProfs.Size = new System.Drawing.Size(267, 139);
             this.listeProfs.TabIndex = 24;
-            this.listeProfs.SelectedIndexChanged += new System.EventHandler(this.ListeProfs_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -298,15 +300,15 @@
             // listeModules
             // 
             this.listeModules.FormattingEnabled = true;
-            this.listeModules.Location = new System.Drawing.Point(839, 368);
+            this.listeModules.Location = new System.Drawing.Point(839, 381);
             this.listeModules.Name = "listeModules";
-            this.listeModules.Size = new System.Drawing.Size(199, 139);
+            this.listeModules.Size = new System.Drawing.Size(199, 154);
             this.listeModules.TabIndex = 27;
             // 
             // titreRechercherModule
             // 
             this.titreRechercherModule.AutoSize = true;
-            this.titreRechercherModule.Location = new System.Drawing.Point(836, 529);
+            this.titreRechercherModule.Location = new System.Drawing.Point(836, 557);
             this.titreRechercherModule.Name = "titreRechercherModule";
             this.titreRechercherModule.Size = new System.Drawing.Size(115, 13);
             this.titreRechercherModule.TabIndex = 28;
@@ -315,10 +317,11 @@
             // 
             // module
             // 
-            this.module.Location = new System.Drawing.Point(839, 545);
+            this.module.Location = new System.Drawing.Point(839, 577);
             this.module.Name = "module";
-            this.module.Size = new System.Drawing.Size(199, 20);
+            this.module.Size = new System.Drawing.Size(127, 20);
             this.module.TabIndex = 29;
+            this.module.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Module_KeyPress);
             // 
             // titreRechercheIntervenant
             // 
@@ -340,7 +343,7 @@
             // 
             // rechercher
             // 
-            this.rechercher.Location = new System.Drawing.Point(1261, 634);
+            this.rechercher.Location = new System.Drawing.Point(1261, 633);
             this.rechercher.Name = "rechercher";
             this.rechercher.Size = new System.Drawing.Size(75, 23);
             this.rechercher.TabIndex = 32;
@@ -375,7 +378,7 @@
             // 
             // nomDeProjet
             // 
-            this.nomDeProjet.Location = new System.Drawing.Point(162, 102);
+            this.nomDeProjet.Location = new System.Drawing.Point(160, 95);
             this.nomDeProjet.Name = "nomDeProjet";
             this.nomDeProjet.Size = new System.Drawing.Size(199, 20);
             this.nomDeProjet.TabIndex = 35;
@@ -383,17 +386,39 @@
             // titreRechercheParNomDeProjet
             // 
             this.titreRechercheParNomDeProjet.AutoSize = true;
-            this.titreRechercheParNomDeProjet.Location = new System.Drawing.Point(9, 105);
+            this.titreRechercheParNomDeProjet.Location = new System.Drawing.Point(9, 102);
             this.titreRechercheParNomDeProjet.Name = "titreRechercheParNomDeProjet";
             this.titreRechercheParNomDeProjet.Size = new System.Drawing.Size(145, 13);
             this.titreRechercheParNomDeProjet.TabIndex = 36;
             this.titreRechercheParNomDeProjet.Text = "Recherche par nom de projet";
+            // 
+            // rechercherMatiere
+            // 
+            this.rechercherMatiere.Location = new System.Drawing.Point(972, 304);
+            this.rechercherMatiere.Name = "rechercherMatiere";
+            this.rechercherMatiere.Size = new System.Drawing.Size(75, 23);
+            this.rechercherMatiere.TabIndex = 37;
+            this.rechercherMatiere.Text = "Rechercher";
+            this.rechercherMatiere.UseVisualStyleBackColor = true;
+            this.rechercherMatiere.Click += new System.EventHandler(this.RechercherMatiere_Click);
+            // 
+            // rechercherModule
+            // 
+            this.rechercherModule.Location = new System.Drawing.Point(972, 575);
+            this.rechercherModule.Name = "rechercherModule";
+            this.rechercherModule.Size = new System.Drawing.Size(75, 23);
+            this.rechercherModule.TabIndex = 38;
+            this.rechercherModule.Text = "Rechercher";
+            this.rechercherModule.UseVisualStyleBackColor = true;
+            this.rechercherModule.Click += new System.EventHandler(this.RechercherModule_Click);
             // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 727);
+            this.Controls.Add(this.rechercherModule);
+            this.Controls.Add(this.rechercherMatiere);
             this.Controls.Add(this.titreRechercheParNomDeProjet);
             this.Controls.Add(this.nomDeProjet);
             this.Controls.Add(this.niveaux);
@@ -475,5 +500,7 @@
         private System.Windows.Forms.CheckedListBox listeAnneePromo;
         private System.Windows.Forms.TextBox nomDeProjet;
         private System.Windows.Forms.Label titreRechercheParNomDeProjet;
+        private System.Windows.Forms.Button rechercherMatiere;
+        private System.Windows.Forms.Button rechercherModule;
     }
 }

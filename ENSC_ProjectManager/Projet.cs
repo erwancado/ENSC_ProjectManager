@@ -13,7 +13,7 @@ namespace ENSC_ProjectManager
         public DateTime DateFin { get => _dateFin; set => _dateFin = value; }
         public DateTime DateDebut { get => _dateDebut; set => _dateDebut = value; }
         public string Description { get => _description; set => _description = value; }
-        internal Type Type { get => _type; set => _type = value; }
+        public Type Type { get => _type; set => _type = value; }
 
         private DateTime _dateFin;
         private DateTime _dateDebut;
@@ -48,7 +48,30 @@ namespace ENSC_ProjectManager
                 ListeLivrables.Add(livrable);
             }
         }
-
+        public bool ContenirMatiere(List<String> matieres)
+        {
+            foreach (String matiere in matieres)
+            {
+                for (int i = 0; i < this.ListeMatieres.Count; i++)
+                {
+                    if (this.ListeMatieres[i].Libelle.ToLower().Equals(matiere.ToLower()))
+                        return true;
+                }
+            }
+            return false;
+        }
+        public bool ContenirModule(List<String>modules)
+        {
+            foreach(String module in modules)
+            {
+                for (int i = 0; i < this.ListeMatieres.Count; i++)
+                {
+                    if (this.ListeMatieres[i].CodeModule.Equals(module))
+                        return true;
+                }
+            }
+            return false;
+        }
         public void AjouterRole(params Role[] roles)
         {
             foreach(Role role in roles)
@@ -62,7 +85,7 @@ namespace ENSC_ProjectManager
             ListeRoles.Add(new Role(intervenant, libelleRole));
         }
 
-        private int[] AnneesPromos()
+        public int[] AnneesPromos()
         {
             switch (_type.TypePromotion)
             {
