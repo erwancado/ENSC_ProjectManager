@@ -12,7 +12,6 @@ namespace ENSC_ProjectManager
 {
     public partial class Accueil : Form
     {
-<<<<<<< HEAD
         List<Projet> _projets;
         Repertoire _repertoire;
         public Accueil(Repertoire repertoire)
@@ -79,7 +78,8 @@ namespace ENSC_ProjectManager
         }
         private void FiltrerParIntervenant()
         {
-            _projets = RechercheParIntervenant(GetIntervenantsFiltre());
+            if(listeEleves.CheckedItems.Count!=0 || listeProfs.CheckedItems.Count!=0 || listeIntervenants.CheckedItems.Count!=0)
+                _projets = RechercheParIntervenant(GetIntervenantsFiltre());
         }
         private List<Projet> RechercheParIntervenant(List<Intervenant> intervenants)
         {
@@ -349,7 +349,11 @@ namespace ENSC_ProjectManager
         private void AppliquerFiltres_Click(object sender, EventArgs e)
         {
             _projets = _repertoire.projets;
+            FiltrerParNiveaux();
+            FiltrerParAnneeDePromo();
             FiltrerParDates();
+            FiltrerParModules();
+            FiltrerParMatieres();
             FiltrerParIntervenant();
             RemplirProjets();
         }
@@ -399,58 +403,63 @@ namespace ENSC_ProjectManager
         }
         public void FiltrerParAnneeDePromo()
         {
-            List<Projet> projetsFiltreAnneeDePromo = new List<Projet>();
-            foreach (Projet projet in _projets)
+            if (listeAnneePromo.CheckedItems.Count != 0)
             {
-                List<int> annee = RecupererAnneesDePromo();
-                int anneePromo = projet.AnneesPromos()[0];
-                int anneeTranspromo = projet.AnneesPromos()[1];
-                for(int i=0; i<annee.Count;i++)
+                List<Projet> projetsFiltreAnneeDePromo = new List<Projet>();
+                foreach (Projet projet in _projets)
                 {
-                    if (annee[i]== anneePromo || annee[i] == anneeTranspromo-1)
+                    List<int> annee = RecupererAnneesDePromo();
+                    bool anneeCorrespond = false;
+                    foreach (int anneePromo in projet.AnneesPromos())
                     {
-                        projetsFiltreAnneeDePromo.Add(projet);
+                        if (annee.Contains(anneePromo))
+                            anneeCorrespond = true;
                     }
+                    if (anneeCorrespond)
+                        projetsFiltreAnneeDePromo.Add(projet);
                 }
+                _projets = projetsFiltreAnneeDePromo;
             }
-            _projets = projetsFiltreAnneeDePromo;
+            
         }
         public void FiltrerParNiveaux()
         {
             List<Projet> projetsFiltreNiveaux = new List<Projet>();
             List<String> niveauxSelectionnes = RecupererNiveaux();
-            
-            foreach(String niveau in niveauxSelectionnes)
+            if (niveauxSelectionnes.Count != 0)
             {
-                if (niveau == "1A")
+                foreach (String niveau in niveauxSelectionnes)
                 {
-                    foreach (Projet projet in _projets)
+                    if (niveau.Equals("1A"))
                     {
-                        if (projet.Type.TypePromotion.Equals("1A") || projet.Type.TypePromotion.Equals("Transpromo"))
+                        foreach (Projet projet in _projets)
                         {
-                            projetsFiltreNiveaux.Add(projet);
+                            if (projet.Type.TypePromotion.Equals("1A") || projet.Type.TypePromotion.Equals("Transpromo"))
+                            {
+                                projetsFiltreNiveaux.Add(projet);
+                            }
                         }
-                    }
 
-                }
-                else if (niveau == "2A")
-                {
-                    foreach (Projet projet in _projets)
+                    }
+                    else if (niveau.Equals("2A"))
                     {
-                        if (projet.Type.TypePromotion.Equals("2A")|| projet.Type.TypePromotion.Equals("Transpromo"))
+                        foreach (Projet projet in _projets)
                         {
-                            projetsFiltreNiveaux.Add(projet);
+                            if (projet.Type.TypePromotion.Equals("2A") || projet.Type.TypePromotion.Equals("Transpromo"))
+                            {
+                                projetsFiltreNiveaux.Add(projet);
+                            }
                         }
-                    }
 
-                }
-                else
-                {
-                    foreach (Projet projet in _projets)
+                    }
+                    else
                     {
-                        if (projet.Type.TypePromotion.Equals("3A"))
+                        foreach (Projet projet in _projets)
                         {
-                            projetsFiltreNiveaux.Add(projet);
+                            if (projet.Type.TypePromotion.Equals("3A"))
+                            {
+                                projetsFiltreNiveaux.Add(projet);
+                            }
                         }
                     }
                 }
@@ -459,23 +468,29 @@ namespace ENSC_ProjectManager
         }
         public void FiltrerParMatieres()
         {
-            List<Projet> projetsFiltreMatieres = new List<Projet>();
-            foreach (Projet projet in _projets)
+            if (listeMatieres.CheckedItems.Count != 0)
             {
-                if (projet.ContenirMatiere(RecupererMatieres()))
-                    projetsFiltreMatieres.Add(projet);
+                List<Projet> projetsFiltreMatieres = new List<Projet>();
+                foreach (Projet projet in _projets)
+                {
+                    if (projet.ContenirMatiere(RecupererMatieres()))
+                        projetsFiltreMatieres.Add(projet);
+                }
+                _projets = projetsFiltreMatieres;
             }
-            _projets = projetsFiltreMatieres;
         }
         public void FiltrerParModules()
         {
-            List<Projet> projetsFiltreModules = new List<Projet>();
-            foreach (Projet projet in _projets)
+            if (listeModules.CheckedItems.Count != 0)
             {
-                if (projet.ContenirModule(RecupererModules()))
-                    projetsFiltreModules.Add(projet);
+                List<Projet> projetsFiltreModules = new List<Projet>();
+                foreach (Projet projet in _projets)
+                {
+                    if (projet.ContenirModule(RecupererModules()))
+                        projetsFiltreModules.Add(projet);
+                }
+                _projets = projetsFiltreModules;
             }
-            _projets = projetsFiltreModules;
         }
         public List<int> RecupererAnneesDePromo()
         {
