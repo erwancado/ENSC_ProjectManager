@@ -40,5 +40,11 @@ namespace ENSC_ProjectManager
                 matiere.CodeModule = Code;
             }
         }
+        public String RetournerNomModule(String code)
+        {
+            if (_code == code)
+                return _libelle;
+            else return "erreur";
+        }
     }
 }

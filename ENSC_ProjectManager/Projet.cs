@@ -48,7 +48,30 @@ namespace ENSC_ProjectManager
                 ListeLivrables.Add(livrable);
             }
         }
-
+        public bool ContenirMatiere(List<String> matieres)
+        {
+            foreach (String matiere in matieres)
+            {
+                for (int i = 0; i < this.ListeMatieres.Count; i++)
+                {
+                    if (this.ListeMatieres[i].Libelle.ToLower().Equals(matiere.ToLower()))
+                        return true;
+                }
+            }
+            return false;
+        }
+        public bool ContenirModule(List<String>modules)
+        {
+            foreach(String module in modules)
+            {
+                for (int i = 0; i < this.ListeMatieres.Count; i++)
+                {
+                    if (this.ListeMatieres[i].CodeModule.Equals(module))
+                        return true;
+                }
+            }
+            return false;
+        }
         public void AjouterRole(params Role[] roles)
         {
             foreach(Role role in roles)
@@ -71,7 +94,7 @@ namespace ENSC_ProjectManager
             return false;
         }
 
-        private int[] AnneesPromos()
+        public int[] AnneesPromos()
         {
             switch (_type.TypePromotion)
             {

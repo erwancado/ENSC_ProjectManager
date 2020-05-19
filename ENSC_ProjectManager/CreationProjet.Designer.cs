@@ -129,7 +129,7 @@
             this.label_etu.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_etu.Location = new System.Drawing.Point(78, 237);
             this.label_etu.Name = "label_etu";
-            this.label_etu.Size = new System.Drawing.Size(68, 17);
+            this.label_etu.Size = new System.Drawing.Size(59, 14);
             this.label_etu.TabIndex = 7;
             this.label_etu.Text = "Etudiants";
             // 
@@ -142,7 +142,6 @@
             this.listePromotion.ScrollAlwaysVisible = true;
             this.listePromotion.Size = new System.Drawing.Size(120, 34);
             this.listePromotion.TabIndex = 8;
-            this.listePromotion.SelectedValueChanged += new System.EventHandler(this.ListePromotion_SelectedValueChanged);
             // 
             // label_profs
             // 
@@ -150,7 +149,7 @@
             this.label_profs.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_profs.Location = new System.Drawing.Point(318, 237);
             this.label_profs.Name = "label_profs";
-            this.label_profs.Size = new System.Drawing.Size(83, 17);
+            this.label_profs.Size = new System.Drawing.Size(71, 14);
             this.label_profs.TabIndex = 9;
             this.label_profs.Text = "Professeurs";
             // 
@@ -210,7 +209,7 @@
             this.label_exte.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_exte.Location = new System.Drawing.Point(528, 237);
             this.label_exte.Name = "label_exte";
-            this.label_exte.Size = new System.Drawing.Size(151, 17);
+            this.label_exte.Size = new System.Drawing.Size(129, 14);
             this.label_exte.TabIndex = 16;
             this.label_exte.Text = "Intervenants extérieurs";
             // 
@@ -230,7 +229,7 @@
             this.label_livrables.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_livrables.Location = new System.Drawing.Point(858, 330);
             this.label_livrables.Name = "label_livrables";
-            this.label_livrables.Size = new System.Drawing.Size(64, 17);
+            this.label_livrables.Size = new System.Drawing.Size(55, 14);
             this.label_livrables.TabIndex = 21;
             this.label_livrables.Text = "Livrables";
             // 
@@ -259,7 +258,7 @@
             this.label_nom_projet.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_nom_projet.Location = new System.Drawing.Point(473, 18);
             this.label_nom_projet.Name = "label_nom_projet";
-            this.label_nom_projet.Size = new System.Drawing.Size(96, 17);
+            this.label_nom_projet.Size = new System.Drawing.Size(85, 14);
             this.label_nom_projet.TabIndex = 25;
             this.label_nom_projet.Text = "Nom du projet";
             // 
@@ -277,7 +276,7 @@
             this.label6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1191, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 17);
+            this.label6.Size = new System.Drawing.Size(119, 14);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description du projet";
             // 
@@ -407,8 +406,8 @@
             this.logoENSC.InitialImage = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
             this.logoENSC.Location = new System.Drawing.Point(1246, 12);
             this.logoENSC.Name = "logoENSC";
-            this.logoENSC.Size = new System.Drawing.Size(184, 114);
-            this.logoENSC.TabIndex = 41;
+            this.logoENSC.Size = new System.Drawing.Size(100, 50);
+            this.logoENSC.TabIndex = 0;
             this.logoENSC.TabStop = false;
             // 
             // CreationProjet
@@ -416,6 +415,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 727);
+            this.ClientSize = new System.Drawing.Size(1370, 727);
             this.Controls.Add(this.logoENSC);
             this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);
