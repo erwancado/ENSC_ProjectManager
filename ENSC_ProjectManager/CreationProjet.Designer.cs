@@ -148,7 +148,7 @@
             // 
             this.label_profs.AutoSize = true;
             this.label_profs.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_profs.Location = new System.Drawing.Point(334, 237);
+            this.label_profs.Location = new System.Drawing.Point(318, 237);
             this.label_profs.Name = "label_profs";
             this.label_profs.Size = new System.Drawing.Size(83, 17);
             this.label_profs.TabIndex = 9;
@@ -166,7 +166,7 @@
             // 
             // insertProfesseur
             // 
-            this.insertProfesseur.Location = new System.Drawing.Point(302, 294);
+            this.insertProfesseur.Location = new System.Drawing.Point(286, 294);
             this.insertProfesseur.Name = "insertProfesseur";
             this.insertProfesseur.Size = new System.Drawing.Size(141, 23);
             this.insertProfesseur.TabIndex = 14;
@@ -177,7 +177,7 @@
             // listeProfesseurs
             // 
             this.listeProfesseurs.FormattingEnabled = true;
-            this.listeProfesseurs.Location = new System.Drawing.Point(287, 258);
+            this.listeProfesseurs.Location = new System.Drawing.Point(271, 258);
             this.listeProfesseurs.Name = "listeProfesseurs";
             this.listeProfesseurs.ScrollAlwaysVisible = true;
             this.listeProfesseurs.Size = new System.Drawing.Size(171, 30);
@@ -186,7 +186,7 @@
             // 
             // insertExte
             // 
-            this.insertExte.Location = new System.Drawing.Point(517, 294);
+            this.insertExte.Location = new System.Drawing.Point(531, 294);
             this.insertExte.Name = "insertExte";
             this.insertExte.Size = new System.Drawing.Size(141, 23);
             this.insertExte.TabIndex = 18;
@@ -197,7 +197,7 @@
             // listeExtes
             // 
             this.listeExtes.FormattingEnabled = true;
-            this.listeExtes.Location = new System.Drawing.Point(503, 258);
+            this.listeExtes.Location = new System.Drawing.Point(517, 258);
             this.listeExtes.Name = "listeExtes";
             this.listeExtes.ScrollAlwaysVisible = true;
             this.listeExtes.Size = new System.Drawing.Size(171, 30);
@@ -208,7 +208,7 @@
             // 
             this.label_exte.AutoSize = true;
             this.label_exte.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_exte.Location = new System.Drawing.Point(514, 237);
+            this.label_exte.Location = new System.Drawing.Point(528, 237);
             this.label_exte.Name = "label_exte";
             this.label_exte.Size = new System.Drawing.Size(151, 17);
             this.label_exte.TabIndex = 16;
@@ -295,7 +295,7 @@
             // retirerProfesseur
             // 
             this.retirerProfesseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.retirerProfesseur.Location = new System.Drawing.Point(315, 645);
+            this.retirerProfesseur.Location = new System.Drawing.Point(299, 645);
             this.retirerProfesseur.Name = "retirerProfesseur";
             this.retirerProfesseur.Size = new System.Drawing.Size(117, 23);
             this.retirerProfesseur.TabIndex = 30;
@@ -315,7 +315,7 @@
             // affichageProfesseurs
             // 
             this.affichageProfesseurs.FormattingEnabled = true;
-            this.affichageProfesseurs.Location = new System.Drawing.Point(287, 362);
+            this.affichageProfesseurs.Location = new System.Drawing.Point(271, 362);
             this.affichageProfesseurs.Name = "affichageProfesseurs";
             this.affichageProfesseurs.Size = new System.Drawing.Size(171, 277);
             this.affichageProfesseurs.TabIndex = 32;
@@ -324,7 +324,7 @@
             // affichageExtes
             // 
             this.affichageExtes.FormattingEnabled = true;
-            this.affichageExtes.Location = new System.Drawing.Point(503, 362);
+            this.affichageExtes.Location = new System.Drawing.Point(517, 362);
             this.affichageExtes.Name = "affichageExtes";
             this.affichageExtes.Size = new System.Drawing.Size(171, 277);
             this.affichageExtes.TabIndex = 33;
@@ -351,7 +351,7 @@
             // 
             // ajouterProfesseur
             // 
-            this.ajouterProfesseur.Location = new System.Drawing.Point(302, 326);
+            this.ajouterProfesseur.Location = new System.Drawing.Point(286, 326);
             this.ajouterProfesseur.Name = "ajouterProfesseur";
             this.ajouterProfesseur.Size = new System.Drawing.Size(141, 23);
             this.ajouterProfesseur.TabIndex = 36;
@@ -361,7 +361,7 @@
             // 
             // ajouterExte
             // 
-            this.ajouterExte.Location = new System.Drawing.Point(517, 326);
+            this.ajouterExte.Location = new System.Drawing.Point(531, 326);
             this.ajouterExte.Name = "ajouterExte";
             this.ajouterExte.Size = new System.Drawing.Size(141, 23);
             this.ajouterExte.TabIndex = 37;
@@ -372,7 +372,7 @@
             // retirerExte
             // 
             this.retirerExte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.retirerExte.Location = new System.Drawing.Point(531, 645);
+            this.retirerExte.Location = new System.Drawing.Point(545, 645);
             this.retirerExte.Name = "retirerExte";
             this.retirerExte.Size = new System.Drawing.Size(117, 23);
             this.retirerExte.TabIndex = 38;
@@ -405,7 +405,7 @@
             // 
             this.logoENSC.Image = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
             this.logoENSC.InitialImage = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
-            this.logoENSC.Location = new System.Drawing.Point(1272, 3);
+            this.logoENSC.Location = new System.Drawing.Point(1246, 12);
             this.logoENSC.Name = "logoENSC";
             this.logoENSC.Size = new System.Drawing.Size(184, 114);
             this.logoENSC.TabIndex = 41;
@@ -415,7 +415,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 727);
+            this.ClientSize = new System.Drawing.Size(1443, 727);
             this.Controls.Add(this.logoENSC);
             this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);

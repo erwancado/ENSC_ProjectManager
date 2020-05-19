@@ -9,7 +9,7 @@ namespace ENSC_ProjectManager
     public class Role
     {
         public string Libelle { get; set; }
-        internal Intervenant Intervenant { get; set; }
+        public Intervenant Intervenant { get; set; }
 
         public Role(Intervenant intervenant,string libelle)
         {

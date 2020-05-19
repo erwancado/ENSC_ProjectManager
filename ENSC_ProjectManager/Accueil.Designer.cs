@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.listeProjets = new System.Windows.Forms.ListBox();
             this.titreListe = new System.Windows.Forms.Label();
             this.titre = new System.Windows.Forms.Label();
@@ -42,12 +43,12 @@
             this.matiere = new System.Windows.Forms.TextBox();
             this.titreRechercheMatiere = new System.Windows.Forms.Label();
             this.titreRechercherQuelqun = new System.Windows.Forms.Label();
-            this.Prenom = new System.Windows.Forms.TextBox();
+            this.PrenomRecherche = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateDebut = new System.Windows.Forms.DateTimePicker();
             this.dateFin = new System.Windows.Forms.DateTimePicker();
-            this.nom = new System.Windows.Forms.TextBox();
+            this.NomRecherche = new System.Windows.Forms.TextBox();
             this.titreDateDebut = new System.Windows.Forms.Label();
             this.titreDateFin = new System.Windows.Forms.Label();
             this.listeProfs = new System.Windows.Forms.CheckedListBox();
@@ -58,12 +59,19 @@
             this.module = new System.Windows.Forms.TextBox();
             this.titreRechercheIntervenant = new System.Windows.Forms.Label();
             this.listeIntervenants = new System.Windows.Forms.CheckedListBox();
-            this.rechercher = new System.Windows.Forms.Button();
+            this.RechercherPersonne = new System.Windows.Forms.Button();
             this.titreListeNiveaux = new System.Windows.Forms.Label();
             this.niveaux = new System.Windows.Forms.CheckedListBox();
             this.listeAnneePromo = new System.Windows.Forms.CheckedListBox();
             this.nomDeProjet = new System.Windows.Forms.TextBox();
             this.titreRechercheParNomDeProjet = new System.Windows.Forms.Label();
+            this.resultatsRecherchePersonne = new System.Windows.Forms.CheckedListBox();
+            this.logoENSC = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AppliquerFiltres = new System.Windows.Forms.Button();
+            this.checkBoxDate = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listeProjets
@@ -77,29 +85,35 @@
             // titreListe
             // 
             this.titreListe.AutoSize = true;
-            this.titreListe.Location = new System.Drawing.Point(12, 62);
+            this.titreListe.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titreListe.ForeColor = System.Drawing.Color.DarkOrange;
+            this.titreListe.Location = new System.Drawing.Point(201, 62);
             this.titreListe.Name = "titreListe";
-            this.titreListe.Size = new System.Drawing.Size(127, 13);
+            this.titreListe.Size = new System.Drawing.Size(180, 19);
             this.titreListe.TabIndex = 1;
             this.titreListe.Text = "Liste des projets existants";
             // 
             // titre
             // 
             this.titre.AutoSize = true;
-            this.titre.Location = new System.Drawing.Point(733, 9);
+            this.titre.Font = new System.Drawing.Font("Roboto Condensed", 18.33962F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.titre.Location = new System.Drawing.Point(646, 3);
             this.titre.MaximumSize = new System.Drawing.Size(0, 30);
             this.titre.Name = "titre";
-            this.titre.Size = new System.Drawing.Size(45, 13);
+            this.titre.Size = new System.Drawing.Size(109, 30);
             this.titre.TabIndex = 2;
-            this.titre.Text = "Accueil ";
+            this.titre.Text = "ACCUEIL";
             this.titre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // titreFiltre
             // 
             this.titreFiltre.AutoSize = true;
-            this.titreFiltre.Location = new System.Drawing.Point(631, 62);
+            this.titreFiltre.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titreFiltre.ForeColor = System.Drawing.Color.DarkOrange;
+            this.titreFiltre.Location = new System.Drawing.Point(919, 62);
             this.titreFiltre.Name = "titreFiltre";
-            this.titreFiltre.Size = new System.Drawing.Size(34, 13);
+            this.titreFiltre.Size = new System.Drawing.Size(50, 19);
             this.titreFiltre.TabIndex = 3;
             this.titreFiltre.Text = "Filtres";
             this.titreFiltre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,7 +123,7 @@
             this.titreFiltreParAnneeDePromo.AutoSize = true;
             this.titreFiltreParAnneeDePromo.Location = new System.Drawing.Point(631, 102);
             this.titreFiltreParAnneeDePromo.Name = "titreFiltreParAnneeDePromo";
-            this.titreFiltreParAnneeDePromo.Size = new System.Drawing.Size(120, 13);
+            this.titreFiltreParAnneeDePromo.Size = new System.Drawing.Size(140, 15);
             this.titreFiltreParAnneeDePromo.TabIndex = 5;
             this.titreFiltreParAnneeDePromo.Text = "Par année de promotion";
             this.titreFiltreParAnneeDePromo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -119,7 +133,7 @@
             this.titreFiltreParMatiere.AutoSize = true;
             this.titreFiltreParMatiere.Location = new System.Drawing.Point(836, 102);
             this.titreFiltreParMatiere.Name = "titreFiltreParMatiere";
-            this.titreFiltreParMatiere.Size = new System.Drawing.Size(65, 13);
+            this.titreFiltreParMatiere.Size = new System.Drawing.Size(77, 15);
             this.titreFiltreParMatiere.TabIndex = 6;
             this.titreFiltreParMatiere.Text = "Par matières";
             this.titreFiltreParMatiere.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -137,7 +151,7 @@
             this.titreFiltreParEleve.AutoSize = true;
             this.titreFiltreParEleve.Location = new System.Drawing.Point(1066, 102);
             this.titreFiltreParEleve.Name = "titreFiltreParEleve";
-            this.titreFiltreParEleve.Size = new System.Drawing.Size(57, 13);
+            this.titreFiltreParEleve.Size = new System.Drawing.Size(64, 15);
             this.titreFiltreParEleve.TabIndex = 8;
             this.titreFiltreParEleve.Text = "Par élèves";
             this.titreFiltreParEleve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -149,14 +163,17 @@
             this.listeEleves.Name = "listeEleves";
             this.listeEleves.Size = new System.Drawing.Size(267, 154);
             this.listeEleves.TabIndex = 9;
+            this.listeEleves.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeEleves_ItemCheck);
             // 
             // boutonNouveauProjet
             // 
+            this.boutonNouveauProjet.Font = new System.Drawing.Font("Roboto Condensed", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boutonNouveauProjet.ForeColor = System.Drawing.Color.DarkOrange;
             this.boutonNouveauProjet.Location = new System.Drawing.Point(12, 12);
             this.boutonNouveauProjet.Name = "boutonNouveauProjet";
             this.boutonNouveauProjet.Size = new System.Drawing.Size(234, 23);
             this.boutonNouveauProjet.TabIndex = 10;
-            this.boutonNouveauProjet.Text = "Nouveau Projet";
+            this.boutonNouveauProjet.Text = "NOUVEAU PROJET";
             this.boutonNouveauProjet.UseMnemonic = false;
             this.boutonNouveauProjet.UseVisualStyleBackColor = true;
             this.boutonNouveauProjet.Click += new System.EventHandler(this.BoutonNouveauProjet_Click);
@@ -166,7 +183,7 @@
             this.titreDate.AutoSize = true;
             this.titreDate.Location = new System.Drawing.Point(631, 396);
             this.titreDate.Name = "titreDate";
-            this.titreDate.Size = new System.Drawing.Size(47, 13);
+            this.titreDate.Size = new System.Drawing.Size(53, 15);
             this.titreDate.TabIndex = 11;
             this.titreDate.Text = "Par date";
             this.titreDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -183,7 +200,7 @@
             this.titreRechercheMatiere.AutoSize = true;
             this.titreRechercheMatiere.Location = new System.Drawing.Point(836, 290);
             this.titreRechercheMatiere.Name = "titreRechercheMatiere";
-            this.titreRechercheMatiere.Size = new System.Drawing.Size(121, 13);
+            this.titreRechercheMatiere.Size = new System.Drawing.Size(140, 15);
             this.titreRechercheMatiere.TabIndex = 14;
             this.titreRechercheMatiere.Text = "Rechercher une matière";
             this.titreRechercheMatiere.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -193,24 +210,24 @@
             this.titreRechercherQuelqun.AutoSize = true;
             this.titreRechercherQuelqun.Location = new System.Drawing.Point(1066, 587);
             this.titreRechercherQuelqun.Name = "titreRechercherQuelqun";
-            this.titreRechercherQuelqun.Size = new System.Drawing.Size(112, 13);
+            this.titreRechercherQuelqun.Size = new System.Drawing.Size(129, 15);
             this.titreRechercherQuelqun.TabIndex = 15;
             this.titreRechercherQuelqun.Text = "Rechercher quelqu\'un";
             this.titreRechercherQuelqun.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Prenom
+            // PrenomRecherche
             // 
-            this.Prenom.Location = new System.Drawing.Point(1115, 624);
-            this.Prenom.Name = "Prenom";
-            this.Prenom.Size = new System.Drawing.Size(120, 20);
-            this.Prenom.TabIndex = 16;
+            this.PrenomRecherche.Location = new System.Drawing.Point(1115, 621);
+            this.PrenomRecherche.Name = "PrenomRecherche";
+            this.PrenomRecherche.Size = new System.Drawing.Size(120, 20);
+            this.PrenomRecherche.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1066, 624);
+            this.label1.Location = new System.Drawing.Point(1058, 624);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 17;
             this.label1.Text = "Prenom";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -220,7 +237,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1066, 653);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nom";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -231,6 +248,7 @@
             this.dateDebut.Name = "dateDebut";
             this.dateDebut.Size = new System.Drawing.Size(174, 20);
             this.dateDebut.TabIndex = 19;
+            this.dateDebut.ValueChanged += new System.EventHandler(this.dateDebut_ValueChanged);
             // 
             // dateFin
             // 
@@ -239,19 +257,19 @@
             this.dateFin.Size = new System.Drawing.Size(174, 20);
             this.dateFin.TabIndex = 20;
             // 
-            // nom
+            // NomRecherche
             // 
-            this.nom.Location = new System.Drawing.Point(1115, 650);
-            this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(120, 20);
-            this.nom.TabIndex = 21;
+            this.NomRecherche.Location = new System.Drawing.Point(1115, 650);
+            this.NomRecherche.Name = "NomRecherche";
+            this.NomRecherche.Size = new System.Drawing.Size(120, 20);
+            this.NomRecherche.TabIndex = 21;
             // 
             // titreDateDebut
             // 
             this.titreDateDebut.AutoSize = true;
             this.titreDateDebut.Location = new System.Drawing.Point(631, 426);
             this.titreDateDebut.Name = "titreDateDebut";
-            this.titreDateDebut.Size = new System.Drawing.Size(73, 13);
+            this.titreDateDebut.Size = new System.Drawing.Size(82, 15);
             this.titreDateDebut.TabIndex = 22;
             this.titreDateDebut.Text = "date de début";
             this.titreDateDebut.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -261,7 +279,7 @@
             this.titreDateFin.AutoSize = true;
             this.titreDateFin.Location = new System.Drawing.Point(631, 478);
             this.titreDateFin.Name = "titreDateFin";
-            this.titreDateFin.Size = new System.Drawing.Size(57, 13);
+            this.titreDateFin.Size = new System.Drawing.Size(64, 15);
             this.titreDateFin.TabIndex = 23;
             this.titreDateFin.Text = "date de fin";
             this.titreDateFin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -273,14 +291,14 @@
             this.listeProfs.Name = "listeProfs";
             this.listeProfs.Size = new System.Drawing.Size(267, 139);
             this.listeProfs.TabIndex = 24;
-            this.listeProfs.SelectedIndexChanged += new System.EventHandler(this.ListeProfs_SelectedIndexChanged);
+            this.listeProfs.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeProfs_ItemCheck);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1066, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(94, 15);
             this.label3.TabIndex = 25;
             this.label3.Text = "Par Professeurs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -290,7 +308,7 @@
             this.titreListeModules.AutoSize = true;
             this.titreListeModules.Location = new System.Drawing.Point(836, 352);
             this.titreListeModules.Name = "titreListeModules";
-            this.titreListeModules.Size = new System.Drawing.Size(65, 13);
+            this.titreListeModules.Size = new System.Drawing.Size(77, 15);
             this.titreListeModules.TabIndex = 26;
             this.titreListeModules.Text = "Par modules";
             this.titreListeModules.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -308,7 +326,7 @@
             this.titreRechercherModule.AutoSize = true;
             this.titreRechercherModule.Location = new System.Drawing.Point(836, 529);
             this.titreRechercherModule.Name = "titreRechercherModule";
-            this.titreRechercherModule.Size = new System.Drawing.Size(115, 13);
+            this.titreRechercherModule.Size = new System.Drawing.Size(133, 15);
             this.titreRechercherModule.TabIndex = 28;
             this.titreRechercherModule.Text = "Rechercher un module";
             this.titreRechercherModule.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -325,7 +343,7 @@
             this.titreRechercheIntervenant.AutoSize = true;
             this.titreRechercheIntervenant.Location = new System.Drawing.Point(1066, 460);
             this.titreRechercheIntervenant.Name = "titreRechercheIntervenant";
-            this.titreRechercheIntervenant.Size = new System.Drawing.Size(85, 13);
+            this.titreRechercheIntervenant.Size = new System.Drawing.Size(95, 15);
             this.titreRechercheIntervenant.TabIndex = 30;
             this.titreRechercheIntervenant.Text = "Par Intervenants";
             this.titreRechercheIntervenant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -337,22 +355,24 @@
             this.listeIntervenants.Name = "listeIntervenants";
             this.listeIntervenants.Size = new System.Drawing.Size(267, 94);
             this.listeIntervenants.TabIndex = 31;
+            this.listeIntervenants.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeIntervenants_ItemCheck);
             // 
-            // rechercher
+            // RechercherPersonne
             // 
-            this.rechercher.Location = new System.Drawing.Point(1261, 634);
-            this.rechercher.Name = "rechercher";
-            this.rechercher.Size = new System.Drawing.Size(75, 23);
-            this.rechercher.TabIndex = 32;
-            this.rechercher.Text = "Rechercher";
-            this.rechercher.UseVisualStyleBackColor = true;
+            this.RechercherPersonne.Location = new System.Drawing.Point(1261, 634);
+            this.RechercherPersonne.Name = "RechercherPersonne";
+            this.RechercherPersonne.Size = new System.Drawing.Size(75, 23);
+            this.RechercherPersonne.TabIndex = 32;
+            this.RechercherPersonne.Text = "Rechercher";
+            this.RechercherPersonne.UseVisualStyleBackColor = true;
+            this.RechercherPersonne.Click += new System.EventHandler(this.RechercherPersonne_Click);
             // 
             // titreListeNiveaux
             // 
             this.titreListeNiveaux.AutoSize = true;
             this.titreListeNiveaux.Location = new System.Drawing.Point(631, 236);
             this.titreListeNiveaux.Name = "titreListeNiveaux";
-            this.titreListeNiveaux.Size = new System.Drawing.Size(63, 13);
+            this.titreListeNiveaux.Size = new System.Drawing.Size(71, 15);
             this.titreListeNiveaux.TabIndex = 33;
             this.titreListeNiveaux.Text = "Par niveaux";
             this.titreListeNiveaux.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -375,30 +395,88 @@
             // 
             // nomDeProjet
             // 
-            this.nomDeProjet.Location = new System.Drawing.Point(162, 102);
+            this.nomDeProjet.Location = new System.Drawing.Point(182, 102);
             this.nomDeProjet.Name = "nomDeProjet";
             this.nomDeProjet.Size = new System.Drawing.Size(199, 20);
             this.nomDeProjet.TabIndex = 35;
+            this.nomDeProjet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomDeProjet_KeyDown);
             // 
             // titreRechercheParNomDeProjet
             // 
             this.titreRechercheParNomDeProjet.AutoSize = true;
             this.titreRechercheParNomDeProjet.Location = new System.Drawing.Point(9, 105);
             this.titreRechercheParNomDeProjet.Name = "titreRechercheParNomDeProjet";
-            this.titreRechercheParNomDeProjet.Size = new System.Drawing.Size(145, 13);
+            this.titreRechercheParNomDeProjet.Size = new System.Drawing.Size(167, 15);
             this.titreRechercheParNomDeProjet.TabIndex = 36;
             this.titreRechercheParNomDeProjet.Text = "Recherche par nom de projet";
+            // 
+            // resultatsRecherchePersonne
+            // 
+            this.resultatsRecherchePersonne.FormattingEnabled = true;
+            this.resultatsRecherchePersonne.Location = new System.Drawing.Point(1069, 695);
+            this.resultatsRecherchePersonne.Name = "resultatsRecherchePersonne";
+            this.resultatsRecherchePersonne.Size = new System.Drawing.Size(267, 94);
+            this.resultatsRecherchePersonne.TabIndex = 37;
+            this.resultatsRecherchePersonne.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.resultatsRecherchePersonne_ItemCheck);
+            // 
+            // logoENSC
+            // 
+            this.logoENSC.Image = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
+            this.logoENSC.InitialImage = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
+            this.logoENSC.Location = new System.Drawing.Point(1184, 3);
+            this.logoENSC.Name = "logoENSC";
+            this.logoENSC.Size = new System.Drawing.Size(184, 114);
+            this.logoENSC.TabIndex = 42;
+            this.logoENSC.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ENSC_ProjectManager.Properties.Resources.logo_home1;
+            this.pictureBox1.Location = new System.Drawing.Point(604, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // AppliquerFiltres
+            // 
+            this.AppliquerFiltres.Font = new System.Drawing.Font("Roboto Condensed", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppliquerFiltres.ForeColor = System.Drawing.Color.DarkOrange;
+            this.AppliquerFiltres.Location = new System.Drawing.Point(604, 729);
+            this.AppliquerFiltres.Name = "AppliquerFiltres";
+            this.AppliquerFiltres.Size = new System.Drawing.Size(109, 39);
+            this.AppliquerFiltres.TabIndex = 44;
+            this.AppliquerFiltres.Text = "FILTRER";
+            this.AppliquerFiltres.UseVisualStyleBackColor = true;
+            this.AppliquerFiltres.Click += new System.EventHandler(this.AppliquerFiltres_Click);
+            // 
+            // checkBoxDate
+            // 
+            this.checkBoxDate.AutoSize = true;
+            this.checkBoxDate.BackColor = System.Drawing.Color.Coral;
+            this.checkBoxDate.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBoxDate.Location = new System.Drawing.Point(698, 397);
+            this.checkBoxDate.Name = "checkBoxDate";
+            this.checkBoxDate.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDate.TabIndex = 45;
+            this.checkBoxDate.UseVisualStyleBackColor = false;
             // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 727);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1370, 801);
+            this.Controls.Add(this.checkBoxDate);
+            this.Controls.Add(this.AppliquerFiltres);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logoENSC);
+            this.Controls.Add(this.resultatsRecherchePersonne);
             this.Controls.Add(this.titreRechercheParNomDeProjet);
             this.Controls.Add(this.nomDeProjet);
             this.Controls.Add(this.niveaux);
             this.Controls.Add(this.titreListeNiveaux);
-            this.Controls.Add(this.rechercher);
+            this.Controls.Add(this.RechercherPersonne);
             this.Controls.Add(this.listeIntervenants);
             this.Controls.Add(this.titreRechercheIntervenant);
             this.Controls.Add(this.module);
@@ -409,12 +487,12 @@
             this.Controls.Add(this.listeProfs);
             this.Controls.Add(this.titreDateFin);
             this.Controls.Add(this.titreDateDebut);
-            this.Controls.Add(this.nom);
+            this.Controls.Add(this.NomRecherche);
             this.Controls.Add(this.dateFin);
             this.Controls.Add(this.dateDebut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Prenom);
+            this.Controls.Add(this.PrenomRecherche);
             this.Controls.Add(this.titreRechercherQuelqun);
             this.Controls.Add(this.titreRechercheMatiere);
             this.Controls.Add(this.matiere);
@@ -430,8 +508,11 @@
             this.Controls.Add(this.titre);
             this.Controls.Add(this.titreListe);
             this.Controls.Add(this.listeProjets);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
-            this.Text = "Accueil";
+            this.Text = "ENSC Project Manager";
+            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,12 +534,12 @@
         private System.Windows.Forms.TextBox matiere;
         private System.Windows.Forms.Label titreRechercheMatiere;
         private System.Windows.Forms.Label titreRechercherQuelqun;
-        private System.Windows.Forms.TextBox Prenom;
+        private System.Windows.Forms.TextBox PrenomRecherche;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateDebut;
         private System.Windows.Forms.DateTimePicker dateFin;
-        private System.Windows.Forms.TextBox nom;
+        private System.Windows.Forms.TextBox NomRecherche;
         private System.Windows.Forms.Label titreDateDebut;
         private System.Windows.Forms.Label titreDateFin;
         private System.Windows.Forms.CheckedListBox listeProfs;
@@ -469,11 +550,16 @@
         private System.Windows.Forms.TextBox module;
         private System.Windows.Forms.Label titreRechercheIntervenant;
         private System.Windows.Forms.CheckedListBox listeIntervenants;
-        private System.Windows.Forms.Button rechercher;
+        private System.Windows.Forms.Button RechercherPersonne;
         private System.Windows.Forms.Label titreListeNiveaux;
         private System.Windows.Forms.CheckedListBox niveaux;
         private System.Windows.Forms.CheckedListBox listeAnneePromo;
         private System.Windows.Forms.TextBox nomDeProjet;
         private System.Windows.Forms.Label titreRechercheParNomDeProjet;
+        private System.Windows.Forms.CheckedListBox resultatsRecherchePersonne;
+        private System.Windows.Forms.PictureBox logoENSC;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button AppliquerFiltres;
+        private System.Windows.Forms.CheckBox checkBoxDate;
     }
 }

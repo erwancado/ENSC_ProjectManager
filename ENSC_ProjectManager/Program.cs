@@ -70,7 +70,7 @@ namespace ENSC_ProjectManager
             repertoire.typesProjet.Add(transpromo);
             repertoire.saveFile = "repertoire.xml";*/
             repertoire = Repertoire.LoadData("repertoire.xml");
-            Application.Run(new CreationProjet(repertoire));
+            Application.Run(new Accueil(repertoire));
         }
         
     }

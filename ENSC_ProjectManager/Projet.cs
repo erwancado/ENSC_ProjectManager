@@ -13,7 +13,7 @@ namespace ENSC_ProjectManager
         public DateTime DateFin { get => _dateFin; set => _dateFin = value; }
         public DateTime DateDebut { get => _dateDebut; set => _dateDebut = value; }
         public string Description { get => _description; set => _description = value; }
-        internal Type Type { get => _type; set => _type = value; }
+        public Type Type { get => _type; set => _type = value; }
 
         private DateTime _dateFin;
         private DateTime _dateDebut;
@@ -60,6 +60,15 @@ namespace ENSC_ProjectManager
         public void AjouterRole(string libelleRole, Intervenant intervenant)
         {
             ListeRoles.Add(new Role(intervenant, libelleRole));
+        }
+        public bool ContientIntervenant(Intervenant intervenant)
+        {
+            foreach(Role role in ListeRoles)
+            {
+                if (role.Intervenant.Equals(intervenant))
+                    return true;
+            }
+            return false;
         }
 
         private int[] AnneesPromos()

@@ -22,6 +22,10 @@ namespace ENSC_ProjectManager
 
         }
 
+        public bool Equals(Intervenant intervenant)
+        {
+            return (Nom.Equals(intervenant.Nom) && Prenom.Equals(intervenant.Prenom) && Mail.Equals(intervenant.Mail));
+        }
         public bool VerificationMail(string mail)
         {
             return RegexUtilities.IsValidEmail(mail);

@@ -12,7 +12,7 @@ namespace ENSC_ProjectManager
 {
     public partial class CreationProjet : Form
     {
-        Repertoire repertoire;
+        public Repertoire repertoire;
         List<Livrable> liste_livrables;
         Type typeProjet;
         public CreationProjet(Repertoire repertoire)
@@ -167,6 +167,7 @@ namespace ENSC_ProjectManager
             {
                 listeExtes.Items.Add(exterieur.Nom + " " + exterieur.Prenom + " - " + exterieur.Organisation);
             }
+            listeExtes.EndUpdate();
         }
 
         private void AjouterExte(Exterieur intervenant)
@@ -657,7 +658,7 @@ namespace ENSC_ProjectManager
                 repertoire.projets.Add(projet);
                 repertoire.SaveData();
                 form.Dispose();
-                this.Close();
+                this.Visible = false;
             }
         }
 
