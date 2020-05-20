@@ -145,6 +145,7 @@
             this.listePromotion.ScrollAlwaysVisible = true;
             this.listePromotion.Size = new System.Drawing.Size(120, 34);
             this.listePromotion.TabIndex = 8;
+            this.listePromotion.SelectedValueChanged += new System.EventHandler(this.ListePromotion_SelectedValueChanged);
             // 
             // label_profs
             // 
