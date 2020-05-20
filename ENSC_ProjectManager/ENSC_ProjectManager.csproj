@@ -53,6 +53,12 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="AffichageProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffichageProjet.Designer.cs">
+      <DependentUpon>AffichageProjet.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AffichageProjet.resx">
+      <DependentUpon>AffichageProjet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AjoutEtudiant.resx">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\logo-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo-back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,11 +14,13 @@ namespace ENSC_ProjectManager
     {
         public Repertoire repertoire;
         List<Livrable> liste_livrables;
+        bool saveData;
         Type typeProjet;
         public CreationProjet(Repertoire repertoire)
         {
             InitializeComponent();
             this.repertoire = repertoire;
+            saveData = true;
             liste_livrables = new List<Livrable>();
             dateDebutProjet.Enabled = false;
             dateFinProjet.Enabled = false;
@@ -37,10 +39,11 @@ namespace ENSC_ProjectManager
             retirerLivrable.Hide();
             ajouterLivrable.Enabled = false;
             ajouterEtudiant.Enabled = false;
-
             RemplirTypesProjet();
             this.CenterToScreen();
+            this.ControlBox = false;
         }
+
         private void RemplirTypesProjet()
         {
             listeTypeProjet.BeginUpdate();
@@ -662,5 +665,14 @@ namespace ENSC_ProjectManager
             }
         }
 
+        private void RetourAccueil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Si vous annulez, toutes vos modifications seront perdues, voulez-vous continuer ?", "Annuler la création du projet",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                saveData = false;
+                this.Dispose();
+            }
+        }
     }
 }

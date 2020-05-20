@@ -70,10 +70,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AppliquerFiltres = new System.Windows.Forms.Button();
             this.checkBoxDate = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rechercherMatiere = new System.Windows.Forms.Button();
             this.rechercherModule = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listeProjets
@@ -83,6 +83,7 @@
             this.listeProjets.Name = "listeProjets";
             this.listeProjets.Size = new System.Drawing.Size(593, 563);
             this.listeProjets.TabIndex = 0;
+            this.listeProjets.DoubleClick += new System.EventHandler(this.listeProjets_DoubleClick);
             // 
             // titreListe
             // 
@@ -398,7 +399,7 @@
             this.listeAnneePromo.TabIndex = 4;
             // 
             // nomDeProjet
-            //
+            // 
             this.nomDeProjet.Location = new System.Drawing.Point(182, 102);
             this.nomDeProjet.Name = "nomDeProjet";
             this.nomDeProjet.Size = new System.Drawing.Size(199, 20);
@@ -464,6 +465,7 @@
             this.checkBoxDate.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDate.TabIndex = 45;
             this.checkBoxDate.UseVisualStyleBackColor = false;
+            // 
             // rechercherMatiere
             // 
             this.rechercherMatiere.Location = new System.Drawing.Point(972, 304);

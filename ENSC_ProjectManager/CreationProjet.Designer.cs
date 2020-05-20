@@ -64,13 +64,16 @@
             this.retirerLivrable = new System.Windows.Forms.Button();
             this.ajoutMatiere = new System.Windows.Forms.Button();
             this.logoENSC = new System.Windows.Forms.PictureBox();
+            this.RetourAccueil = new System.Windows.Forms.Button();
+            this.label_date_d = new System.Windows.Forms.Label();
+            this.label_date_f = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logoENSC)).BeginInit();
             this.SuspendLayout();
             // 
             // listeTypeProjet
             // 
             this.listeTypeProjet.FormattingEnabled = true;
-            this.listeTypeProjet.Location = new System.Drawing.Point(12, 44);
+            this.listeTypeProjet.Location = new System.Drawing.Point(12, 99);
             this.listeTypeProjet.Name = "listeTypeProjet";
             this.listeTypeProjet.ScrollAlwaysVisible = true;
             this.listeTypeProjet.Size = new System.Drawing.Size(224, 56);
@@ -79,7 +82,7 @@
             // 
             // ajouterType
             // 
-            this.ajouterType.Location = new System.Drawing.Point(243, 57);
+            this.ajouterType.Location = new System.Drawing.Point(255, 107);
             this.ajouterType.Name = "ajouterType";
             this.ajouterType.Size = new System.Drawing.Size(121, 23);
             this.ajouterType.TabIndex = 1;
@@ -99,7 +102,7 @@
             // 
             // dateDebutProjet
             // 
-            this.dateDebutProjet.Location = new System.Drawing.Point(12, 136);
+            this.dateDebutProjet.Location = new System.Drawing.Point(106, 181);
             this.dateDebutProjet.Name = "dateDebutProjet";
             this.dateDebutProjet.Size = new System.Drawing.Size(168, 20);
             this.dateDebutProjet.TabIndex = 4;
@@ -107,7 +110,7 @@
             // 
             // dateFinProjet
             // 
-            this.dateFinProjet.Location = new System.Drawing.Point(200, 136);
+            this.dateFinProjet.Location = new System.Drawing.Point(386, 181);
             this.dateFinProjet.Name = "dateFinProjet";
             this.dateFinProjet.Size = new System.Drawing.Size(200, 20);
             this.dateFinProjet.TabIndex = 5;
@@ -129,7 +132,7 @@
             this.label_etu.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_etu.Location = new System.Drawing.Point(78, 237);
             this.label_etu.Name = "label_etu";
-            this.label_etu.Size = new System.Drawing.Size(59, 14);
+            this.label_etu.Size = new System.Drawing.Size(68, 17);
             this.label_etu.TabIndex = 7;
             this.label_etu.Text = "Etudiants";
             // 
@@ -137,7 +140,7 @@
             // 
             this.listePromotion.CheckOnClick = true;
             this.listePromotion.FormattingEnabled = true;
-            this.listePromotion.Location = new System.Drawing.Point(476, 122);
+            this.listePromotion.Location = new System.Drawing.Point(575, 96);
             this.listePromotion.Name = "listePromotion";
             this.listePromotion.ScrollAlwaysVisible = true;
             this.listePromotion.Size = new System.Drawing.Size(120, 34);
@@ -149,7 +152,7 @@
             this.label_profs.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_profs.Location = new System.Drawing.Point(318, 237);
             this.label_profs.Name = "label_profs";
-            this.label_profs.Size = new System.Drawing.Size(71, 14);
+            this.label_profs.Size = new System.Drawing.Size(83, 17);
             this.label_profs.TabIndex = 9;
             this.label_profs.Text = "Professeurs";
             // 
@@ -209,7 +212,7 @@
             this.label_exte.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_exte.Location = new System.Drawing.Point(528, 237);
             this.label_exte.Name = "label_exte";
-            this.label_exte.Size = new System.Drawing.Size(129, 14);
+            this.label_exte.Size = new System.Drawing.Size(151, 17);
             this.label_exte.TabIndex = 16;
             this.label_exte.Text = "Intervenants extérieurs";
             // 
@@ -229,7 +232,7 @@
             this.label_livrables.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_livrables.Location = new System.Drawing.Point(858, 330);
             this.label_livrables.Name = "label_livrables";
-            this.label_livrables.Size = new System.Drawing.Size(55, 14);
+            this.label_livrables.Size = new System.Drawing.Size(64, 17);
             this.label_livrables.TabIndex = 21;
             this.label_livrables.Text = "Livrables";
             // 
@@ -258,7 +261,7 @@
             this.label_nom_projet.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_nom_projet.Location = new System.Drawing.Point(473, 18);
             this.label_nom_projet.Name = "label_nom_projet";
-            this.label_nom_projet.Size = new System.Drawing.Size(85, 14);
+            this.label_nom_projet.Size = new System.Drawing.Size(96, 17);
             this.label_nom_projet.TabIndex = 25;
             this.label_nom_projet.Text = "Nom du projet";
             // 
@@ -266,7 +269,7 @@
             // 
             this.descriptionProjet.Location = new System.Drawing.Point(1062, 242);
             this.descriptionProjet.Name = "descriptionProjet";
-            this.descriptionProjet.Size = new System.Drawing.Size(368, 397);
+            this.descriptionProjet.Size = new System.Drawing.Size(334, 397);
             this.descriptionProjet.TabIndex = 26;
             this.descriptionProjet.Text = "";
             // 
@@ -274,9 +277,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1191, 222);
+            this.label6.Location = new System.Drawing.Point(1162, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 14);
+            this.label6.Size = new System.Drawing.Size(136, 17);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description du projet";
             // 
@@ -404,18 +407,49 @@
             // 
             this.logoENSC.Image = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
             this.logoENSC.InitialImage = global::ENSC_ProjectManager.Properties.Resources.logo_ensc;
-            this.logoENSC.Location = new System.Drawing.Point(1246, 12);
+            this.logoENSC.Location = new System.Drawing.Point(1223, 12);
             this.logoENSC.Name = "logoENSC";
-            this.logoENSC.Size = new System.Drawing.Size(100, 50);
+            this.logoENSC.Size = new System.Drawing.Size(173, 118);
             this.logoENSC.TabIndex = 0;
             this.logoENSC.TabStop = false;
+            // 
+            // RetourAccueil
+            // 
+            this.RetourAccueil.BackColor = System.Drawing.Color.Transparent;
+            this.RetourAccueil.Image = global::ENSC_ProjectManager.Properties.Resources.logo_back1;
+            this.RetourAccueil.Location = new System.Drawing.Point(12, 12);
+            this.RetourAccueil.Name = "RetourAccueil";
+            this.RetourAccueil.Size = new System.Drawing.Size(59, 57);
+            this.RetourAccueil.TabIndex = 41;
+            this.RetourAccueil.UseVisualStyleBackColor = false;
+            this.RetourAccueil.Click += new System.EventHandler(this.RetourAccueil_Click);
+            // 
+            // label_date_d
+            // 
+            this.label_date_d.AutoSize = true;
+            this.label_date_d.Location = new System.Drawing.Point(39, 184);
+            this.label_date_d.Name = "label_date_d";
+            this.label_date_d.Size = new System.Drawing.Size(23, 15);
+            this.label_date_d.TabIndex = 42;
+            this.label_date_d.Text = "Du";
+            // 
+            // label_date_f
+            // 
+            this.label_date_f.AutoSize = true;
+            this.label_date_f.Location = new System.Drawing.Point(318, 184);
+            this.label_date_f.Name = "label_date_f";
+            this.label_date_f.Size = new System.Drawing.Size(21, 15);
+            this.label_date_f.TabIndex = 43;
+            this.label_date_f.Text = "au";
             // 
             // CreationProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 727);
-            this.ClientSize = new System.Drawing.Size(1370, 727);
+            this.ClientSize = new System.Drawing.Size(1408, 727);
+            this.Controls.Add(this.label_date_f);
+            this.Controls.Add(this.label_date_d);
+            this.Controls.Add(this.RetourAccueil);
             this.Controls.Add(this.logoENSC);
             this.Controls.Add(this.ajoutMatiere);
             this.Controls.Add(this.retirerLivrable);
@@ -497,6 +531,9 @@
         private System.Windows.Forms.Button retirerLivrable;
         private System.Windows.Forms.Button ajoutMatiere;
         private System.Windows.Forms.PictureBox logoENSC;
+        private System.Windows.Forms.Button RetourAccueil;
+        private System.Windows.Forms.Label label_date_d;
+        private System.Windows.Forms.Label label_date_f;
     }
 }
 

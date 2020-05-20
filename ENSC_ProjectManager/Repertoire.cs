@@ -73,12 +73,30 @@ namespace ENSC_ProjectManager
             }
             return null;
         }
+        public Professeur GetProfesseur(Intervenant intervenant)
+        {
+            foreach (Professeur professeur in professeurs)
+            {
+                if (professeur.Equals(intervenant))
+                    return professeur;
+            }
+            return null;
+        }
 
         public Exterieur GetExterieur(string nom, string prenom, string organisation)
         {
             foreach(Exterieur exterieur in intervenantsExte)
             {
                 if (exterieur.Nom.Equals(nom) && exterieur.Prenom.Equals(prenom) && exterieur.Organisation.Equals(organisation))
+                    return exterieur;
+            }
+            return null;
+        }
+        public Exterieur GetExterieur(Intervenant intervenant)
+        {
+            foreach (Exterieur exterieur in intervenantsExte)
+            {
+                if (exterieur.Equals(intervenant))
                     return exterieur;
             }
             return null;
@@ -127,6 +145,22 @@ namespace ENSC_ProjectManager
                 }
                 return null;
             }
+        }
+        public Etudiant GetEtudiant(int[] anneesPromo, Intervenant intervenant)
+        {
+            foreach(int anneePromo in anneesPromo)
+            {
+                Promotion promotion = GetPromotion(anneePromo);
+                if (promotion != null)
+                {
+                    foreach (Etudiant etudiant in promotion.Etudiants)
+                    {
+                        if (etudiant.Equals(intervenant))
+                            return etudiant;
+                    }
+                }
+            }
+            return null;
         }
 
         public List<string> GetLibellesRoles()

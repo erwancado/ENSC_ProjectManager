@@ -577,5 +577,12 @@ namespace ENSC_ProjectManager
                 }
             }
         }
+
+        private void listeProjets_DoubleClick(object sender, EventArgs e)
+        {
+            Projet selected = _projets[listeProjets.SelectedIndex];
+            AffichageProjet affichageProjet = new AffichageProjet(_repertoire, selected);
+            affichageProjet.Show();
+        }
     }
 }
