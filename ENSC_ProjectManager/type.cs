@@ -1,5 +1,8 @@
 ﻿namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente un type de projet
+    /// </summary>
     public class Type
     {
         public bool Groupe { get { return NbMaxEtudiants != 1; } }

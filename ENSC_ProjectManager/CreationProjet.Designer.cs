@@ -122,7 +122,7 @@
             this.listeEtudiants.Location = new System.Drawing.Point(12, 258);
             this.listeEtudiants.Name = "listeEtudiants";
             this.listeEtudiants.ScrollAlwaysVisible = true;
-            this.listeEtudiants.Size = new System.Drawing.Size(224, 30);
+            this.listeEtudiants.Size = new System.Drawing.Size(224, 121);
             this.listeEtudiants.TabIndex = 6;
             this.listeEtudiants.SelectedValueChanged += new System.EventHandler(this.listeEtudiants_SelectedValueChanged);
             // 
@@ -161,7 +161,7 @@
             // 
             // insertEtudiant
             // 
-            this.insertEtudiant.Location = new System.Drawing.Point(52, 294);
+            this.insertEtudiant.Location = new System.Drawing.Point(52, 386);
             this.insertEtudiant.Name = "insertEtudiant";
             this.insertEtudiant.Size = new System.Drawing.Size(117, 23);
             this.insertEtudiant.TabIndex = 11;
@@ -171,7 +171,7 @@
             // 
             // insertProfesseur
             // 
-            this.insertProfesseur.Location = new System.Drawing.Point(286, 294);
+            this.insertProfesseur.Location = new System.Drawing.Point(286, 386);
             this.insertProfesseur.Name = "insertProfesseur";
             this.insertProfesseur.Size = new System.Drawing.Size(141, 23);
             this.insertProfesseur.TabIndex = 14;
@@ -185,13 +185,13 @@
             this.listeProfesseurs.Location = new System.Drawing.Point(242, 258);
             this.listeProfesseurs.Name = "listeProfesseurs";
             this.listeProfesseurs.ScrollAlwaysVisible = true;
-            this.listeProfesseurs.Size = new System.Drawing.Size(234, 30);
+            this.listeProfesseurs.Size = new System.Drawing.Size(234, 121);
             this.listeProfesseurs.TabIndex = 13;
             this.listeProfesseurs.SelectedValueChanged += new System.EventHandler(this.listeProfesseurs_SelectedValueChanged);
             // 
             // insertExte
             // 
-            this.insertExte.Location = new System.Drawing.Point(531, 294);
+            this.insertExte.Location = new System.Drawing.Point(531, 386);
             this.insertExte.Name = "insertExte";
             this.insertExte.Size = new System.Drawing.Size(141, 23);
             this.insertExte.TabIndex = 18;
@@ -205,7 +205,7 @@
             this.listeExtes.Location = new System.Drawing.Point(482, 258);
             this.listeExtes.Name = "listeExtes";
             this.listeExtes.ScrollAlwaysVisible = true;
-            this.listeExtes.Size = new System.Drawing.Size(230, 30);
+            this.listeExtes.Size = new System.Drawing.Size(230, 121);
             this.listeExtes.TabIndex = 17;
             this.listeExtes.SelectedValueChanged += new System.EventHandler(this.listeExtes_SelectedValueChanged);
             // 
@@ -316,27 +316,27 @@
             // affichageEtudiants
             // 
             this.affichageEtudiants.FormattingEnabled = true;
-            this.affichageEtudiants.Location = new System.Drawing.Point(12, 362);
+            this.affichageEtudiants.Location = new System.Drawing.Point(12, 453);
             this.affichageEtudiants.Name = "affichageEtudiants";
-            this.affichageEtudiants.Size = new System.Drawing.Size(224, 277);
+            this.affichageEtudiants.Size = new System.Drawing.Size(224, 186);
             this.affichageEtudiants.TabIndex = 31;
             this.affichageEtudiants.SelectedValueChanged += new System.EventHandler(this.affichageEtudiants_SelectedValueChanged);
             // 
             // affichageProfesseurs
             // 
             this.affichageProfesseurs.FormattingEnabled = true;
-            this.affichageProfesseurs.Location = new System.Drawing.Point(242, 362);
+            this.affichageProfesseurs.Location = new System.Drawing.Point(242, 453);
             this.affichageProfesseurs.Name = "affichageProfesseurs";
-            this.affichageProfesseurs.Size = new System.Drawing.Size(234, 277);
+            this.affichageProfesseurs.Size = new System.Drawing.Size(234, 186);
             this.affichageProfesseurs.TabIndex = 32;
             this.affichageProfesseurs.SelectedValueChanged += new System.EventHandler(this.affichageProfesseurs_SelectedValueChanged);
             // 
             // affichageExtes
             // 
             this.affichageExtes.FormattingEnabled = true;
-            this.affichageExtes.Location = new System.Drawing.Point(482, 362);
+            this.affichageExtes.Location = new System.Drawing.Point(482, 453);
             this.affichageExtes.Name = "affichageExtes";
-            this.affichageExtes.Size = new System.Drawing.Size(230, 277);
+            this.affichageExtes.Size = new System.Drawing.Size(230, 186);
             this.affichageExtes.TabIndex = 33;
             this.affichageExtes.SelectedValueChanged += new System.EventHandler(this.affichageExtes_SelectedValueChanged);
             // 
@@ -351,7 +351,7 @@
             // 
             // ajouterEtudiant
             // 
-            this.ajouterEtudiant.Location = new System.Drawing.Point(52, 324);
+            this.ajouterEtudiant.Location = new System.Drawing.Point(52, 416);
             this.ajouterEtudiant.Name = "ajouterEtudiant";
             this.ajouterEtudiant.Size = new System.Drawing.Size(117, 23);
             this.ajouterEtudiant.TabIndex = 35;
@@ -361,7 +361,7 @@
             // 
             // ajouterProfesseur
             // 
-            this.ajouterProfesseur.Location = new System.Drawing.Point(286, 326);
+            this.ajouterProfesseur.Location = new System.Drawing.Point(286, 416);
             this.ajouterProfesseur.Name = "ajouterProfesseur";
             this.ajouterProfesseur.Size = new System.Drawing.Size(141, 23);
             this.ajouterProfesseur.TabIndex = 36;
@@ -371,7 +371,7 @@
             // 
             // ajouterExte
             // 
-            this.ajouterExte.Location = new System.Drawing.Point(531, 326);
+            this.ajouterExte.Location = new System.Drawing.Point(531, 416);
             this.ajouterExte.Name = "ajouterExte";
             this.ajouterExte.Size = new System.Drawing.Size(141, 23);
             this.ajouterExte.TabIndex = 37;

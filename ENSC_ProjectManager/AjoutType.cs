@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'un type de projet
+    /// </summary>
     public partial class AjoutType : Form
     {
         public Type ReturnType;

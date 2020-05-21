@@ -1,5 +1,8 @@
 ﻿namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente un étudiant
+    /// </summary>
     public class Etudiant : Intervenant
     {
         public bool Redoublant;

@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'un étudiant
+    /// </summary>
     public partial class AjoutEtudiant : Form
     {
         public Etudiant ReturnEtudiant;
@@ -16,6 +19,11 @@ namespace ENSC_ProjectManager
             this.CenterToParent();
         }
 
+        /// <summary>
+        /// Vérifie que tous les champs sont remplis correctement avant de créer l'étudiant
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Valider_Click(object sender, EventArgs e)
         {
             if (nomEtudiant.TextLength != 0 && prenomEtudiant.TextLength != 0)

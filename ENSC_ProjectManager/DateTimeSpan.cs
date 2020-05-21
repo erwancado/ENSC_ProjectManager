@@ -2,6 +2,9 @@
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Ecart de dates
+    /// </summary>
     public struct DateTimeSpan
     {
         public int Years { get; }
@@ -25,6 +28,12 @@ namespace ENSC_ProjectManager
 
         enum Phase { Years, Months, Days, Done }
 
+        /// <summary>
+        /// Compare deux dates entre elles et renvoie un objet comportant le temps qui les sépare en secondes, minutes, heures, jours, mois et années
+        /// </summary>
+        /// <param name="date1"></param>
+        /// <param name="date2"></param>
+        /// <returns>un écart de date</returns>
         public static DateTimeSpan CompareDates(DateTime date1, DateTime date2)
         {
             if (date2 < date1)

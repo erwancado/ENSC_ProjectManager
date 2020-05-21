@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'un intervenant extérieur
+    /// </summary>
     public partial class AjoutExterieur : Form
     {
         public Exterieur ReturnIntervenant;
@@ -12,6 +15,11 @@ namespace ENSC_ProjectManager
             this.CenterToParent();
         }
 
+        /// <summary>
+        /// Vérifie que tous les champs sont correctement remplis avant de créer l'intervenant
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Valider_Click(object sender, EventArgs e)
         {
             if (nomExte.Text.Length > 1 && prenomExte.Text.Length > 0 && mailExte.Text.Length > 7 && organisationExte.Text.Length > 1)

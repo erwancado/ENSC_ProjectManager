@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'une matière
+    /// </summary>
     public partial class AjoutMatiere : Form
     {
         public Matiere ReturnMatiere;
-        public Module ReturnModule;
+        public Module ReturnModule; // Module auquel la matière sera associée
         private Repertoire Repertoire;
-        
+
         public AjoutMatiere(Repertoire repertoire)
         {
             InitializeComponent();
@@ -28,6 +25,11 @@ namespace ENSC_ProjectManager
             this.CenterToParent();
         }
 
+        /// <summary>
+        /// Vérifie que tous les champs sont remplis correctement avant de créer la matière
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Valider_Click(object sender, EventArgs e)
         {
             if (code.TextLength == 8)
@@ -62,7 +64,7 @@ namespace ENSC_ProjectManager
                     {
                         MessageBox.Show("Module manquant", "Veuillez sélectionner le module de la matière.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
+
                 }
                 else
                 {
@@ -91,11 +93,15 @@ namespace ENSC_ProjectManager
             listeProf.EndUpdate();
         }
 
+        /// <summary>
+        /// Remplit la liste des modules correspondant au type de promotion choisi
+        /// </summary>
+        /// <param name="promo">type de promotion</param>
         private void RemplirModules(string promo)
         {
             liste_modules.BeginUpdate();
             liste_modules.Items.Clear();
-            if(promo.Equals(""))
+            if (promo.Equals(""))
             {
                 foreach (Module module in Repertoire.modules)
                 {
@@ -106,7 +112,7 @@ namespace ENSC_ProjectManager
             {
                 foreach (Module module in Repertoire.modules)
                 {
-                    if(module.Promo.Equals(promo))
+                    if (module.Promo.Equals(promo))
                         liste_modules.Items.Add(module.Code + "-" + module.Libelle);
                 }
             }

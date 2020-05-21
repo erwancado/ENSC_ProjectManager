@@ -39,8 +39,8 @@ namespace ENSC_ProjectManager
             RemplirExtes();
             RemplirProjets();
             RemplirAnneePromo();
-            RemplirMatiere();
-            RemplirModule();
+            RemplirMatieres();
+            RemplirModules();
             rechercherMatiere.Enabled = false;
             rechercherModule.Enabled = false;
             resultatsRecherchePersonne.Hide();
@@ -49,6 +49,10 @@ namespace ENSC_ProjectManager
         {
             CreationProjet formCreationProjet = new CreationProjet(_repertoire);
             formCreationProjet.Show();
+            string aideCreationProjet = "Pour créer votre projet, choisissez d'abord un type de projet. Renseignez le nom du projet, ses dates et décrivez-le.\n" +
+                "Sélectionnez ensuite les promotions et les matières concernées par le projet.\n" +
+                "Vous pouvez alors ajouter les différents participants et vos livrables avant de valider pour attribuer les rôles.";
+            MessageBox.Show(aideCreationProjet, "Comment créer mon projet ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
             formCreationProjet.VisibleChanged += formVisibleChangedCreationProjet;
         }
 
@@ -97,6 +101,11 @@ namespace ENSC_ProjectManager
             if (listeEleves.CheckedItems.Count != 0 || listeProfs.CheckedItems.Count != 0 || listeIntervenants.CheckedItems.Count != 0)
                 _projets = RechercheParIntervenant(GetIntervenantsFiltre());
         }
+        /// <summary>
+        /// Recherche les projets comptant parmi ses participants au moins un des intervenants de la liste
+        /// </summary>
+        /// <param name="intervenants">liste des intervenants</param>
+        /// <returns>liste des projets contenant les intervenants</returns>
         private List<Projet> RechercheParIntervenant(List<Intervenant> intervenants)
         {
             List<Projet> projetsRecherche = new List<Projet>();
@@ -212,6 +221,12 @@ namespace ENSC_ProjectManager
             listeProjets.EndUpdate();
         }
 
+        /// <summary>
+        /// Recherche les étudiants dans la liste dont les nom et prénom ressemblent à ceux recherchés
+        /// </summary>
+        /// <param name="nomRecherche">nom recherché</param>
+        /// <param name="prenomRecherche">prénom recherché</param>
+        /// <returns>liste de string contenant le nom prenom de chaque étudiant qui correspond ainsi que son index</returns>
         private List<string> RechercherEtudiants(string nomRecherche, string prenomRecherche)
         {
             List<string> etudiantsRecherche = new List<string>();
@@ -227,6 +242,12 @@ namespace ENSC_ProjectManager
             return etudiantsRecherche;
         }
 
+        /// <summary>
+        /// Recherche les professeurs dans la liste dont les nom et prénom ressemblent à ceux recherchés
+        /// </summary>
+        /// <param name="nomRecherche">nom recherché</param>
+        /// <param name="prenomRecherche">prénom recherché</param>
+        /// <returns>liste de string contenant le nom prenom de chaque professeur qui correspond ainsi que son index</returns>
         private List<string> RechercherProfesseurs(string nomRecherche, string prenomRecherche)
         {
             List<string> professeursRecherche = new List<string>();
@@ -241,6 +262,12 @@ namespace ENSC_ProjectManager
             return professeursRecherche;
         }
 
+        /// <summary>
+        /// Recherche les intervenants extérieurs dans la liste dont les nom et prénom ressemblent à ceux recherchés
+        /// </summary>
+        /// <param name="nomRecherche">nom recherché</param>
+        /// <param name="prenomRecherche">prénom recherché</param>
+        /// <returns>liste de string contenant le nom prenom de chaque intervenant extérieur qui correspond ainsi que son index</returns>
         private List<string> RechercherExterieurs(string nomRecherche, string prenomRecherche)
         {
             List<string> exterieursRecherche = new List<string>();
@@ -257,6 +284,11 @@ namespace ENSC_ProjectManager
 
 
 
+        /// <summary>
+        /// Remplit la liste des personnes correspondant à la recherche
+        /// </summary>
+        /// <param name="sender">bouton de recherche</param>
+        /// <param name="e"></param>
         private void RechercherPersonne_Click(object sender, EventArgs e)
         {
             resultatsRecherchePersonne.Show();
@@ -276,6 +308,11 @@ namespace ENSC_ProjectManager
             UpdateCheckedResultats();
         }
 
+        /// <summary>
+        /// Sélectionne une personne dans la liste correspondante lorsqu'elle est sélectionnée dans les résultats de la recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void resultatsRecherchePersonne_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             listeEleves.BeginUpdate();
@@ -313,6 +350,9 @@ namespace ENSC_ProjectManager
             listeIntervenants.EndUpdate();
         }
 
+        /// <summary>
+        /// Coche les personnes de la liste de résultats déjà cochées dans leurs listes respectives
+        /// </summary>
         private void UpdateCheckedResultats()
         {
             resultatsRecherchePersonne.BeginUpdate();
@@ -346,21 +386,12 @@ namespace ENSC_ProjectManager
             resultatsRecherchePersonne.EndUpdate();
         }
 
-        private void listeEleves_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            //UpdateCheckedResultats();
-        }
 
-        private void listeProfs_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            //UpdateCheckedResultats();
-        }
-
-        private void listeIntervenants_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            //UpdateCheckedResultats();
-        }
-
+        /// <summary>
+        /// Effectue une recherche par nom de projet après que l'utilisateur ait appuyé sur "Entrer" dans la barre de recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nomDeProjet_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -378,6 +409,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Applique les filtres sélectionnés à la liste de projets affichés
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AppliquerFiltres_Click(object sender, EventArgs e)
         {
             _projets = _repertoire.projets;
@@ -390,11 +426,19 @@ namespace ENSC_ProjectManager
             RemplirProjets();
         }
 
+        /// <summary>
+        /// Fait en sorte que la date de fin de la période recherchée ne puisse pas être avant la date de début
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dateDebut_ValueChanged(object sender, EventArgs e)
         {
             dateFin.MinDate = dateDebut.Value;
         }
 
+        /// <summary>
+        /// Remplit la liste des années de promotion présentes dans le répertoire
+        /// </summary>
         public void RemplirAnneePromo()
         {
             listeAnneePromo.BeginUpdate();
@@ -413,7 +457,11 @@ namespace ENSC_ProjectManager
             listeAnneePromo.Items.AddRange(listeAnneesExistantes.ToArray());
             listeAnneePromo.EndUpdate();
         }
-        public void RemplirModule()
+
+        /// <summary>
+        /// Remplit la liste des modules
+        /// </summary>
+        public void RemplirModules()
         {
             listeModules.BeginUpdate();
             listeModules.Items.Clear();
@@ -423,7 +471,10 @@ namespace ENSC_ProjectManager
             }
             listeModules.EndUpdate();
         }
-        public void RemplirMatiere()
+        /// <summary>
+        /// Remplit la liste des matières
+        /// </summary>
+        public void RemplirMatieres()
         {
             listeMatieres.BeginUpdate();
             listeMatieres.Items.Clear();
@@ -433,6 +484,9 @@ namespace ENSC_ProjectManager
             }
             listeMatieres.EndUpdate();
         }
+        /// <summary>
+        /// Filtre les projets par année de promotion
+        /// </summary>
         public void FiltrerParAnneeDePromo()
         {
             if (listeAnneePromo.CheckedItems.Count != 0)
@@ -452,8 +506,10 @@ namespace ENSC_ProjectManager
                 }
                 _projets = projetsFiltreAnneeDePromo;
             }
-
         }
+        /// <summary>
+        /// Filtre les projets par niveaux : 1A, 2A ou 3A
+        /// </summary>
         public void FiltrerParNiveaux()
         {
             List<Projet> projetsFiltreNiveaux = new List<Projet>();
@@ -498,6 +554,9 @@ namespace ENSC_ProjectManager
                 _projets = projetsFiltreNiveaux;
             }
         }
+        /// <summary>
+        /// Filtre les projets par matières
+        /// </summary>
         public void FiltrerParMatieres()
         {
             if (listeMatieres.CheckedItems.Count != 0)
@@ -511,6 +570,9 @@ namespace ENSC_ProjectManager
                 _projets = projetsFiltreMatieres;
             }
         }
+        /// <summary>
+        /// Filtre les projets par modules
+        /// </summary>
         public void FiltrerParModules()
         {
             if (listeModules.CheckedItems.Count != 0)
@@ -524,6 +586,10 @@ namespace ENSC_ProjectManager
                 _projets = projetsFiltreModules;
             }
         }
+        /// <summary>
+        /// Récupére la liste des années de promo cochées
+        /// </summary>
+        /// <returns>liste des années de promo sous forme d'entier</returns>
         public List<int> RecupererAnneesDePromo()
         {
             List<int> listeAnneesDePromo = new List<int>();
@@ -535,6 +601,10 @@ namespace ENSC_ProjectManager
             }
             return listeAnneesDePromo;
         }
+        /// <summary>
+        /// Récupére les codes des modules cochés
+        /// </summary>
+        /// <returns>liste des codes des modules cochés</returns>
         public List<String> RecupererModules()
         {
             List<String> listeDeModules = new List<String>();
@@ -544,6 +614,10 @@ namespace ENSC_ProjectManager
             }
             return listeDeModules;
         }
+        /// <summary>
+        /// Récupére la liste des niveaux cochés
+        /// </summary>
+        /// <returns>liste des niveaux cochés</returns>
         public List<String> RecupererNiveaux()
         {
             List<String> listeNiveaux = new List<String>();
@@ -553,6 +627,10 @@ namespace ENSC_ProjectManager
             }
             return listeNiveaux;
         }
+        /// <summary>
+        /// Récupére la liste des matières cochées
+        /// </summary>
+        /// <returns></returns>
         public List<String> RecupererMatieres()
         {
             List<String> listeDeMatieres = new List<String>();
@@ -570,6 +648,11 @@ namespace ENSC_ProjectManager
         {
             rechercherModule.Enabled = true;
         }
+        /// <summary>
+        /// Sélectionne la matière dont le nom correspond à la recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RechercherMatiere_Click(object sender, EventArgs e)
         {
             if (matiere.TextLength == 0)
@@ -590,6 +673,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Sélectionne le module dont le nom correspond à la recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RechercherModule_Click(object sender, EventArgs e)
         {
             if (module.TextLength == 0)
@@ -610,6 +698,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Appelle le formulaire d'affichage du projet sur lequel l'utilisateur a double-cliqué
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listeProjets_DoubleClick(object sender, EventArgs e)
         {
             Projet selected = _projets[listeProjets.SelectedIndex];

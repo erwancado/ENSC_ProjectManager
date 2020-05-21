@@ -4,6 +4,11 @@ using System.Text.RegularExpressions;
 
 public class RegexUtilities
 {
+    /// <summary>
+    /// Fonction permettant de vérifier si un email est correct (extrait de code trouvé sur internet)
+    /// </summary>
+    /// <param name="email">email à verifier</param>
+    /// <returns></returns>
     public static bool IsValidEmail(string email)
     {
         if (string.IsNullOrWhiteSpace(email))

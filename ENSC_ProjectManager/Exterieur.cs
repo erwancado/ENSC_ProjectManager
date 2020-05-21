@@ -1,5 +1,8 @@
 ﻿namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente un intervenant extérieur
+    /// </summary>
     public class Exterieur : Intervenant
     {
         private string _organisation;

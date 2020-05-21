@@ -143,7 +143,7 @@
             this.RetourAccueil.Size = new System.Drawing.Size(59, 57);
             this.RetourAccueil.TabIndex = 42;
             this.RetourAccueil.UseVisualStyleBackColor = false;
-            this.RetourAccueil.Click += new System.EventHandler(this.RetourAccueil_Click);
+            this.RetourAccueil.Click += new System.EventHandler(this.RetourCreationProjet_Click);
             // 
             // AjoutRoles
             // 

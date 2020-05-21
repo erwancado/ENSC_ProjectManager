@@ -3,10 +3,13 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Affiche les détails d'un projet
+    /// </summary>
     public partial class AffichageProjet : Form
     {
-        Repertoire _repertoire;
-        Projet _projet;
+        Repertoire _repertoire; // Repertoire contenant toutes les données du logiciel
+        Projet _projet; // Projet dont on veut afficher les détails
         public AffichageProjet(Repertoire repertoire, Projet projet)
         {
             InitializeComponent();
@@ -89,6 +92,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Renvoie l'utilisateur à la page d'accueil du logiciel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RetourAccueil_Click(object sender, EventArgs e)
         {
             this.Close();

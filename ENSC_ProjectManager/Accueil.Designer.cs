@@ -166,7 +166,6 @@
             this.listeEleves.Name = "listeEleves";
             this.listeEleves.Size = new System.Drawing.Size(267, 154);
             this.listeEleves.TabIndex = 9;
-            this.listeEleves.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeEleves_ItemCheck);
             // 
             // boutonNouveauProjet
             // 
@@ -295,7 +294,6 @@
             this.listeProfs.Name = "listeProfs";
             this.listeProfs.Size = new System.Drawing.Size(267, 139);
             this.listeProfs.TabIndex = 24;
-            this.listeProfs.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeProfs_ItemCheck);
             // 
             // label3
             // 
@@ -360,7 +358,6 @@
             this.listeIntervenants.Name = "listeIntervenants";
             this.listeIntervenants.Size = new System.Drawing.Size(267, 94);
             this.listeIntervenants.TabIndex = 31;
-            this.listeIntervenants.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listeIntervenants_ItemCheck);
             // 
             // RechercherPersonne
             // 

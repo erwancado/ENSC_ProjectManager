@@ -5,6 +5,9 @@ using System.Xml.Serialization;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Contient toutes les données de l'application
+    /// </summary>
     [XmlRoot("Repertoire", IsNullable = false)]
     public class Repertoire
     {
@@ -171,6 +174,9 @@ namespace ENSC_ProjectManager
             return libelles;
         }
 
+        /// <summary>
+        /// Sérialise toutes les données dans le fichier de sauvegarde XML spécifié au moment du chargement
+        /// </summary>
         public void SaveData()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));
@@ -179,6 +185,11 @@ namespace ENSC_ProjectManager
             writer.Close();
         }
 
+        /// <summary>
+        /// Charge les données de l'application à partir du fichier XML de sauvegarde
+        /// </summary>
+        /// <param name="SaveFile">fichier XML de sauvegarde des données</param>
+        /// <returns></returns>
         public static Repertoire LoadData(string SaveFile)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Repertoire));
@@ -189,6 +200,7 @@ namespace ENSC_ProjectManager
             // Declare an object variable of the type to be deserialized.
             Repertoire repertoire;
             repertoire = (Repertoire)serializer.Deserialize(fs);
+            repertoire.saveFile = SaveFile;
             return repertoire;
         }
         private static void serializer_UnknownNode(object sender, XmlNodeEventArgs e)

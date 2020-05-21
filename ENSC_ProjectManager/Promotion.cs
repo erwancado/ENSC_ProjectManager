@@ -2,6 +2,9 @@
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente une promotion d'étudiants de l'ENSC
+    /// </summary>
     public class Promotion
     {
         public int Annee { get; set; }

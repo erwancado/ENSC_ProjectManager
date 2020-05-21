@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'un professeur
+    /// </summary>
     public partial class AjoutProf : Form
     {
         public Professeur ReturnProfesseur;
@@ -17,6 +20,11 @@ namespace ENSC_ProjectManager
             this.CenterToParent();
         }
 
+        /// <summary>
+        /// Vérifie que tous les champs sont remplis correctement avant de créer le professeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Valider_Click(object sender, EventArgs e)
         {
             if (nomProf.TextLength != 0 && prenomProf.TextLength != 0 && mailProf.TextLength != 0)
@@ -49,6 +57,10 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Remplit la liste des matières auxquelles on peut associer le professeur
+        /// </summary>
+        /// <param name="matieres"></param>
         private void RemplirMatieres(List<Matiere> matieres)
         {
             liste_matieres.BeginUpdate();

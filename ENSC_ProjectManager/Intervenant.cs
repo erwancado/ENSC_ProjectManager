@@ -1,5 +1,8 @@
 ﻿namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente une personne prenant part à un projet
+    /// </summary>
     public class Intervenant
     {
         public string Nom { get; set; }

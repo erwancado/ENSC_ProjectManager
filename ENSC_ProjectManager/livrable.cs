@@ -2,6 +2,9 @@
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Représente un livrable de projet
+    /// </summary>
     public class Livrable
     {
         private string _typeFichier;

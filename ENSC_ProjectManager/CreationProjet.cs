@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire de création d'un projet
+    /// </summary>
     public partial class CreationProjet : Form
     {
         public Repertoire repertoire;
@@ -33,10 +36,18 @@ namespace ENSC_ProjectManager
             ajouterLivrable.Enabled = false;
             ajouterEtudiant.Enabled = false;
             RemplirTypesProjet();
+            RemplirExtes();
+            AideDescriptionProjet();
             this.CenterToScreen();
             this.ControlBox = false;
         }
 
+        private void AideDescriptionProjet()
+        {
+            descriptionProjet.Text = "Renseignez ici le sujet de votre projet, avez-vous pu le choisir ? Etait-il imposé ?\n" +
+                "Quel était le contexte du projet ? Comment avez-vous procédé pour répondre à la problématique ?\n" +
+                "N'hésitez pas à ajouter un lien vers votre projet (dépot Git, site web, accés google drive...).";
+        }
         private void RemplirTypesProjet()
         {
             listeTypeProjet.BeginUpdate();
@@ -47,6 +58,10 @@ namespace ENSC_ProjectManager
             }
             listeTypeProjet.EndUpdate();
         }
+        /// <summary>
+        /// Ajoute un type de projet à la liste et au repertoire
+        /// </summary>
+        /// <param name="type">type de projet</param>
         private void AjouterTypeProjet(Type type)
         {
             repertoire.typesProjet.Add(type);
@@ -54,6 +69,10 @@ namespace ENSC_ProjectManager
             listeTypeProjet.Items.Add("Projet " + type.TypePromotion.ToUpper() + " de " + type.NbMinEtudiants + " à " + type.NbMaxEtudiants + " étudiants");
             listeTypeProjet.EndUpdate();
         }
+        /// <summary>
+        /// Ajoute un livrable à la liste des livrables
+        /// </summary>
+        /// <param name="livrable"></param>
         private void AjouterLivrable(Livrable livrable)
         {
             if (affichageLivrables.Items.Count == 0)
@@ -68,6 +87,10 @@ namespace ENSC_ProjectManager
             affichageLivrables.Items.Add(livrable.Libelle + " (" + livrable.TypeFichier.ToUpper() + ") - " + livrable.DateRendu.ToShortDateString() + (livrable.Rendu ? " - Rendu" : " - Non rendu"));
             affichageLivrables.EndUpdate();
         }
+        /// <summary>
+        /// Remplit la liste des étudiants filtrés par années de promotion
+        /// </summary>
+        /// <param name="anneePromos">années de promotion des étudiants à afficher</param>
         private void RemplirEtudiants(int[] anneePromos)
         {
             listeEtudiants.BeginUpdate();
@@ -85,6 +108,11 @@ namespace ENSC_ProjectManager
             }
             listeEtudiants.EndUpdate();
         }
+        /// <summary>
+        /// Ajoute un étudiant à la liste des étudiants et à sa promotion dans le repertoire
+        /// </summary>
+        /// <param name="etudiant">étudiant à ajouter</param>
+        /// <param name="anneePromo">année de promotion de l'étudiant</param>
         private void AjouterEtudiant(Etudiant etudiant, int anneePromo)
         {
             Promotion promotion = repertoire.GetPromotion(anneePromo);
@@ -101,6 +129,10 @@ namespace ENSC_ProjectManager
             listeEtudiants.EndUpdate();
 
         }
+        /// <summary>
+        /// Remplit la liste de promotions
+        /// </summary>
+        /// <param name="promotions"></param>
         private void RemplirPromos(string[] promotions)
         {
             listePromotion.BeginUpdate();
@@ -111,6 +143,10 @@ namespace ENSC_ProjectManager
             }
             listePromotion.EndUpdate();
         }
+        /// <summary>
+        /// Remplit la liste des matières en fonction des promotions voulues
+        /// </summary>
+        /// <param name="promotion">promotions dont on veut afficher les matières</param>
         private void RemplirMatieres(string[] promotion)
         {
             listeMatiere.BeginUpdate();
@@ -125,6 +161,11 @@ namespace ENSC_ProjectManager
             listeMatiere.EndUpdate();
         }
 
+        /// <summary>
+        /// Ajoute la matière à la liste des matières et au repertoire qui l'associe à son module
+        /// </summary>
+        /// <param name="matiere">matière à ajouter</param>
+        /// <param name="module">module de la matière</param>
         private void AjouterMatiere(Matiere matiere, Module module)
         {
             repertoire.AddMatiere(matiere, module);
@@ -132,20 +173,35 @@ namespace ENSC_ProjectManager
             listeMatiere.Items.Add(matiere.Code + "-" + matiere.Libelle);
             listeMatiere.EndUpdate();
         }
+        /// <summary>
+        /// Remplit la liste des professeurs en fonction des matières sélectionnées
+        /// </summary>
+        /// <param name="matieres">matières sélectionnées</param>
         private void RemplirProfesseurs(Matiere[] matieres)
         {
             listeProfesseurs.BeginUpdate();
             listeProfesseurs.Items.Clear();
+            List<Professeur> professeursAjoutes = new List<Professeur>();
             foreach (Matiere matiere in matieres)
             {
                 foreach (Professeur professeur in matiere.ListeProfesseurs)
                 {
-                    listeProfesseurs.Items.Add(professeur.Nom + " " + professeur.Prenom);
+                    if (professeursAjoutes.Find(p=>p.Equals(professeur))==null)
+                    {
+                        listeProfesseurs.Items.Add(professeur.Nom + " " + professeur.Prenom);
+                        professeursAjoutes.Add(professeur);
+                    }
+                    
                 }
             }
             listeProfesseurs.EndUpdate();
         }
 
+        /// <summary>
+        /// Ajoute un professeur à la liste des professeurs et au répertoire
+        /// </summary>
+        /// <param name="professeur">professeur à ajouter</param>
+        /// <param name="matieresEnseignees">matières auxquelles le professeur est asssocié</param>
         private void AjouterProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
         {
             repertoire.AddProfesseur(professeur, matieresEnseignees);
@@ -164,6 +220,10 @@ namespace ENSC_ProjectManager
             listeExtes.EndUpdate();
         }
 
+        /// <summary>
+        /// Ajoute un intervenant extérieur à la liste et au répertoire
+        /// </summary>
+        /// <param name="intervenant">intervenant à ajouter</param>
         private void AjouterExte(Exterieur intervenant)
         {
             repertoire.intervenantsExte.Add(intervenant);
@@ -171,6 +231,11 @@ namespace ENSC_ProjectManager
             listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " " + intervenant.Organisation);
             listeExtes.EndUpdate();
         }
+        /// <summary>
+        /// Calcule l'année de promotion en fonction des dates du projet et du niveau de promotion (1A, 2A, 3A)
+        /// </summary>
+        /// <param name="promotion">niveau de promotion</param>
+        /// <returns></returns>
         private int AnneePromo(string promotion)
         {
             int result = -1;
@@ -202,6 +267,11 @@ namespace ENSC_ProjectManager
             ajouterEtudiant.Enabled = true;
         }
 
+        /// <summary>
+        /// Remplit les niveaux de promotion et les matières possibles en fonction du type de projet sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListeTypeProjet_SelectedValueChanged(object sender, EventArgs e)
         {
             dateDebutProjet.Enabled = true;
@@ -215,6 +285,11 @@ namespace ENSC_ProjectManager
             typeProjet = repertoire.typesProjet[listeTypeProjet.SelectedIndex];
         }
 
+        /// <summary>
+        /// Retourne les niveaux de promotions en fonction du type de projet
+        /// </summary>
+        /// <param name="libPromo">type de promotions du projet</param>
+        /// <returns></returns>
         private string[] GetPromotions(string libPromo)
         {
             if (libPromo.Equals("TRANSPROMO") || libPromo.Equals("TRANSPROMOTION"))
@@ -231,6 +306,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Remplit les matières et les étudiants en fonction du type de promotion sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListePromotion_SelectedValueChanged(object sender, EventArgs e)
         {
             List<string> promotions = new List<string>();
@@ -246,6 +326,11 @@ namespace ENSC_ProjectManager
             RemplirEtudiants(anneesPromos.ToArray());
         }
 
+        /// <summary>
+        /// Remplit les professeurs en fonction des matières sélectionnées
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListeMatiere_SelectedValueChanged(object sender, EventArgs e)
         {
             List<Matiere> matieres = new List<Matiere>();
@@ -259,10 +344,12 @@ namespace ENSC_ProjectManager
             listeProfesseurs.Enabled = true;
             listeExtes.Enabled = true;
             RemplirProfesseurs(matieres.ToArray());
-            RemplirExtes();
         }
 
 
+        /// <summary>
+        /// Vérifie que les dates de début et de fin sont valides
+        /// </summary>
         private void DatesValidation()
         {
             if (dateDebutProjet.Value > dateFinProjet.Value)
@@ -285,6 +372,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Insert un étudiant dans le projet après avoir vérifié que le nombre maximum n'était pas déjà atteint
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void insertEtudiant_Click(object sender, EventArgs e)
         {
             if (affichageEtudiants.Items.Count < typeProjet.NbMaxEtudiants)
@@ -304,6 +396,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Retire l'étudiant sélectionné du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void retirerEtudiant_Click(object sender, EventArgs e)
         {
             if (affichageEtudiants.SelectedItem != null)
@@ -318,6 +415,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Insert un professeur au projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void insertProfesseur_Click(object sender, EventArgs e)
         {
             affichageProfesseurs.BeginUpdate();
@@ -325,7 +427,69 @@ namespace ENSC_ProjectManager
                 affichageProfesseurs.Items.Add(listeProfesseurs.SelectedItem);
             affichageProfesseurs.EndUpdate();
         }
+        /// <summary>
+        /// Retire le professeur sélectionné du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void retirerProfesseur_Click(object sender, EventArgs e)
+        {
+            if (affichageProfesseurs.SelectedItem != null)
+            {
+                affichageProfesseurs.BeginUpdate();
+                affichageProfesseurs.Items.RemoveAt(affichageProfesseurs.SelectedIndex);
+                affichageProfesseurs.EndUpdate();
+            }
+        }
+        /// <summary>
+        /// Insert un intervenant extérieur au projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void insertExte_Click(object sender, EventArgs e)
+        {
+            affichageExtes.BeginUpdate();
+            if (listeExtes.SelectedItem != null)
+                affichageExtes.Items.Add(listeExtes.SelectedItem);
+            affichageExtes.EndUpdate();
+        }
+        /// <summary>
+        /// Retire l'intervenant sélectionné du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void retirerExte_Click(object sender, EventArgs e)
+        {
+            if (affichageExtes.SelectedItem != null)
+            {
+                affichageExtes.BeginUpdate();
+                affichageExtes.Items.RemoveAt(affichageEtudiants.SelectedIndex);
+                affichageExtes.EndUpdate();
+            }
+        }
 
+        /// <summary>
+        /// Retire le livrable sélectionné du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void retirerLivrable_Click(object sender, EventArgs e)
+        {
+            if (affichageLivrables.SelectedItem != null)
+            {
+                affichageLivrables.BeginUpdate();
+                affichageLivrables.Items.RemoveAt(affichageEtudiants.SelectedIndex);
+                affichageLivrables.EndUpdate();
+                liste_livrables.RemoveAt(affichageEtudiants.SelectedIndex);
+                if (affichageLivrables.Items.Count == 0)
+                {
+                    dateDebutProjet.Enabled = true;
+                    dateFinProjet.Enabled = false;
+                }
+            }
+        }
+
+       
         private void listeEtudiants_SelectedValueChanged(object sender, EventArgs e)
         {
             if (listeEtudiants.SelectedItem == null)
@@ -404,50 +568,13 @@ namespace ENSC_ProjectManager
                 retirerLivrable.Show();
         }
 
-        private void retirerProfesseur_Click(object sender, EventArgs e)
-        {
-            if (affichageProfesseurs.SelectedItem != null)
-            {
-                affichageProfesseurs.BeginUpdate();
-                affichageProfesseurs.Items.RemoveAt(affichageProfesseurs.SelectedIndex);
-                affichageProfesseurs.EndUpdate();
-            }
-        }
+       
 
-        private void retirerExte_Click(object sender, EventArgs e)
-        {
-            if (affichageExtes.SelectedItem != null)
-            {
-                affichageExtes.BeginUpdate();
-                affichageExtes.Items.RemoveAt(affichageEtudiants.SelectedIndex);
-                affichageExtes.EndUpdate();
-            }
-        }
-
-        private void retirerLivrable_Click(object sender, EventArgs e)
-        {
-            if (affichageLivrables.SelectedItem != null)
-            {
-                affichageLivrables.BeginUpdate();
-                affichageLivrables.Items.RemoveAt(affichageEtudiants.SelectedIndex);
-                affichageLivrables.EndUpdate();
-                liste_livrables.RemoveAt(affichageEtudiants.SelectedIndex);
-                if (affichageLivrables.Items.Count == 0)
-                {
-                    dateDebutProjet.Enabled = true;
-                    dateFinProjet.Enabled = false;
-                }
-            }
-        }
-
-        private void insertExte_Click(object sender, EventArgs e)
-        {
-            affichageExtes.BeginUpdate();
-            if (listeExtes.SelectedItem != null)
-                affichageExtes.Items.Add(listeExtes.SelectedItem);
-            affichageExtes.EndUpdate();
-        }
-
+        /// <summary>
+        /// Affiche le formulaire d'ajout de type de projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterType_Click(object sender, EventArgs e)
         {
             AjoutType formAjoutType = new AjoutType();
@@ -455,6 +582,11 @@ namespace ENSC_ProjectManager
             formAjoutType.VisibleChanged += formVisibleChangedAjouterType;
 
         }
+        /// <summary>
+        /// Récupére le type de projet créé dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterType(object sender, EventArgs e)
         {
             AjoutType form = (AjoutType)sender;
@@ -467,12 +599,22 @@ namespace ENSC_ProjectManager
 
         }
 
+        /// <summary>
+        /// Affiche le formulaire d'ajout d'un livrable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterLivrable_Click(object sender, EventArgs e)
         {
             AjoutLivrable formAjoutLivrable = new AjoutLivrable(dateDebutProjet.Value, dateFinProjet.Value);
             formAjoutLivrable.Show();
             formAjoutLivrable.VisibleChanged += formVisibleChangedAjouterLivrable;
         }
+        /// <summary>
+        /// Récupére le livrable créé dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterLivrable(object sender, EventArgs e)
         {
             AjoutLivrable form = (AjoutLivrable)sender;
@@ -483,12 +625,22 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Affiche le formulaire d'ajout d'un étudiant
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterEtudiant_Click(object sender, EventArgs e)
         {
             AjoutEtudiant formAjoutEtudiant = new AjoutEtudiant(AnneePromo("3A"));
             formAjoutEtudiant.Show();
             formAjoutEtudiant.VisibleChanged += formVisibleChangedAjouterEtudiant;
         }
+        /// <summary>
+        /// Récupére l'étudiant créé dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterEtudiant(object sender, EventArgs e)
         {
             AjoutEtudiant form = (AjoutEtudiant)sender;
@@ -499,12 +651,22 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Affiche le formulaire d'ajout d'un professeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterProfesseur_Click(object sender, EventArgs e)
         {
             AjoutProf formAjoutProf = new AjoutProf(repertoire);
             formAjoutProf.Show();
             formAjoutProf.VisibleChanged += formVisibleChangedAjouterProfesseur;
         }
+        /// <summary>
+        /// Récupére le professeur créé dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterProfesseur(object sender, EventArgs e)
         {
             AjoutProf form = (AjoutProf)sender;
@@ -515,6 +677,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Affiche le formulaire de création d'une matière
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajoutMatiere_Click(object sender, EventArgs e)
         {
             AjoutMatiere formAjoutMatiere = new AjoutMatiere(repertoire);
@@ -522,6 +689,11 @@ namespace ENSC_ProjectManager
             formAjoutMatiere.VisibleChanged += formVisibleChangedAjouterMatiere;
         }
 
+        /// <summary>
+        /// Récupére la matière crée dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterMatiere(object sender, EventArgs e)
         {
             AjoutMatiere form = (AjoutMatiere)sender;
@@ -532,6 +704,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Affiche le formulaire d'ajout d'un intervenant extérieur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterExte_Click(object sender, EventArgs e)
         {
             AjoutExterieur formAjoutExterieur = new AjoutExterieur();
@@ -539,6 +716,11 @@ namespace ENSC_ProjectManager
             formAjoutExterieur.VisibleChanged += formVisibleChangedAjouterExterieur;
         }
 
+        /// <summary>
+        /// Récupére l'intervenant créé dans le formulaire pour l'ajouter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterExterieur(object sender, EventArgs e)
         {
             AjoutExterieur form = (AjoutExterieur)sender;
@@ -549,6 +731,10 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Récupére les étudiants ajoutés au projet
+        /// </summary>
+        /// <returns>la liste des étudiants ajoutés au projet</returns>
         private List<Etudiant> EtudiantsProjet()
         {
             List<Etudiant> etudiants = new List<Etudiant>();
@@ -564,6 +750,10 @@ namespace ENSC_ProjectManager
             return etudiants;
         }
 
+        /// <summary>
+        /// Récupére les professeurs ajoutés au projet
+        /// </summary>
+        /// <returns>la liste des professeurs ajoutés au projet</returns>
         private List<Professeur> ProfesseursProjet()
         {
             List<Professeur> professeurs = new List<Professeur>();
@@ -577,6 +767,10 @@ namespace ENSC_ProjectManager
             return professeurs;
         }
 
+        /// <summary>
+        /// Récupére les intervenants extérieurs ajoutés au projet
+        /// </summary>
+        /// <returns>la liste des intervenants extérieurs ajoutés au projet</returns>
         private List<Exterieur> IntervenantsExteProjet()
         {
             List<Exterieur> intervenantsExte = new List<Exterieur>();
@@ -592,6 +786,10 @@ namespace ENSC_ProjectManager
             return intervenantsExte;
         }
 
+        /// <summary>
+        /// Récupére les matières associées au projet
+        /// </summary>
+        /// <returns>la liste des matières associées au projet</returns>
         private List<Matiere> MatieresProjet()
         {
             List<Matiere> matieres = new List<Matiere>();
@@ -603,6 +801,12 @@ namespace ENSC_ProjectManager
             }
             return matieres;
         }
+        /// <summary>
+        /// Vérifie que toutes les informations du projet sont correctes, que les contraintes sont respectées 
+        /// avant d'afficher le formulaire d'ajout des rôles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void valider_Click(object sender, EventArgs e)
         {
             List<Intervenant> intervenants = new List<Intervenant>();
@@ -640,6 +844,11 @@ namespace ENSC_ProjectManager
                 MessageBox.Show("Nom de projet manquant", "Veuillez renseigner le nom du projet.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        /// <summary>
+        /// Récupére les rôles ajoutés dans le formulaire, créé le projet, l'ajoute au répertoire puis sauvegarde le répertoire
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedAjouterRoles(object sender, EventArgs e)
         {
             AjoutRoles form = (AjoutRoles)sender;
@@ -657,6 +866,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Renvoie à la page d'accueil du logiciel et abandonne les modifications
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RetourAccueil_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Si vous annulez, toutes vos modifications seront perdues, voulez-vous continuer ?", "Annuler la création du projet",

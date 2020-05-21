@@ -4,11 +4,14 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout des rôles, dernière étape avant l'insertion du projet
+    /// </summary>
     public partial class AjoutRoles : Form
     {
-        List<Intervenant> Intervenants;
+        List<Intervenant> Intervenants; // Liste des intervenants ajoutés au projet
         Repertoire Repertoire;
-        Dictionary<int, string> indexIntervenantRole;
+        Dictionary<int, string> indexIntervenantRole; // Récupére l'indice de l'intervenant dans la liste et son rôle associé
         public List<Role> ReturnRoles;
         public AjoutRoles(List<Intervenant> intervenants, Repertoire repertoire)
         {
@@ -26,6 +29,9 @@ namespace ENSC_ProjectManager
             this.ControlBox = false;
         }
 
+        /// <summary>
+        /// Remplit la liste d'intervenants du projet
+        /// </summary>
         private void RemplirIntervenants()
         {
             liste_intervenants.BeginUpdate();
@@ -37,6 +43,9 @@ namespace ENSC_ProjectManager
             liste_intervenants.EndUpdate();
         }
 
+        /// <summary>
+        /// Remplit la liste de suggestions de rôles en fonction des rôles présents dans les autres projets
+        /// </summary>
         private void RemplirRoles()
         {
             libelle_role.BeginUpdate();
@@ -48,6 +57,11 @@ namespace ENSC_ProjectManager
             libelle_role.EndUpdate();
         }
 
+        /// <summary>
+        /// Affiche l'ajout de rôle lorsqu'un intervenant est sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void liste_intervenants_SelectedValueChanged(object sender, EventArgs e)
         {
             if (liste_intervenants.SelectedItem != null)
@@ -65,6 +79,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Vérifie que l'intervenant choisi n'a pas déjà un rôle attribué puis lui ajoute son rôle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterRole_Click(object sender, EventArgs e)
         {
             if (liste_intervenants.SelectedItem != null && libelle_role.Text.Length > 0)
@@ -99,6 +118,11 @@ namespace ENSC_ProjectManager
 
         }
 
+        /// <summary>
+        /// Retire le rôle sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void retirerRole_Click(object sender, EventArgs e)
         {
             if (liste_roles.SelectedItem != null)
@@ -111,6 +135,11 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Vérifie que tous les intervenants ont un rôle puis créer les instances de rôle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ValiderRoles_Click(object sender, EventArgs e)
         {
             if (liste_roles.Items.Count == liste_intervenants.Items.Count)
@@ -130,7 +159,12 @@ namespace ENSC_ProjectManager
 
         }
 
-        private void RetourAccueil_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Abandonne les modifications et revient à la fenêtre de création de projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RetourCreationProjet_Click(object sender, EventArgs e)
         {
             this.Close();
         }

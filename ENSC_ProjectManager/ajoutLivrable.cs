@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'un livrable
+    /// </summary>
     public partial class AjoutLivrable : Form
     {
         private DateTime _dateDebutProjet;
@@ -18,10 +21,15 @@ namespace ENSC_ProjectManager
             valider.Enabled = false;
             dateRenduLivrable.MinDate = dateDebutProjet;
             dateRenduLivrable.Value = dateFinProjet;
-            listeTypeFichier.Items.Add("pdf");
-            listeTypeFichier.Items.Add("video");
-            listeTypeFichier.Items.Add("map");
-            listeTypeFichier.Items.Add("code");
+            listeTypeFichier.Items.Add("PDF");
+            listeTypeFichier.Items.Add("Video");
+            listeTypeFichier.Items.Add("MindMap");
+            listeTypeFichier.Items.Add("Code");
+            listeTypeFichier.Items.Add("Diaporama");
+            listeTypeFichier.Items.Add("Maquette");
+            listeTypeFichier.Items.Add("Tableur");
+            listeTypeFichier.Items.Add("Site web");
+            listeTypeFichier.Items.Add("Autre");
             this.CenterToParent();
         }
 
@@ -32,6 +40,11 @@ namespace ENSC_ProjectManager
             this.Visible = false;
         }
 
+        /// <summary>
+        /// Vérifie que la date de rendu du livrable sélectionnée est valide
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DateRenduLivrable_ValueChanged(object sender, EventArgs e)
         {
             if (nomDuLivrable.Text.Length != 0)
