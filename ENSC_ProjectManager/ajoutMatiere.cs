@@ -4,10 +4,13 @@ using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    /// <summary>
+    /// Formulaire d'ajout d'une matière
+    /// </summary>
     public partial class AjoutMatiere : Form
     {
         public Matiere ReturnMatiere;
-        public Module ReturnModule;
+        public Module ReturnModule; // Module auquel la matière sera associée
         private Repertoire Repertoire;
 
         public AjoutMatiere(Repertoire repertoire)
@@ -22,6 +25,11 @@ namespace ENSC_ProjectManager
             this.CenterToParent();
         }
 
+        /// <summary>
+        /// Vérifie que tous les champs sont remplis correctement avant de créer la matière
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Valider_Click(object sender, EventArgs e)
         {
             if (code.TextLength == 8)
@@ -85,6 +93,10 @@ namespace ENSC_ProjectManager
             listeProf.EndUpdate();
         }
 
+        /// <summary>
+        /// Remplit la liste des modules correspondant au type de promotion choisi
+        /// </summary>
+        /// <param name="promo">type de promotion</param>
         private void RemplirModules(string promo)
         {
             liste_modules.BeginUpdate();
