@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace ENSC_ProjectManager
@@ -41,7 +38,7 @@ namespace ENSC_ProjectManager
         {
             modules.Add(mod);
             foreach (Matiere matiere in mod.ListeMatiere)
-            { 
+            {
                 matieres.Add(matiere);
             }
 
@@ -58,7 +55,7 @@ namespace ENSC_ProjectManager
         public void AddProfesseur(Professeur professeur, List<Matiere> matieresEnseignees)
         {
             professeurs.Add(professeur);
-            foreach(Matiere matiere in matieresEnseignees)
+            foreach (Matiere matiere in matieresEnseignees)
             {
                 int index = matieres.FindIndex(m => m.Code.Equals(matiere.Code));
                 matieres[index].AjouterProfesseur(professeur);
@@ -66,7 +63,7 @@ namespace ENSC_ProjectManager
         }
         public Professeur GetProfesseur(string nom, string prenom)
         {
-            foreach(Professeur professeur in professeurs)
+            foreach (Professeur professeur in professeurs)
             {
                 if (professeur.Nom.Equals(nom) && professeur.Prenom.Equals(prenom))
                     return professeur;
@@ -85,7 +82,7 @@ namespace ENSC_ProjectManager
 
         public Exterieur GetExterieur(string nom, string prenom, string organisation)
         {
-            foreach(Exterieur exterieur in intervenantsExte)
+            foreach (Exterieur exterieur in intervenantsExte)
             {
                 if (exterieur.Nom.Equals(nom) && exterieur.Prenom.Equals(prenom) && exterieur.Organisation.Equals(organisation))
                     return exterieur;
@@ -103,7 +100,7 @@ namespace ENSC_ProjectManager
         }
         public Matiere GetMatiere(string code)
         {
-            foreach(Matiere matiere in matieres)
+            foreach (Matiere matiere in matieres)
             {
                 if (matiere.Code.Equals(code))
                 {
@@ -113,15 +110,15 @@ namespace ENSC_ProjectManager
             return null;
         }
 
-        public void AddMatiere(Matiere matiere,Module module)
+        public void AddMatiere(Matiere matiere, Module module)
         {
             matieres.Add(matiere);
             modules.Find(m => m.Code.Equals(module.Code)).AjouterMatiere(matiere);
         }
-        
+
         public Module GetModule(string code)
         {
-            foreach(Module module in modules)
+            foreach (Module module in modules)
             {
                 if (module.Code.Equals(code))
                 {
@@ -138,7 +135,7 @@ namespace ENSC_ProjectManager
                 return null;
             else
             {
-                foreach(Etudiant etudiant in promotion.Etudiants)
+                foreach (Etudiant etudiant in promotion.Etudiants)
                 {
                     if (etudiant.Nom.Equals(nom) && etudiant.Prenom.Equals(prenom))
                         return etudiant;
@@ -148,7 +145,7 @@ namespace ENSC_ProjectManager
         }
         public Etudiant GetEtudiant(int[] anneesPromo, Intervenant intervenant)
         {
-            foreach(int anneePromo in anneesPromo)
+            foreach (int anneePromo in anneesPromo)
             {
                 Promotion promotion = GetPromotion(anneePromo);
                 if (promotion != null)
@@ -166,7 +163,7 @@ namespace ENSC_ProjectManager
         public List<string> GetLibellesRoles()
         {
             List<string> libelles = new List<string>();
-            foreach(Role role in roles)
+            foreach (Role role in roles)
             {
                 if (!libelles.Contains(role.Libelle))
                     libelles.Add(role.Libelle);
@@ -194,12 +191,12 @@ namespace ENSC_ProjectManager
             repertoire = (Repertoire)serializer.Deserialize(fs);
             return repertoire;
         }
-        private static void serializer_UnknownNode (object sender, XmlNodeEventArgs e)
+        private static void serializer_UnknownNode(object sender, XmlNodeEventArgs e)
         {
             Console.WriteLine("Unknown Node:" + e.Name + "\t" + e.Text);
         }
 
-        private static void serializer_UnknownAttribute (object sender, XmlAttributeEventArgs e)
+        private static void serializer_UnknownAttribute(object sender, XmlAttributeEventArgs e)
         {
             System.Xml.XmlAttribute attr = e.Attr;
             Console.WriteLine("Unknown attribute " +

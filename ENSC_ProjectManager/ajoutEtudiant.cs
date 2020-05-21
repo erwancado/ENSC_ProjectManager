@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -25,12 +18,12 @@ namespace ENSC_ProjectManager
 
         private void Valider_Click(object sender, EventArgs e)
         {
-            if(nomEtudiant.TextLength!=0 && prenomEtudiant.TextLength != 0)
+            if (nomEtudiant.TextLength != 0 && prenomEtudiant.TextLength != 0)
             {
                 if (RegexUtilities.IsValidEmail(email.Text))
                 {
                     ReturnAnneePromo = (int)anneePromo.Value;
-                    ReturnEtudiant = new Etudiant(nomEtudiant.Text.Replace(' ','-'), prenomEtudiant.Text.Replace(' ', '-'), email.Text, redoublant.Checked,ReturnAnneePromo);
+                    ReturnEtudiant = new Etudiant(nomEtudiant.Text.Replace(' ', '-'), prenomEtudiant.Text.Replace(' ', '-'), email.Text, redoublant.Checked, ReturnAnneePromo);
                     this.Visible = false;
                 }
 
@@ -41,7 +34,7 @@ namespace ENSC_ProjectManager
             {
                 MessageBox.Show("Information manquante", "Tous les champs doivent être remplis pour continuer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -36,7 +29,7 @@ namespace ENSC_ProjectManager
         }
         private void RemplirDates()
         {
-            Dates.Text = "Du " + _projet.DateDebut.ToShortDateString() + " au " + _projet.DateFin.ToShortDateString() + " ("+ _projet.DureeProjet().Months + " mois"+(_projet.DureeProjet().Days!=0?" et " +_projet.DureeProjet().Days + " jours)":")") ;
+            Dates.Text = "Du " + _projet.DateDebut.ToShortDateString() + " au " + _projet.DateFin.ToShortDateString() + " (" + _projet.DureeProjet().Months + " mois" + (_projet.DureeProjet().Days != 0 ? " et " + _projet.DureeProjet().Days + " jours)" : ")");
         }
         private void RemplirType()
         {
@@ -49,7 +42,7 @@ namespace ENSC_ProjectManager
         }
         private void RemplirParticipants()
         {
-            foreach(Role role in _projet.ListeRoles)
+            foreach (Role role in _projet.ListeRoles)
             {
                 Intervenant intervenant = role.Intervenant;
                 Etudiant etudiant = _repertoire.GetEtudiant(_projet.AnneesPromos(), intervenant);
@@ -79,7 +72,7 @@ namespace ENSC_ProjectManager
         }
         private void RemplirLivrables()
         {
-            foreach(Livrable livrable in _projet.ListeLivrables)
+            foreach (Livrable livrable in _projet.ListeLivrables)
             {
                 livrablesTextBox.Text += livrable.Libelle + " (" + livrable.TypeFichier.ToUpper() + ") - " + livrable.DateRendu.ToShortDateString() + (livrable.Rendu ? " - Rendu" : " - Non rendu") + "\n";
 
@@ -87,7 +80,7 @@ namespace ENSC_ProjectManager
         }
         private void RemplirMatieres()
         {
-            foreach(Matiere matiere in _projet.ListeMatieres)
+            foreach (Matiere matiere in _projet.ListeMatieres)
             {
                 Module module = _repertoire.GetModule(matiere.CodeModule);
                 matieresTextBox.Text += matiere.Libelle + " (" + matiere.Code + ")" + "\n";

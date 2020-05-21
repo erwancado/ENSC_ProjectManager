@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
@@ -43,7 +40,7 @@ namespace ENSC_ProjectManager
         }
         public void AjouterLivrable(params Livrable[] livrables)
         {
-            foreach(Livrable livrable in livrables)
+            foreach (Livrable livrable in livrables)
             {
                 ListeLivrables.Add(livrable);
             }
@@ -60,9 +57,9 @@ namespace ENSC_ProjectManager
             }
             return false;
         }
-        public bool ContenirModule(List<String>modules)
+        public bool ContenirModule(List<String> modules)
         {
-            foreach(String module in modules)
+            foreach (String module in modules)
             {
                 for (int i = 0; i < this.ListeMatieres.Count; i++)
                 {
@@ -74,7 +71,7 @@ namespace ENSC_ProjectManager
         }
         public void AjouterRole(params Role[] roles)
         {
-            foreach(Role role in roles)
+            foreach (Role role in roles)
             {
                 ListeRoles.Add(role);
             }
@@ -86,7 +83,7 @@ namespace ENSC_ProjectManager
         }
         public bool ContientIntervenant(Intervenant intervenant)
         {
-            foreach(Role role in ListeRoles)
+            foreach (Role role in ListeRoles)
             {
                 if (role.Intervenant.Equals(intervenant))
                     return true;
@@ -116,7 +113,7 @@ namespace ENSC_ProjectManager
                     {
                         return new int[] { DateFin.Year + 1 };
                     }
-                    
+
                 case "3A":
                     if (DateFin.Month >= 9)
                     {

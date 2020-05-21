@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -15,7 +8,7 @@ namespace ENSC_ProjectManager
         public AjoutModule()
         {
             InitializeComponent();
-           Valider.Enabled = false;
+            Valider.Enabled = false;
 
         }
 
@@ -27,7 +20,7 @@ namespace ENSC_ProjectManager
         private void Valider_Click(object sender, EventArgs e)
         {
 
-           Module Mod = new Module(codeModule.Text, libelleModule.Text,promo.SelectedItem.ToString());
+            Module Mod = new Module(codeModule.Text, libelleModule.Text, promo.SelectedItem.ToString());
         }
 
 

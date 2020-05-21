@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -15,7 +9,7 @@ namespace ENSC_ProjectManager
         public Matiere ReturnMatiere;
         public Module ReturnModule;
         private Repertoire Repertoire;
-        
+
         public AjoutMatiere(Repertoire repertoire)
         {
             InitializeComponent();
@@ -62,7 +56,7 @@ namespace ENSC_ProjectManager
                     {
                         MessageBox.Show("Module manquant", "Veuillez sélectionner le module de la matière.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
+
                 }
                 else
                 {
@@ -95,7 +89,7 @@ namespace ENSC_ProjectManager
         {
             liste_modules.BeginUpdate();
             liste_modules.Items.Clear();
-            if(promo.Equals(""))
+            if (promo.Equals(""))
             {
                 foreach (Module module in Repertoire.modules)
                 {
@@ -106,7 +100,7 @@ namespace ENSC_ProjectManager
             {
                 foreach (Module module in Repertoire.modules)
                 {
-                    if(module.Promo.Equals(promo))
+                    if (module.Promo.Equals(promo))
                         liste_modules.Items.Add(module.Code + "-" + module.Libelle);
                 }
             }

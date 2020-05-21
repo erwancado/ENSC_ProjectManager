@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
@@ -21,7 +16,7 @@ namespace ENSC_ProjectManager
         public string Libelle { get { return _libelle; } set { _libelle = value; } }
         public string TypeFichier { get => _typeFichier; set => _typeFichier = value; }
 
-        public Livrable(string typeFichier, DateTime DateRendu, bool Rendu , string Libelle)
+        public Livrable(string typeFichier, DateTime DateRendu, bool Rendu, string Libelle)
         {
             _typeFichier = typeFichier;
             _dateRendu = DateRendu;

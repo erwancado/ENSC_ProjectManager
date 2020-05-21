@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -72,6 +71,6 @@ namespace ENSC_ProjectManager
             repertoire = Repertoire.LoadData("repertoire.xml");
             Application.Run(new Accueil(repertoire));
         }
-        
+
     }
 }

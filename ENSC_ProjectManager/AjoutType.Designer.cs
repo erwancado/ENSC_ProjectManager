@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutType));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_nb_min = new System.Windows.Forms.Label();
+            this.label_nb_max = new System.Windows.Forms.Label();
             this.nbMinEleve = new System.Windows.Forms.NumericUpDown();
             this.nbMaxEleve = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,23 +40,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.nbMaxEleve)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // label_nb_min
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "nombre minimum d\'eleve";
+            this.label_nb_min.AutoSize = true;
+            this.label_nb_min.Location = new System.Drawing.Point(167, 106);
+            this.label_nb_min.Name = "label_nb_min";
+            this.label_nb_min.Size = new System.Drawing.Size(171, 15);
+            this.label_nb_min.TabIndex = 0;
+            this.label_nb_min.Text = "Nombre minimum d\'étudiants";
             // 
-            // label5
+            // label_nb_max
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(185, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "nombre maximum d\'eleve";
+            this.label_nb_max.AutoSize = true;
+            this.label_nb_max.Location = new System.Drawing.Point(164, 153);
+            this.label_nb_max.Name = "label_nb_max";
+            this.label_nb_max.Size = new System.Drawing.Size(174, 15);
+            this.label_nb_max.TabIndex = 1;
+            this.label_nb_max.Text = "Nombre maximum d\'étudiants";
             // 
             // nbMinEleve
             // 
@@ -74,6 +74,7 @@
             this.nbMinEleve.Name = "nbMinEleve";
             this.nbMinEleve.Size = new System.Drawing.Size(60, 20);
             this.nbMinEleve.TabIndex = 2;
+            this.nbMinEleve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbMinEleve.Value = new decimal(new int[] {
             1,
             0,
@@ -83,7 +84,7 @@
             // 
             // nbMaxEleve
             // 
-            this.nbMaxEleve.Location = new System.Drawing.Point(358, 151);
+            this.nbMaxEleve.Location = new System.Drawing.Point(358, 153);
             this.nbMaxEleve.Maximum = new decimal(new int[] {
             10,
             0,
@@ -97,6 +98,7 @@
             this.nbMaxEleve.Name = "nbMaxEleve";
             this.nbMaxEleve.Size = new System.Drawing.Size(60, 20);
             this.nbMaxEleve.TabIndex = 3;
+            this.nbMaxEleve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nbMaxEleve.Value = new decimal(new int[] {
             1,
             0,
@@ -106,7 +108,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(140, 208);
+            this.label6.Location = new System.Drawing.Point(142, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(196, 15);
             this.label6.TabIndex = 5;
@@ -139,8 +141,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.nbMaxEleve);
             this.Controls.Add(this.nbMinEleve);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_nb_max);
+            this.Controls.Add(this.label_nb_min);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutType";
             this.Text = "Ajout d\'un type de projet";
@@ -152,15 +154,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.CheckedListBox listeTypePromotion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button valider;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_nb_min;
+        private System.Windows.Forms.Label label_nb_max;
         private System.Windows.Forms.NumericUpDown nbMinEleve;
         private System.Windows.Forms.NumericUpDown nbMaxEleve;
         private System.Windows.Forms.Label label6;

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -36,9 +30,9 @@ namespace ENSC_ProjectManager
         {
             liste_intervenants.BeginUpdate();
             liste_intervenants.Items.Clear();
-            foreach(Intervenant intervenant in Intervenants)
+            foreach (Intervenant intervenant in Intervenants)
             {
-                liste_intervenants.Items.Add(intervenant.Nom + " " + intervenant.Prenom+" "+intervenant.Mail);
+                liste_intervenants.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " " + intervenant.Mail);
             }
             liste_intervenants.EndUpdate();
         }
@@ -47,7 +41,7 @@ namespace ENSC_ProjectManager
         {
             libelle_role.BeginUpdate();
             libelle_role.Items.Clear();
-            foreach(string libRole in Repertoire.GetLibellesRoles())
+            foreach (string libRole in Repertoire.GetLibellesRoles())
             {
                 libelle_role.Items.Add(libRole);
             }
@@ -73,7 +67,7 @@ namespace ENSC_ProjectManager
 
         private void ajouterRole_Click(object sender, EventArgs e)
         {
-            if(liste_intervenants.SelectedItem!=null && libelle_role.Text.Length > 0)
+            if (liste_intervenants.SelectedItem != null && libelle_role.Text.Length > 0)
             {
                 if (!indexIntervenantRole.ContainsKey(liste_intervenants.SelectedIndex))
                 {

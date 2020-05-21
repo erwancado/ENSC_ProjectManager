@@ -137,6 +137,7 @@
             // 
             // participantsTextBox
             // 
+            this.participantsTextBox.BackColor = System.Drawing.Color.White;
             this.participantsTextBox.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.participantsTextBox.Location = new System.Drawing.Point(24, 193);
             this.participantsTextBox.Name = "participantsTextBox";
@@ -147,6 +148,7 @@
             // 
             // rolesTextBox
             // 
+            this.rolesTextBox.BackColor = System.Drawing.Color.White;
             this.rolesTextBox.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rolesTextBox.Location = new System.Drawing.Point(642, 193);
             this.rolesTextBox.Name = "rolesTextBox";
@@ -157,6 +159,7 @@
             // 
             // descriptionTextBox
             // 
+            this.descriptionTextBox.BackColor = System.Drawing.Color.White;
             this.descriptionTextBox.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionTextBox.Location = new System.Drawing.Point(910, 193);
             this.descriptionTextBox.Name = "descriptionTextBox";
@@ -167,6 +170,7 @@
             // 
             // matieresTextBox
             // 
+            this.matieresTextBox.BackColor = System.Drawing.Color.White;
             this.matieresTextBox.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matieresTextBox.Location = new System.Drawing.Point(910, 502);
             this.matieresTextBox.Name = "matieresTextBox";
@@ -177,6 +181,7 @@
             // 
             // livrablesTextBox
             // 
+            this.livrablesTextBox.BackColor = System.Drawing.Color.White;
             this.livrablesTextBox.Font = new System.Drawing.Font("Roboto Condensed", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.livrablesTextBox.Location = new System.Drawing.Point(121, 502);
             this.livrablesTextBox.Name = "livrablesTextBox";
@@ -208,8 +213,8 @@
             // 
             // AffichageProjet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(106F, 106F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1364, 799);
             this.Controls.Add(this.logoENSC);
             this.Controls.Add(this.RetourAccueil);

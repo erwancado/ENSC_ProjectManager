@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ENSC_ProjectManager
 {
@@ -34,7 +31,7 @@ namespace ENSC_ProjectManager
         }
         public void AjouterMatiere(params Matiere[] matieres)
         {
-            foreach(Matiere matiere in matieres)
+            foreach (Matiere matiere in matieres)
             {
                 _listeMatieres.Add(matiere);
                 matiere.CodeModule = Code;

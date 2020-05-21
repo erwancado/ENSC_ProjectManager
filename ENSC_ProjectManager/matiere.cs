@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ENSC_ProjectManager
 {
@@ -16,7 +12,7 @@ namespace ENSC_ProjectManager
 
         public List<Professeur> ListeProfesseurs;
 
-        public Matiere (string code,string libelle, string promo)
+        public Matiere(string code, string libelle, string promo)
         {
             Code = code;
             Libelle = libelle;
@@ -29,7 +25,7 @@ namespace ENSC_ProjectManager
         }
         public void AjouterProfesseur(params Professeur[] professeurs)
         {
-            foreach(Professeur p in professeurs)
+            foreach (Professeur p in professeurs)
             {
                 ListeProfesseurs.Add(p);
             }

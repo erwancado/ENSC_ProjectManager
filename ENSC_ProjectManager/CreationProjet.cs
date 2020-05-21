@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
@@ -304,7 +300,7 @@ namespace ENSC_ProjectManager
             }
             else
             {
-                MessageBox.Show("Nombre maximum d'étudiants atteint", "Le type de projet choisi indique un maximum de ."+typeProjet.NbMaxEtudiants+" étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nombre maximum d'étudiants atteint", "Le type de projet choisi indique un maximum de ." + typeProjet.NbMaxEtudiants + " étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -315,7 +311,7 @@ namespace ENSC_ProjectManager
                 affichageEtudiants.BeginUpdate();
                 affichageEtudiants.Items.RemoveAt(affichageEtudiants.SelectedIndex);
                 affichageEtudiants.EndUpdate();
-                if(affichageEtudiants.Items.Count < typeProjet.NbMinEtudiants)
+                if (affichageEtudiants.Items.Count < typeProjet.NbMinEtudiants)
                 {
                     valider.Enabled = false;
                 }
@@ -556,7 +552,7 @@ namespace ENSC_ProjectManager
         private List<Etudiant> EtudiantsProjet()
         {
             List<Etudiant> etudiants = new List<Etudiant>();
-            for(int i=0; i < affichageEtudiants.Items.Count;i++)
+            for (int i = 0; i < affichageEtudiants.Items.Count; i++)
             {
                 string strEtudiant = affichageEtudiants.Items[i].ToString();
                 string nomEtPrenom = strEtudiant.Split('_')[0];
@@ -571,7 +567,7 @@ namespace ENSC_ProjectManager
         private List<Professeur> ProfesseursProjet()
         {
             List<Professeur> professeurs = new List<Professeur>();
-            for(int i=0; i < affichageProfesseurs.Items.Count; i++)
+            for (int i = 0; i < affichageProfesseurs.Items.Count; i++)
             {
                 string strProf = affichageProfesseurs.Items[i].ToString();
                 Professeur professeur = repertoire.GetProfesseur(strProf.Split(' ')[0], strProf.Split(' ')[1]);
@@ -584,7 +580,7 @@ namespace ENSC_ProjectManager
         private List<Exterieur> IntervenantsExteProjet()
         {
             List<Exterieur> intervenantsExte = new List<Exterieur>();
-            for(int i = 0; i < affichageExtes.Items.Count; i++)
+            for (int i = 0; i < affichageExtes.Items.Count; i++)
             {
                 string strExte = affichageExtes.Items[i].ToString();
                 Exterieur exterieur = repertoire.GetExterieur(strExte.Split(' ')[0], strExte.Split(' ')[1], strExte.Split(' ')[2]);
@@ -599,7 +595,7 @@ namespace ENSC_ProjectManager
         private List<Matiere> MatieresProjet()
         {
             List<Matiere> matieres = new List<Matiere>();
-            for(int i=0; i < listeMatiere.CheckedItems.Count; i++)
+            for (int i = 0; i < listeMatiere.CheckedItems.Count; i++)
             {
                 Matiere matiere = repertoire.GetMatiere(listeMatiere.CheckedItems[i].ToString().Split('-')[0]);
                 if (matiere != null)
@@ -621,7 +617,7 @@ namespace ENSC_ProjectManager
             {
                 if (listeMatiere.CheckedItems.Count > 0)
                 {
-                    if(etudiantsProjet.Count>=typeProjet.NbMinEtudiants && etudiantsProjet.Count <= typeProjet.NbMaxEtudiants)
+                    if (etudiantsProjet.Count >= typeProjet.NbMinEtudiants && etudiantsProjet.Count <= typeProjet.NbMaxEtudiants)
                     {
                         if (liste_livrables.Count > 0)
                         {
@@ -634,7 +630,7 @@ namespace ENSC_ProjectManager
                     }
                     else
                         MessageBox.Show("Nombre d'étudiants incorrect", "Le groupe de projet doit être composé de "
-                            +typeProjet.NbMinEtudiants+" à "+typeProjet.NbMaxEtudiants+" étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            + typeProjet.NbMinEtudiants + " à " + typeProjet.NbMaxEtudiants + " étudiants.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                     MessageBox.Show("Matière manquante", "Veuillez sélectionner la ou les matières dont fait parti le projet.", MessageBoxButtons.OK, MessageBoxIcon.Warning);

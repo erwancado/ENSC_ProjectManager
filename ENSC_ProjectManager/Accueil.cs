@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ENSC_ProjectManager
 {
+    
+    /// <summary>
+    /// Formulaire d'accueil du logiciel dans lequel sont affichés l'ensemble des projets. 
+    /// On peut affiner la recherche de projets à l'aide de filtres, double-cliquer sur un projet pour afficher ses détails
+    /// et lancer le formulaire de création de projet en cliquant sur le bouton "Nouveau projet"
+    /// </summary>
     public partial class Accueil : Form
     {
-        List<Projet> _projets;
-        Repertoire _repertoire;
+        List<Projet> _projets; // Projets à afficher dans la liste des projets
+        Repertoire _repertoire; // Repertoire contenant toutes les données du logiciel
         public Accueil(Repertoire repertoire)
         {
             InitializeComponent();
@@ -22,6 +22,9 @@ namespace ENSC_ProjectManager
             InitialiserAccueil();
         }
 
+        /// <summary>
+        /// Initialise la page d'accueil en récupérant les projets du répertoire et en affichant toutes les données dans la page
+        /// </summary>
         private void InitialiserAccueil()
         {
             _projets = _repertoire.projets;
@@ -34,7 +37,7 @@ namespace ENSC_ProjectManager
             RemplirEtudiants();
             RemplirProfesseurs();
             RemplirExtes();
-            RemplirProjets(); 
+            RemplirProjets();
             RemplirAnneePromo();
             RemplirMatiere();
             RemplirModule();
@@ -49,6 +52,11 @@ namespace ENSC_ProjectManager
             formCreationProjet.VisibleChanged += formVisibleChangedCreationProjet;
         }
 
+        /// <summary>
+        /// Récupére les modifications apportées au répertoire après la création d'un projet 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void formVisibleChangedCreationProjet(object sender, EventArgs e)
         {
             CreationProjet form = (CreationProjet)sender;
@@ -60,6 +68,10 @@ namespace ENSC_ProjectManager
             }
         }
 
+        /// <summary>
+        /// Filtre les projets en fonction de leurs dates et ne garde que ceux qui se déroulent au moins en partie
+        /// dans la période indiquée par l'utilisateur
+        /// </summary>
         private void FiltrerParDates()
         {
             if (checkBoxDate.Checked)
@@ -76,9 +88,13 @@ namespace ENSC_ProjectManager
                 _projets = projetsRecherche;
             }
         }
+        /// <summary>
+        /// Filtre les projets en fonction de si ils comptent parmi leurs participants un des étudiants, professeurs
+        /// ou intervenants extérieur sélectionnés
+        /// </summary>
         private void FiltrerParIntervenant()
         {
-            if(listeEleves.CheckedItems.Count!=0 || listeProfs.CheckedItems.Count!=0 || listeIntervenants.CheckedItems.Count!=0)
+            if (listeEleves.CheckedItems.Count != 0 || listeProfs.CheckedItems.Count != 0 || listeIntervenants.CheckedItems.Count != 0)
                 _projets = RechercheParIntervenant(GetIntervenantsFiltre());
         }
         private List<Projet> RechercheParIntervenant(List<Intervenant> intervenants)
@@ -98,10 +114,14 @@ namespace ENSC_ProjectManager
             return projetsRecherche;
         }
 
+        /// <summary>
+        /// Récupére les instances des intervenants sélectionnés dans les filtres
+        /// </summary>
+        /// <returns>La liste d'instances d'intervenant</returns>
         private List<Intervenant> GetIntervenantsFiltre()
         {
             List<Intervenant> intervenantsFiltre = new List<Intervenant>();
-            for(int i =0; i<listeEleves.CheckedItems.Count; i++)
+            for (int i = 0; i < listeEleves.CheckedItems.Count; i++)
             {
                 string strEtudiant = listeEleves.CheckedItems[i].ToString();
                 string nomEtPrenom = strEtudiant.Split('_')[0];
@@ -110,14 +130,14 @@ namespace ENSC_ProjectManager
                 if (etudiant != null)
                     intervenantsFiltre.Add(etudiant);
             }
-            for(int j=0; j<listeProfs.CheckedItems.Count; j++)
+            for (int j = 0; j < listeProfs.CheckedItems.Count; j++)
             {
                 string strProf = listeProfs.CheckedItems[j].ToString();
                 Professeur professeur = _repertoire.GetProfesseur(strProf.Split(' ')[0], strProf.Split(' ')[1]);
                 if (professeur != null)
                     intervenantsFiltre.Add(professeur);
             }
-            for(int k=0; k<listeIntervenants.CheckedItems.Count; k++)
+            for (int k = 0; k < listeIntervenants.CheckedItems.Count; k++)
             {
                 string strExte = listeIntervenants.CheckedItems[k].ToString();
                 Exterieur exterieur = _repertoire.GetExterieur(strExte.Split(' ')[0], strExte.Split(' ')[1], strExte.Split(' ')[2]);
@@ -130,6 +150,9 @@ namespace ENSC_ProjectManager
         }
 
 
+        /// <summary>
+        /// Remplit la liste d'étudiants
+        /// </summary>
         private void RemplirEtudiants()
         {
             listeEleves.BeginUpdate();
@@ -143,6 +166,9 @@ namespace ENSC_ProjectManager
             }
             listeEleves.EndUpdate();
         }
+        /// <summary>
+        /// Remplit la liste de professeurs
+        /// </summary>
         private void RemplirProfesseurs()
         {
             listeProfs.BeginUpdate();
@@ -154,6 +180,9 @@ namespace ENSC_ProjectManager
             listeProfs.EndUpdate();
         }
 
+        /// <summary>
+        /// Remplit la liste des intervenants extérieurs
+        /// </summary>
         private void RemplirExtes()
         {
             listeIntervenants.BeginUpdate();
@@ -165,15 +194,18 @@ namespace ENSC_ProjectManager
             listeIntervenants.EndUpdate();
         }
 
+        /// <summary>
+        /// Remplit la liste des projets
+        /// </summary>
         private void RemplirProjets()
         {
             listeProjets.BeginUpdate();
             listeProjets.Items.Clear();
-            foreach(Projet projet in _projets)
+            foreach (Projet projet in _projets)
             {
-                string itemProjet = projet.Libelle+" -- -- ";
+                string itemProjet = projet.Libelle + " -- -- ";
                 foreach (Role role in projet.ListeRoles)
-                    itemProjet += " "+role.Intervenant.Nom + " ";
+                    itemProjet += " " + role.Intervenant.Nom + " ";
                 itemProjet += " -- -- " + projet.DateDebut.Year + " " + projet.Type.TypePromotion + "\n";
                 listeProjets.Items.Add(itemProjet);
             }
@@ -223,14 +255,14 @@ namespace ENSC_ProjectManager
             return exterieursRecherche;
         }
 
-        
+
 
         private void RechercherPersonne_Click(object sender, EventArgs e)
         {
             resultatsRecherchePersonne.Show();
             resultatsRecherchePersonne.BeginUpdate();
             resultatsRecherchePersonne.Items.Clear();
-            if(NomRecherche.TextLength!=0 || PrenomRecherche.TextLength != 0)
+            if (NomRecherche.TextLength != 0 || PrenomRecherche.TextLength != 0)
             {
                 resultatsRecherchePersonne.Items.AddRange(RechercherEtudiants(NomRecherche.Text, PrenomRecherche.Text).ToArray());
                 resultatsRecherchePersonne.Items.AddRange(RechercherProfesseurs(NomRecherche.Text, PrenomRecherche.Text).ToArray());
@@ -249,7 +281,7 @@ namespace ENSC_ProjectManager
             listeEleves.BeginUpdate();
             listeProfs.BeginUpdate();
             listeIntervenants.BeginUpdate();
-            for (int i=0; i < resultatsRecherchePersonne.Items.Count; i++)
+            for (int i = 0; i < resultatsRecherchePersonne.Items.Count; i++)
             {
                 string codeItem = resultatsRecherchePersonne.Items[i].ToString().Split(' ')[2];
                 string typePersonne = codeItem.Split('-')[0];
@@ -331,7 +363,7 @@ namespace ENSC_ProjectManager
 
         private void nomDeProjet_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 List<Projet> projetsRecherche = new List<Projet>();
                 foreach (Projet projet in _projets)
@@ -363,12 +395,12 @@ namespace ENSC_ProjectManager
             dateFin.MinDate = dateDebut.Value;
         }
 
-       public void RemplirAnneePromo()
+        public void RemplirAnneePromo()
         {
             listeAnneePromo.BeginUpdate();
             listeAnneePromo.Items.Clear();
             List<String> listeAnneesExistantes = new List<String>();
-            foreach(Projet projet in _repertoire.projets)
+            foreach (Projet projet in _repertoire.projets)
             {
                 foreach (int anneePromo in projet.AnneesPromos())
                 {
@@ -420,7 +452,7 @@ namespace ENSC_ProjectManager
                 }
                 _projets = projetsFiltreAnneeDePromo;
             }
-            
+
         }
         public void FiltrerParNiveaux()
         {
@@ -515,7 +547,7 @@ namespace ENSC_ProjectManager
         public List<String> RecupererNiveaux()
         {
             List<String> listeNiveaux = new List<String>();
-            for (int i = 0;i<niveaux.CheckedItems.Count;i++)
+            for (int i = 0; i < niveaux.CheckedItems.Count; i++)
             {
                 listeNiveaux.Add(niveaux.CheckedItems[i].ToString());
             }
