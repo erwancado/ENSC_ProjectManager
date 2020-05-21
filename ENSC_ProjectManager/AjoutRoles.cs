@@ -29,6 +29,7 @@ namespace ENSC_ProjectManager
             RemplirIntervenants();
             RemplirRoles();
             this.CenterToParent();
+            this.ControlBox = false;
         }
 
         private void RemplirIntervenants()
@@ -133,6 +134,11 @@ namespace ENSC_ProjectManager
                 MessageBox.Show("Rôles manquants", "Tous les intervenants doivents se voir attribuer un rôle.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+
+        private void RetourAccueil_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

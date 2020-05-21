@@ -119,20 +119,21 @@
             // listeEtudiants
             // 
             this.listeEtudiants.FormattingEnabled = true;
-            this.listeEtudiants.Location = new System.Drawing.Point(32, 258);
+            this.listeEtudiants.Location = new System.Drawing.Point(12, 258);
             this.listeEtudiants.Name = "listeEtudiants";
             this.listeEtudiants.ScrollAlwaysVisible = true;
-            this.listeEtudiants.Size = new System.Drawing.Size(171, 30);
+            this.listeEtudiants.Size = new System.Drawing.Size(224, 30);
             this.listeEtudiants.TabIndex = 6;
             this.listeEtudiants.SelectedValueChanged += new System.EventHandler(this.listeEtudiants_SelectedValueChanged);
             // 
             // label_etu
             // 
             this.label_etu.AutoSize = true;
-            this.label_etu.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_etu.Location = new System.Drawing.Point(78, 237);
+            this.label_etu.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_etu.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_etu.Location = new System.Drawing.Point(78, 235);
             this.label_etu.Name = "label_etu";
-            this.label_etu.Size = new System.Drawing.Size(68, 17);
+            this.label_etu.Size = new System.Drawing.Size(76, 19);
             this.label_etu.TabIndex = 7;
             this.label_etu.Text = "Etudiants";
             // 
@@ -150,10 +151,11 @@
             // label_profs
             // 
             this.label_profs.AutoSize = true;
-            this.label_profs.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_profs.Location = new System.Drawing.Point(318, 237);
+            this.label_profs.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_profs.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_profs.Location = new System.Drawing.Point(317, 235);
             this.label_profs.Name = "label_profs";
-            this.label_profs.Size = new System.Drawing.Size(83, 17);
+            this.label_profs.Size = new System.Drawing.Size(93, 19);
             this.label_profs.TabIndex = 9;
             this.label_profs.Text = "Professeurs";
             // 
@@ -180,10 +182,10 @@
             // listeProfesseurs
             // 
             this.listeProfesseurs.FormattingEnabled = true;
-            this.listeProfesseurs.Location = new System.Drawing.Point(271, 258);
+            this.listeProfesseurs.Location = new System.Drawing.Point(242, 258);
             this.listeProfesseurs.Name = "listeProfesseurs";
             this.listeProfesseurs.ScrollAlwaysVisible = true;
-            this.listeProfesseurs.Size = new System.Drawing.Size(171, 30);
+            this.listeProfesseurs.Size = new System.Drawing.Size(234, 30);
             this.listeProfesseurs.TabIndex = 13;
             this.listeProfesseurs.SelectedValueChanged += new System.EventHandler(this.listeProfesseurs_SelectedValueChanged);
             // 
@@ -200,20 +202,21 @@
             // listeExtes
             // 
             this.listeExtes.FormattingEnabled = true;
-            this.listeExtes.Location = new System.Drawing.Point(517, 258);
+            this.listeExtes.Location = new System.Drawing.Point(482, 258);
             this.listeExtes.Name = "listeExtes";
             this.listeExtes.ScrollAlwaysVisible = true;
-            this.listeExtes.Size = new System.Drawing.Size(171, 30);
+            this.listeExtes.Size = new System.Drawing.Size(230, 30);
             this.listeExtes.TabIndex = 17;
             this.listeExtes.SelectedValueChanged += new System.EventHandler(this.listeExtes_SelectedValueChanged);
             // 
             // label_exte
             // 
             this.label_exte.AutoSize = true;
-            this.label_exte.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_exte.Location = new System.Drawing.Point(528, 237);
+            this.label_exte.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_exte.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_exte.Location = new System.Drawing.Point(516, 235);
             this.label_exte.Name = "label_exte";
-            this.label_exte.Size = new System.Drawing.Size(151, 17);
+            this.label_exte.Size = new System.Drawing.Size(168, 19);
             this.label_exte.TabIndex = 16;
             this.label_exte.Text = "Intervenants extérieurs";
             // 
@@ -230,20 +233,22 @@
             // label_livrables
             // 
             this.label_livrables.AutoSize = true;
-            this.label_livrables.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_livrables.Location = new System.Drawing.Point(858, 330);
+            this.label_livrables.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_livrables.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_livrables.Location = new System.Drawing.Point(848, 328);
             this.label_livrables.Name = "label_livrables";
-            this.label_livrables.Size = new System.Drawing.Size(64, 17);
+            this.label_livrables.Size = new System.Drawing.Size(73, 19);
             this.label_livrables.TabIndex = 21;
             this.label_livrables.Text = "Livrables";
             // 
             // valider
             // 
             this.valider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chartreuse;
-            this.valider.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valider.Location = new System.Drawing.Point(531, 689);
+            this.valider.Font = new System.Drawing.Font("Roboto Condensed", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valider.ForeColor = System.Drawing.Color.DarkOrange;
+            this.valider.Location = new System.Drawing.Point(531, 686);
             this.valider.Name = "valider";
-            this.valider.Size = new System.Drawing.Size(197, 37);
+            this.valider.Size = new System.Drawing.Size(230, 37);
             this.valider.TabIndex = 23;
             this.valider.Text = "Valider et passer aux rôles";
             this.valider.UseVisualStyleBackColor = true;
@@ -259,10 +264,11 @@
             // label_nom_projet
             // 
             this.label_nom_projet.AutoSize = true;
-            this.label_nom_projet.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nom_projet.Location = new System.Drawing.Point(473, 18);
+            this.label_nom_projet.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nom_projet.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_nom_projet.Location = new System.Drawing.Point(460, 15);
             this.label_nom_projet.Name = "label_nom_projet";
-            this.label_nom_projet.Size = new System.Drawing.Size(96, 17);
+            this.label_nom_projet.Size = new System.Drawing.Size(109, 19);
             this.label_nom_projet.TabIndex = 25;
             this.label_nom_projet.Text = "Nom du projet";
             // 
@@ -277,10 +283,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1162, 222);
+            this.label6.Font = new System.Drawing.Font("Roboto", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label6.Location = new System.Drawing.Point(1156, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 17);
+            this.label6.Size = new System.Drawing.Size(155, 19);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description du projet";
             // 
@@ -309,27 +316,27 @@
             // affichageEtudiants
             // 
             this.affichageEtudiants.FormattingEnabled = true;
-            this.affichageEtudiants.Location = new System.Drawing.Point(32, 362);
+            this.affichageEtudiants.Location = new System.Drawing.Point(12, 362);
             this.affichageEtudiants.Name = "affichageEtudiants";
-            this.affichageEtudiants.Size = new System.Drawing.Size(171, 277);
+            this.affichageEtudiants.Size = new System.Drawing.Size(224, 277);
             this.affichageEtudiants.TabIndex = 31;
             this.affichageEtudiants.SelectedValueChanged += new System.EventHandler(this.affichageEtudiants_SelectedValueChanged);
             // 
             // affichageProfesseurs
             // 
             this.affichageProfesseurs.FormattingEnabled = true;
-            this.affichageProfesseurs.Location = new System.Drawing.Point(271, 362);
+            this.affichageProfesseurs.Location = new System.Drawing.Point(242, 362);
             this.affichageProfesseurs.Name = "affichageProfesseurs";
-            this.affichageProfesseurs.Size = new System.Drawing.Size(171, 277);
+            this.affichageProfesseurs.Size = new System.Drawing.Size(234, 277);
             this.affichageProfesseurs.TabIndex = 32;
             this.affichageProfesseurs.SelectedValueChanged += new System.EventHandler(this.affichageProfesseurs_SelectedValueChanged);
             // 
             // affichageExtes
             // 
             this.affichageExtes.FormattingEnabled = true;
-            this.affichageExtes.Location = new System.Drawing.Point(517, 362);
+            this.affichageExtes.Location = new System.Drawing.Point(482, 362);
             this.affichageExtes.Name = "affichageExtes";
-            this.affichageExtes.Size = new System.Drawing.Size(171, 277);
+            this.affichageExtes.Size = new System.Drawing.Size(230, 277);
             this.affichageExtes.TabIndex = 33;
             this.affichageExtes.SelectedValueChanged += new System.EventHandler(this.affichageExtes_SelectedValueChanged);
             // 

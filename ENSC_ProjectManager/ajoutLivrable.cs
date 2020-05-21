@@ -23,6 +23,7 @@ namespace ENSC_ProjectManager
             InitializeComponent();
             rendu.Checked = true;
             valider.Enabled = false;
+            dateRenduLivrable.MinDate = dateDebutProjet;
             dateRenduLivrable.Value = dateFinProjet;
             listeTypeFichier.Items.Add("pdf");
             listeTypeFichier.Items.Add("video");

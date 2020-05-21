@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{79E5514B-D99A-46D2-A626-346E79FF5247}"
 	ProjectSection(SolutionItems) = preProject
 		ENSC_ProjectManager\bin\Debug\liste.txt = ENSC_ProjectManager\bin\Debug\liste.txt
+		ENSC_ProjectManager\bin\Debug\repertoire-titi.xml = ENSC_ProjectManager\bin\Debug\repertoire-titi.xml
 		ENSC_ProjectManager\bin\Debug\repertoire.xml = ENSC_ProjectManager\bin\Debug\repertoire.xml
 	EndProjectSection
 EndProject

@@ -26,7 +26,6 @@ namespace ENSC_ProjectManager
             listePromotion.Enabled = false;
             listeEtudiants.Enabled = false;
             listeProfesseurs.Enabled = false;
-            listeExtes.Enabled = false;
             valider.Enabled = false;
             insertExte.Hide();
             insertProfesseur.Hide();
@@ -98,11 +97,9 @@ namespace ENSC_ProjectManager
             {
                 promotion = new Promotion(anneePromo);
             }
-            promotion.AjouterEtudiant(etudiant);
             if (promoVide)
                 repertoire.AddPromotion(promotion);
-            else
-                repertoire.AddEtudiant(etudiant);
+            repertoire.AddEtudiant(etudiant);
             listeEtudiants.BeginUpdate();
             listeEtudiants.Items.Add(etudiant.Nom + " " + etudiant.Prenom + " _ promotion " + etudiant.AnneePromotion);
             listeEtudiants.EndUpdate();
@@ -166,7 +163,7 @@ namespace ENSC_ProjectManager
             listeExtes.Items.Clear();
             foreach (Exterieur exterieur in repertoire.intervenantsExte)
             {
-                listeExtes.Items.Add(exterieur.Nom + " " + exterieur.Prenom + " - " + exterieur.Organisation);
+                listeExtes.Items.Add(exterieur.Nom + " " + exterieur.Prenom + " " + exterieur.Organisation);
             }
             listeExtes.EndUpdate();
         }
@@ -175,7 +172,7 @@ namespace ENSC_ProjectManager
         {
             repertoire.intervenantsExte.Add(intervenant);
             listeExtes.BeginUpdate();
-            listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " - " + intervenant.Organisation);
+            listeExtes.Items.Add(intervenant.Nom + " " + intervenant.Prenom + " " + intervenant.Organisation);
             listeExtes.EndUpdate();
         }
         private int AnneePromo(string promotion)
@@ -451,7 +448,7 @@ namespace ENSC_ProjectManager
         {
             affichageExtes.BeginUpdate();
             if (listeExtes.SelectedItem != null)
-                affichageExtes.Items.Add(listeProfesseurs.SelectedItem);
+                affichageExtes.Items.Add(listeExtes.SelectedItem);
             affichageExtes.EndUpdate();
         }
 
@@ -492,7 +489,7 @@ namespace ENSC_ProjectManager
 
         private void ajouterEtudiant_Click(object sender, EventArgs e)
         {
-            AjoutEtudiant formAjoutEtudiant = new AjoutEtudiant(AnneePromo("1A"));
+            AjoutEtudiant formAjoutEtudiant = new AjoutEtudiant(AnneePromo("3A"));
             formAjoutEtudiant.Show();
             formAjoutEtudiant.VisibleChanged += formVisibleChangedAjouterEtudiant;
         }
@@ -543,6 +540,7 @@ namespace ENSC_ProjectManager
         {
             AjoutExterieur formAjoutExterieur = new AjoutExterieur();
             formAjoutExterieur.Show();
+            formAjoutExterieur.VisibleChanged += formVisibleChangedAjouterExterieur;
         }
 
         private void formVisibleChangedAjouterExterieur(object sender, EventArgs e)

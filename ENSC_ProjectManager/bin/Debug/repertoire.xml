@@ -11,6 +11,16 @@
       <NbMinEtudiants>4</NbMinEtudiants>
       <TypePromotion>transpromo</TypePromotion>
     </Type>
+    <Type>
+      <NbMaxEtudiants>8</NbMaxEtudiants>
+      <NbMinEtudiants>6</NbMinEtudiants>
+      <TypePromotion>1A</TypePromotion>
+    </Type>
+    <Type>
+      <NbMaxEtudiants>7</NbMaxEtudiants>
+      <NbMinEtudiants>3</NbMinEtudiants>
+      <TypePromotion>1A</TypePromotion>
+    </Type>
   </typesProjet>
   <promotions>
     <Promotion>
@@ -29,6 +39,116 @@
           <Mail>tdeligny@ensc.fr</Mail>
           <Redoublant>false</Redoublant>
           <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Desclaux</Nom>
+          <Prenom>Nicolas</Prenom>
+          <Mail>ndeclaux@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Dupetit</Nom>
+          <Prenom>Camille</Prenom>
+          <Mail>cdupetit@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Esquirol</Nom>
+          <Prenom>Juliette</Prenom>
+          <Mail>jesquirol@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Medina</Nom>
+          <Prenom>Loic</Prenom>
+          <Mail>lmedina002@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Bannay</Nom>
+          <Prenom>Lucie</Prenom>
+          <Mail>lbannay@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Tomas</Nom>
+          <Prenom>Lucas</Prenom>
+          <Mail>ltomas001@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Arrachequesne</Nom>
+          <Prenom>Thomas</Prenom>
+          <Mail>tarracheque@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Grondin</Nom>
+          <Prenom>Léa</Prenom>
+          <Mail>lgrondin@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Dizet</Nom>
+          <Prenom>Allan</Prenom>
+          <Mail>adizet001@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Letournel</Nom>
+          <Prenom>Marie</Prenom>
+          <Mail>mletournel@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Le-Moigne</Nom>
+          <Prenom>Guilhem</Prenom>
+          <Mail>glemoigne@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Ciattoni</Nom>
+          <Prenom>Ines</Prenom>
+          <Mail>iciattoni@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2022</AnneePromotion>
+        </Etudiant>
+      </Etudiants>
+    </Promotion>
+    <Promotion>
+      <Annee>2021</Annee>
+      <Etudiants>
+        <Etudiant>
+          <Nom>Morelle</Nom>
+          <Prenom>Marie</Prenom>
+          <Mail>mmorelle@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2021</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Tuco</Nom>
+          <Prenom>Clara</Prenom>
+          <Mail>ctuco@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2021</AnneePromotion>
+        </Etudiant>
+        <Etudiant>
+          <Nom>Dona</Nom>
+          <Prenom>Alizé</Prenom>
+          <Mail>adona@ensc.fr</Mail>
+          <Redoublant>false</Redoublant>
+          <AnneePromotion>2021</AnneePromotion>
         </Etudiant>
       </Etudiants>
     </Promotion>
@@ -81,6 +201,12 @@
           <Mail>eclermont@ensc.fr</Mail>
           <Titre />
         </Professeur>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
       </ListeProfesseurs>
     </Matiere>
     <Matiere>
@@ -94,6 +220,18 @@
           <Prenom>Edwige</Prenom>
           <Mail>eclermont@ensc.fr</Mail>
           <Titre />
+        </Professeur>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
         </Professeur>
       </ListeProfesseurs>
     </Matiere>
@@ -109,14 +247,28 @@
       <Code>CO5PRTD0</Code>
       <CodeModule>CO5PRST0</CodeModule>
       <Libelle>Projet transdisciplinaire</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>1A</Promo>
       <Code>CO5PRTP0</Code>
       <CodeModule>CO5PRST0</CodeModule>
       <Libelle>Projet transpromotion</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>1A</Promo>
@@ -144,7 +296,14 @@
       <Code>CO6INGP0</Code>
       <CodeModule>CO6INGL0</CodeModule>
       <Libelle>Gestion de projet, Ingénierie de conception</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Kijewski</Nom>
+          <Prenom>Elisabeth</Prenom>
+          <Mail>elisabeth.kijewski@ensc.fr</Mail>
+          <Titre>Enseignante - Ingénieure</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>1A</Promo>
@@ -179,6 +338,18 @@
           <Mail>eclermont@ensc.fr</Mail>
           <Titre />
         </Professeur>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
       </ListeProfesseurs>
     </Matiere>
     <Matiere>
@@ -192,6 +363,18 @@
           <Prenom>Edwige</Prenom>
           <Mail>eclermont@ensc.fr</Mail>
           <Titre />
+        </Professeur>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
         </Professeur>
       </ListeProfesseurs>
     </Matiere>
@@ -291,7 +474,14 @@
       <Code>CO7SCIA0</Code>
       <CodeModule>CO7SCOG0</CodeModule>
       <Libelle>Intelligence artificielle - 1</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -305,7 +495,20 @@
       <Code>CO7SFGL0</Code>
       <CodeModule>CO7SFON0</CodeModule>
       <Libelle>Génie logiciel</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -319,7 +522,14 @@
       <Code>CO7PRTP0</Code>
       <CodeModule>CO7PRST0</CodeModule>
       <Libelle>Projet Transpromotion</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -368,7 +578,14 @@
       <Code>CO8SCIA0</Code>
       <CodeModule>CO8SCOG0</CodeModule>
       <Libelle>Intelligence artificielle - 2</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -382,7 +599,20 @@
       <Code>CO8SFPI0</Code>
       <CodeModule>CO8SFON0</CodeModule>
       <Libelle>Projet informatique individuel</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -396,7 +626,20 @@
       <Code>CO8SFDM0</Code>
       <CodeModule>CO8SFON0</CodeModule>
       <Libelle>Développement mobile</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+        <Professeur>
+          <Nom>Favier</Nom>
+          <Prenom>Pierre-Alexandre</Prenom>
+          <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+          <Titre>Ingénieur et docteur en informatique</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>2A</Promo>
@@ -438,7 +681,14 @@
       <Code>CO9SCIC0</Code>
       <CodeModule>CO9SCOG0</CodeModule>
       <Libelle>Intelligence collective</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>3A</Promo>
@@ -501,7 +751,14 @@
       <Code>CO9PRSP2</Code>
       <CodeModule>CO9PRST0</CodeModule>
       <Libelle>Spécialisation : IA</Libelle>
-      <ListeProfesseurs />
+      <ListeProfesseurs>
+        <Professeur>
+          <Nom>Pesquet</Nom>
+          <Prenom>Baptiste</Prenom>
+          <Mail>bpesquet@ensc.fr</Mail>
+          <Titre>Enseignant en informatique et IA</Titre>
+        </Professeur>
+      </ListeProfesseurs>
     </Matiere>
     <Matiere>
       <Promo>3A</Promo>
@@ -1323,6 +1580,380 @@
         <Titre />
       </Intervenant>
     </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Desclaux</Nom>
+        <Prenom>Nicolas</Prenom>
+        <Mail>ndeclaux@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Pesquet</Nom>
+        <Prenom>Baptiste</Prenom>
+        <Mail>bpesquet@ensc.fr</Mail>
+        <Titre>Enseignant en informatique et IA</Titre>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Desclaux</Nom>
+        <Prenom>Nicolas</Prenom>
+        <Mail>ndeclaux@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Pesquet</Nom>
+        <Prenom>Baptiste</Prenom>
+        <Mail>bpesquet@ensc.fr</Mail>
+        <Titre>Enseignant en informatique et IA</Titre>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Software</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Risk Manager</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dupetit</Nom>
+        <Prenom>Camille</Prenom>
+        <Mail>cdupetit@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Maquette</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Esquirol</Nom>
+        <Prenom>Juliette</Prenom>
+        <Mail>jesquirol@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Hardware</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Medina</Nom>
+        <Prenom>Loic</Prenom>
+        <Mail>lmedina002@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Jeux</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Bannay</Nom>
+        <Prenom>Lucie</Prenom>
+        <Mail>lbannay@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable FH</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Arrachequesne</Nom>
+        <Prenom>Thomas</Prenom>
+        <Mail>tarracheque@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Cliente</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Kijewski</Nom>
+        <Prenom>Elisabeth</Prenom>
+        <Mail>elisabeth.kijewski@ensc.fr</Mail>
+        <Titre>Enseignante - Ingénieure</Titre>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Ingénierie</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Tomas</Nom>
+        <Prenom>Lucas</Prenom>
+        <Mail>ltomas001@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Software</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Risk Manager</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dupetit</Nom>
+        <Prenom>Camille</Prenom>
+        <Mail>cdupetit@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Maquette</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Esquirol</Nom>
+        <Prenom>Juliette</Prenom>
+        <Mail>jesquirol@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Hardware</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Medina</Nom>
+        <Prenom>Loic</Prenom>
+        <Mail>lmedina002@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Jeux</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Bannay</Nom>
+        <Prenom>Lucie</Prenom>
+        <Mail>lbannay@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable FH</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Arrachequesne</Nom>
+        <Prenom>Thomas</Prenom>
+        <Mail>tarracheque@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Cliente</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Kijewski</Nom>
+        <Prenom>Elisabeth</Prenom>
+        <Mail>elisabeth.kijewski@ensc.fr</Mail>
+        <Titre>Enseignante - Ingénieure</Titre>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable Ingénierie</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Tomas</Nom>
+        <Prenom>Lucas</Prenom>
+        <Mail>ltomas001@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable technique</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable FH</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Grondin</Nom>
+        <Prenom>Léa</Prenom>
+        <Mail>lgrondin@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Chef de projet</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Morelle</Nom>
+        <Prenom>Marie</Prenom>
+        <Mail>mmorelle@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable qualité</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Tuco</Nom>
+        <Prenom>Clara</Prenom>
+        <Mail>ctuco@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable technique</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dona</Nom>
+        <Prenom>Alizé</Prenom>
+        <Mail>adona@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable technique</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable FH</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Grondin</Nom>
+        <Prenom>Léa</Prenom>
+        <Mail>lgrondin@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Chef de projet</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Morelle</Nom>
+        <Prenom>Marie</Prenom>
+        <Mail>mmorelle@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable qualité</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Tuco</Nom>
+        <Prenom>Clara</Prenom>
+        <Mail>ctuco@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Responsable technique</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dona</Nom>
+        <Prenom>Alizé</Prenom>
+        <Mail>adona@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2021</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dizet</Nom>
+        <Prenom>Allan</Prenom>
+        <Mail>adizet001@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Favier</Nom>
+        <Prenom>Pierre-Alexandre</Prenom>
+        <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+        <Titre>Ingénieur et docteur en informatique</Titre>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Cado</Nom>
+        <Prenom>Erwan</Prenom>
+        <Mail>ecado@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Développeur</Libelle>
+      <Intervenant xsi:type="Etudiant">
+        <Nom>Dizet</Nom>
+        <Prenom>Allan</Prenom>
+        <Mail>adizet001@ensc.fr</Mail>
+        <Redoublant>false</Redoublant>
+        <AnneePromotion>2022</AnneePromotion>
+      </Intervenant>
+    </Role>
+    <Role>
+      <Libelle>Référent</Libelle>
+      <Intervenant xsi:type="Professeur">
+        <Nom>Favier</Nom>
+        <Prenom>Pierre-Alexandre</Prenom>
+        <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+        <Titre>Ingénieur et docteur en informatique</Titre>
+      </Intervenant>
+    </Role>
   </roles>
   <professeurs>
     <Professeur>
@@ -1331,8 +1962,33 @@
       <Mail>eclermont@ensc.fr</Mail>
       <Titre />
     </Professeur>
+    <Professeur>
+      <Nom>Pesquet</Nom>
+      <Prenom>Baptiste</Prenom>
+      <Mail>bpesquet@ensc.fr</Mail>
+      <Titre>Enseignant en informatique et IA</Titre>
+    </Professeur>
+    <Professeur>
+      <Nom>Kijewski</Nom>
+      <Prenom>Elisabeth</Prenom>
+      <Mail>elisabeth.kijewski@ensc.fr</Mail>
+      <Titre>Enseignante - Ingénieure</Titre>
+    </Professeur>
+    <Professeur>
+      <Nom>Favier</Nom>
+      <Prenom>Pierre-Alexandre</Prenom>
+      <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+      <Titre>Ingénieur et docteur en informatique</Titre>
+    </Professeur>
   </professeurs>
-  <intervenantsExte />
+  <intervenantsExte>
+    <Exterieur>
+      <Nom>Saramito</Nom>
+      <Prenom>Jean-Michel</Prenom>
+      <Mail>jean-michel.saramito@fr.thalesgroup.com</Mail>
+      <Organisation>Thales</Organisation>
+    </Exterieur>
+  </intervenantsExte>
   <projets>
     <Projet>
       <ListeLivrables>
@@ -1400,6 +2056,393 @@
       <DateFin>2020-05-21T17:49:37</DateFin>
       <DateDebut>2020-03-20T17:49:37</DateDebut>
       <Description>Logiciel d'archivage des projets de l'ENSC.</Description>
+      <Type>
+        <NbMaxEtudiants>2</NbMaxEtudiants>
+        <NbMinEtudiants>1</NbMinEtudiants>
+        <TypePromotion>1A</TypePromotion>
+      </Type>
+    </Projet>
+    <Projet>
+      <ListeLivrables>
+        <Livrable>
+          <DateRendu>2020-04-17T11:02:05</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Rapport</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+        <Livrable>
+          <DateRendu>2020-04-17T11:02:05</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Code source</Libelle>
+          <TypeFichier>code</TypeFichier>
+        </Livrable>
+      </ListeLivrables>
+      <ListeRoles>
+        <Role>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Cado</Nom>
+            <Prenom>Erwan</Prenom>
+            <Mail>ecado@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Desclaux</Nom>
+            <Prenom>Nicolas</Prenom>
+            <Mail>ndeclaux@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Référent</Libelle>
+          <Intervenant xsi:type="Professeur">
+            <Nom>Pesquet</Nom>
+            <Prenom>Baptiste</Prenom>
+            <Mail>bpesquet@ensc.fr</Mail>
+            <Titre>Enseignant en informatique et IA</Titre>
+          </Intervenant>
+        </Role>
+      </ListeRoles>
+      <ListeMatieres>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6SFCW0</Code>
+          <CodeModule>CO6SFON0</CodeModule>
+          <Libelle>Communication Web</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+            <Professeur>
+              <Nom>Pesquet</Nom>
+              <Prenom>Baptiste</Prenom>
+              <Mail>bpesquet@ensc.fr</Mail>
+              <Titre>Enseignant en informatique et IA</Titre>
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+      </ListeMatieres>
+      <Libelle>Projet web QuizzDesigner</Libelle>
+      <DateFin>2020-04-17T11:02:05</DateFin>
+      <DateDebut>2020-02-21T11:02:05</DateDebut>
+      <Description>Application web permettant de créer et de jouer à des quizz classés par thèmes.
+Le projet a été développé en PHP et JS à l'aide du framework Symfony et déployé avec Heroku depuis le dépot GitHub.
+Lien du dépot : https://github.com/erwancado/QuizzDesigner </Description>
+      <Type>
+        <NbMaxEtudiants>2</NbMaxEtudiants>
+        <NbMinEtudiants>1</NbMinEtudiants>
+        <TypePromotion>1A</TypePromotion>
+      </Type>
+    </Projet>
+    <Projet>
+      <ListeLivrables>
+        <Livrable>
+          <DateRendu>2020-05-11T11:30:06</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Réponse à l'appel d'offre</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+        <Livrable>
+          <DateRendu>2020-05-11T11:30:06</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Présentation avec script</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+      </ListeLivrables>
+      <ListeRoles>
+        <Role>
+          <Libelle>Responsable Software</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Cado</Nom>
+            <Prenom>Erwan</Prenom>
+            <Mail>ecado@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Risk Manager</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Dupetit</Nom>
+            <Prenom>Camille</Prenom>
+            <Mail>cdupetit@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable Maquette</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Esquirol</Nom>
+            <Prenom>Juliette</Prenom>
+            <Mail>jesquirol@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable Hardware</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Medina</Nom>
+            <Prenom>Loic</Prenom>
+            <Mail>lmedina002@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable Jeux</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Bannay</Nom>
+            <Prenom>Lucie</Prenom>
+            <Mail>lbannay@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable FH</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Arrachequesne</Nom>
+            <Prenom>Thomas</Prenom>
+            <Mail>tarracheque@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Cliente</Libelle>
+          <Intervenant xsi:type="Professeur">
+            <Nom>Kijewski</Nom>
+            <Prenom>Elisabeth</Prenom>
+            <Mail>elisabeth.kijewski@ensc.fr</Mail>
+            <Titre>Enseignante - Ingénieure</Titre>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable Ingénierie</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Tomas</Nom>
+            <Prenom>Lucas</Prenom>
+            <Mail>ltomas001@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+      </ListeRoles>
+      <ListeMatieres>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO6INGP0</Code>
+          <CodeModule>CO6INGL0</CodeModule>
+          <Libelle>Gestion de projet, Ingénierie de conception</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Kijewski</Nom>
+              <Prenom>Elisabeth</Prenom>
+              <Mail>elisabeth.kijewski@ensc.fr</Mail>
+              <Titre>Enseignante - Ingénieure</Titre>
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+      </ListeMatieres>
+      <Libelle>Projet RAO Colib'Rouge</Libelle>
+      <DateFin>2020-05-11T11:30:06</DateFin>
+      <DateDebut>2020-02-25T11:30:06</DateDebut>
+      <Description>Réponse à l'appel d'offre du projet “la réserve 2.20” qui a pour objectif d’introduire des outils numériques au sein de la réserve naturelle du Teich et ainsi permettre d’augmenter l’implication et l’intérêt des différents profils de visiteurs du site.
+Solution proposée : La solution consiste en la mise à disposition de tablettes numériques pour accompagner les visiteurs dans la réserve. Celles-ci disposeront uniquement d’une application mobile silencieuse  qui comporte quatre fonctionnalités : 
+Réalité augmentée (RA) : en scannant des QR codes présents dans la réserve, le visiteur peut observer des oiseaux qui ne sont pas présents physiquement.
+Informations : le visiteur peut accéder à des “fiches identité” sur les oiseaux présents dans la réserve. 
+Jeux : le visiteur est invité à répondre à des quiz et énigmes ludo-éducatives qui sont à résoudre tout au long du parcours afin d’en apprendre plus sur la réserve et les oiseaux qu’elle abrite.
+Carte interactive : le visiteur identifie les points d’intérêts, établit un itinéraire, est encouragé à rester sur les chemins sécurisés.
+Cette dernière fonctionnalité s’accompagne d’un logiciel qui permettra à la réserve de visualiser en temps réel la position de ses visiteurs et de s’assurer qu’ils restent en sécurité. </Description>
+      <Type>
+        <NbMaxEtudiants>8</NbMaxEtudiants>
+        <NbMinEtudiants>6</NbMinEtudiants>
+        <TypePromotion>1A</TypePromotion>
+      </Type>
+    </Projet>
+    <Projet>
+      <ListeLivrables>
+        <Livrable>
+          <DateRendu>2020-01-13T12:15:48</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Cahier des charges</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+      </ListeLivrables>
+      <ListeRoles>
+        <Role>
+          <Libelle>Responsable technique</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Cado</Nom>
+            <Prenom>Erwan</Prenom>
+            <Mail>ecado@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable FH</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Grondin</Nom>
+            <Prenom>Léa</Prenom>
+            <Mail>lgrondin@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Chef de projet</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Morelle</Nom>
+            <Prenom>Marie</Prenom>
+            <Mail>mmorelle@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2021</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable qualité</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Tuco</Nom>
+            <Prenom>Clara</Prenom>
+            <Mail>ctuco@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2021</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Responsable technique</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Dona</Nom>
+            <Prenom>Alizé</Prenom>
+            <Mail>adona@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2021</AnneePromotion>
+          </Intervenant>
+        </Role>
+      </ListeRoles>
+      <ListeMatieres>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5PRTP0</Code>
+          <CodeModule>CO5PRST0</CodeModule>
+          <Libelle>Projet transpromotion</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+        <Matiere>
+          <Promo>2A</Promo>
+          <Code>CO7PRTP0</Code>
+          <CodeModule>CO7PRST0</CodeModule>
+          <Libelle>Projet Transpromotion</Libelle>
+          <ListeProfesseurs />
+        </Matiere>
+      </ListeMatieres>
+      <Libelle>Transpromo SYET</Libelle>
+      <DateFin>2020-01-13T12:15:48</DateFin>
+      <DateDebut>2019-09-10T12:15:48</DateDebut>
+      <Description>Application mobile de partage d'astuces écolos sous forme de réseau social.
+S.Y.E.T = Share Your Ecological Tricks.</Description>
+      <Type>
+        <NbMaxEtudiants>6</NbMaxEtudiants>
+        <NbMinEtudiants>4</NbMinEtudiants>
+        <TypePromotion>transpromo</TypePromotion>
+      </Type>
+    </Projet>
+    <Projet>
+      <ListeLivrables>
+        <Livrable>
+          <DateRendu>2020-01-17T12:28:34</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Fiche technique</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+        <Livrable>
+          <DateRendu>2020-01-17T12:28:34</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Notice de jeu</Libelle>
+          <TypeFichier>pdf</TypeFichier>
+        </Livrable>
+        <Livrable>
+          <DateRendu>2020-01-17T12:28:34</DateRendu>
+          <Rendu>true</Rendu>
+          <Libelle>Code source</Libelle>
+          <TypeFichier>code</TypeFichier>
+        </Livrable>
+      </ListeLivrables>
+      <ListeRoles>
+        <Role>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Cado</Nom>
+            <Prenom>Erwan</Prenom>
+            <Mail>ecado@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Développeur</Libelle>
+          <Intervenant xsi:type="Etudiant">
+            <Nom>Dizet</Nom>
+            <Prenom>Allan</Prenom>
+            <Mail>adizet001@ensc.fr</Mail>
+            <Redoublant>false</Redoublant>
+            <AnneePromotion>2022</AnneePromotion>
+          </Intervenant>
+        </Role>
+        <Role>
+          <Libelle>Référent</Libelle>
+          <Intervenant xsi:type="Professeur">
+            <Nom>Favier</Nom>
+            <Prenom>Pierre-Alexandre</Prenom>
+            <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+            <Titre>Ingénieur et docteur en informatique</Titre>
+          </Intervenant>
+        </Role>
+      </ListeRoles>
+      <ListeMatieres>
+        <Matiere>
+          <Promo>1A</Promo>
+          <Code>CO5SFIN0</Code>
+          <CodeModule>CO5SFON0</CodeModule>
+          <Libelle>Introduction à la programmation</Libelle>
+          <ListeProfesseurs>
+            <Professeur>
+              <Nom>Clermont</Nom>
+              <Prenom>Edwige</Prenom>
+              <Mail>eclermont@ensc.fr</Mail>
+              <Titre />
+            </Professeur>
+            <Professeur>
+              <Nom>Pesquet</Nom>
+              <Prenom>Baptiste</Prenom>
+              <Mail>bpesquet@ensc.fr</Mail>
+              <Titre>Enseignant en informatique et IA</Titre>
+            </Professeur>
+            <Professeur>
+              <Nom>Favier</Nom>
+              <Prenom>Pierre-Alexandre</Prenom>
+              <Mail>pierre-alexandre.favier@ensc.fr</Mail>
+              <Titre>Ingénieur et docteur en informatique</Titre>
+            </Professeur>
+          </ListeProfesseurs>
+        </Matiere>
+      </ListeMatieres>
+      <Libelle>Projet Info S5 WordGrid</Libelle>
+      <DateFin>2020-01-17T12:28:34</DateFin>
+      <DateDebut>2019-12-17T12:28:34</DateDebut>
+      <Description>Jeu semblable au 2048 dans lequel il faut non pas associer des chiffres pour arriver à 2048 mais associer des lettres pour arriver au mot souhaité. Le jeu est codé en C# et prend la forme d'une application Windows Forms.
+Lien vers le dépot GitHub : https://github.com/erwancado/WordGrid</Description>
       <Type>
         <NbMaxEtudiants>2</NbMaxEtudiants>
         <NbMinEtudiants>1</NbMinEtudiants>

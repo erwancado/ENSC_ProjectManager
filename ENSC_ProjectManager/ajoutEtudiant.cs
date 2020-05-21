@@ -17,7 +17,7 @@ namespace ENSC_ProjectManager
         public AjoutEtudiant(int minAnneePromo)
         {
             InitializeComponent();
-            anneePromo.Maximum = minAnneePromo + 3;
+            anneePromo.Maximum = minAnneePromo + 2;
             anneePromo.Value = minAnneePromo;
             anneePromo.Minimum = minAnneePromo;
             this.CenterToParent();
